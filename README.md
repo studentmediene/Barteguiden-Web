@@ -17,6 +17,6 @@ Clone the repo with
     cd Barteguiden-Web
     npm install
     bower install
-    grunt serve --force
+    grunt serve
 
 This might take some time. Now, the site should be available at `http://localhost:9000/`
