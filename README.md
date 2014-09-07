@@ -6,7 +6,7 @@ This is the repo for Barteguiden Webapp!
 
 #Setup
 
-You'll need `npm`, `grunt`, `bower`, and `compass`. 
+You'll need `npm`, `grunt`, `bower`, and `compass`. More info on installing can be found [here](http://www.google.com).
 
 Clone the repo with
 
