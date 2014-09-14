@@ -7,11 +7,15 @@
  * # MainCtrl
  * Controller of the barteguidenWebApp
  */
-angular.module('barteguidenWebApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+angular.module('barteguidenWebApp.controllers')
+  .controller('MainCtrl', function ($scope, EventService) {
+    EventService.getAllEvents()
+      .success(function(data) {
+        $scope.events = data.events;
+      })
+      .error(function(data, status, headers) {
+        console.log(data, status, headers);
+      });
+
+
   });

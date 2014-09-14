@@ -8,6 +8,13 @@
  *
  * Main module of the application.
  */
+
+
+angular.module('barteguidenWebApp.controllers', []);
+angular.module('barteguidenWebApp.filters', []);
+angular.module('barteguidenWebApp.services', []);
+angular.module('barteguidenWebApp.directives', []);
+
 angular
   .module('barteguidenWebApp', [
     'ngAnimate',
@@ -15,7 +22,11 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'barteguidenWebApp.controllers',
+    'barteguidenWebApp.filters',
+    'barteguidenWebApp.services',
+    'barteguidenWebApp.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider

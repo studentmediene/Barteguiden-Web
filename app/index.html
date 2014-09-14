@@ -23,11 +23,16 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
+          <li class="active"><a ng-href="#">Hjem</a></li>
+          <li><a ng-href="#/about">Om</a></li>
+          <li><a ng-href="#">Kontakt</a></li>
+          <li>
+            <div class="form-group">
+              <input ng-model="query" type="text" class="form-control" placeholder="Søk">
+            </div>
+          </li>
         </ul>
-        <h3 class="text-muted">barteguidenWeb</h3>
+        <h3 class="text-muted"><img src="images/barteguiden.png"> Barteguiden</h3>
       </div>
 
       <div ng-view=""></div>
@@ -60,6 +65,7 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="https://code.angularjs.org/1.2.23/i18n/angular-locale_no.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
@@ -85,6 +91,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/services/EventService.js"></script>
         <!-- endbuild -->
 </body>
 </html>

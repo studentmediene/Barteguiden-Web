@@ -1,23 +1,14 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+<section class="events">
+    <article class="panel panel-primary" ng-repeat="event in events | orderBy:'startAt' |filter:query">
+      <header class="panel-heading event-header">
+        <img class="img-responsive" style="height:25px;" ng-src="images/{{event.categoryID}}.png"/>
+        <h3 class="panel-title">{{event.title}}</h3>
+      </header>
+      <div class="panel-body">
+        <img class="img-responsive" src="{{event.imageURL}}">
+        <p>{{event.descriptions[0].text}}</p>
+        <p><strong>Tid og sted:</strong> <time>{{event.startAt | date:'EEEE d. MMMM y kl. HH:mm'}}</time> på {{event.placeName}}</p>
+        <p><strong>Pris:</strong> {{event.price}} kr</span></p>
+      </div>
+    </article>
+</section>

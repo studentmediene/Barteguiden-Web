@@ -1,0 +1,1763 @@
+{
+  "events": [
+    {
+      "eventID": "53",
+      "title": "DANSESHOW MED NTNUI DANS",
+      "startAt": "2014-11-13T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 80,
+      "categoryID": "PERFORMANCES",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "NTNUI dans sin årlige danseoppvisning finner i år sted i Storsalen på Studentersamfundet, etterfulgt av Storbandskonsert. Det er dermed duket for en helaften med dans og morro, enten du kommer som tilskuer eller du også selv vil riste på rockefoten."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2407_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/3398"
+    },
+    {
+      "eventID": "660",
+      "title": "Chippendales",
+      "startAt": "2014-09-12T17:00:00.000Z",
+      "placeName": "OlavsHallen",
+      "address": "Kjøpmannsgata 44",
+      "latitude": 63.433424,
+      "longitude": 10.403808,
+      "ageLimit": 0,
+      "price": 520,
+      "categoryID": "PERFORMANCES",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "De verdensberømte mannlige stripperne kommer til å sette OlavsHallen i kok igjen. 12 sexy karer på scenen i et forrykende musikalsk show med sang, dans og mye kropp."
+        }
+      ],
+      "isRecommended": true,
+      "imageURL": "http://barteguiden.no/v1/images/264.jpg",
+      "eventURL": "http://www.olavshallen.no/no/Publikum/Program/E2x2l2Y7UKpdSY7SMhL7z_yVBlU6lVBt67KXhRLQ0T.ips?template=calendar"
+    },
+    {
+      "eventID": "688",
+      "title": "Rosenborg - Bodø/Glimt",
+      "startAt": "2014-09-13T22:00:00.000Z",
+      "placeName": "Lerkendal Stadion",
+      "address": "Klæbuveien 125",
+      "latitude": 63.412278,
+      "longitude": 10.402884,
+      "ageLimit": 0,
+      "price": null,
+      "categoryID": "SPORT",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Tippeliga-sesongen 2014."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://barteguiden.no/v1/images/292.jpg",
+      "eventURL": "http://www.rbk.no/matches"
+    },
+    {
+      "eventID": "689",
+      "title": "Rosenborg - Aalesund",
+      "startAt": "2014-09-27T22:00:00.000Z",
+      "placeName": "Lerkendal Stadion",
+      "address": "Klæbuveien 125",
+      "latitude": 63.412278,
+      "longitude": 10.402884,
+      "ageLimit": 0,
+      "price": null,
+      "categoryID": "SPORT",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Tippeliga-sesongen 2014."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://barteguiden.no/v1/images/293.jpg",
+      "eventURL": "http://www.rbk.no/matches"
+    },
+    {
+      "eventID": "690",
+      "title": "Rosenborg - Vålerenga",
+      "startAt": "2014-10-18T22:00:00.000Z",
+      "placeName": "Lerkendal Stadion",
+      "address": "Klæbuveien 125",
+      "latitude": 63.412278,
+      "longitude": 10.402884,
+      "ageLimit": 0,
+      "price": null,
+      "categoryID": "SPORT",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Tippeliga-sesongen 2014."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://barteguiden.no/v1/images/294.jpg",
+      "eventURL": "http://www.rbk.no/matches"
+    },
+    {
+      "eventID": "691",
+      "title": "Rosenborg - Sandnes Ulf",
+      "startAt": "2014-10-25T22:00:00.000Z",
+      "placeName": "Lerkendal Stadion",
+      "address": "Klæbuveien 125",
+      "latitude": 63.412278,
+      "longitude": 10.402884,
+      "ageLimit": 0,
+      "price": null,
+      "categoryID": "SPORT",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Tippeliga-sesongen 2014."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://barteguiden.no/v1/images/295.jpg",
+      "eventURL": "http://www.rbk.no/matches"
+    },
+    {
+      "eventID": "692",
+      "title": "Rosenborg - Strømsgodset",
+      "startAt": "2014-11-08T23:00:00.000Z",
+      "placeName": "Lerkendal Stadion",
+      "address": "Klæbuveien 125",
+      "latitude": 63.412278,
+      "longitude": 10.402884,
+      "ageLimit": 0,
+      "price": null,
+      "categoryID": "SPORT",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Rosenborg avslutter Tippeliga-sesongen 2014 mot Viking på Lerkendal."
+        }
+      ],
+      "isRecommended": true,
+      "imageURL": "http://barteguiden.no/v1/images/296.jpg",
+      "eventURL": "http://www.rbk.no/matches"
+    },
+    {
+      "eventID": "1035",
+      "title": "Bokstavelig Talt: Litterær Diskusjon",
+      "startAt": "2014-09-10T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "DEBATE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Dragvolls ypperste litteraturvitere åpner sin kollokviegruppe for hvermann og diskuterer høstens bøker i Bokstavelig talt: Litterær diskusjon i Biblioteket på Studentersamfundet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2275_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4073"
+    },
+    {
+      "eventID": "1063",
+      "title": "Klovner i Kamp [UTSOLGT]",
+      "startAt": "2014-09-12T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 350,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Den 12. september kommer Klovner i Kamp til Storsalen og Samfundet i anledning deres 20-års jubileum. Det blir helt fantastisk."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2426_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4101"
+    },
+    {
+      "eventID": "1064",
+      "title": "Team Me + Supp. Ludvig Moon",
+      "startAt": "2014-09-20T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 180,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Etter to svært begivenhetsrike år med omfattende turneer verden rundt, utgivelsen av det kritikerroste debutalbumet ”To The Treetops!” som vant både Spellemannspris og internasjonale musikkpriser, kommer endelig Team Me med nytt album 1. september. Litt under tre uker senere, 20. september, gjester de Storsalen."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2430_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4103"
+    },
+    {
+      "eventID": "1065",
+      "title": "Bernhoft [FÅ BILLETTER IGJEN]",
+      "startAt": "2014-09-27T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 350,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Bernhoft er tilbake, og han kommer til Samfundet. Fredag 25. april slapp han sitt tredje studioalbum \"Islanders\", til ellevill jubel fra en samlet musikkpresse."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2428_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4098"
+    },
+    {
+      "eventID": "1078",
+      "title": "TORE RENBERG MED VENNER – PÅ HØSTTURNÉ I STAVANGER, OSLO, BERGEN OG TRONDHEIM",
+      "startAt": "2014-10-15T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 240,
+      "categoryID": "PERFORMANCES",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Tore Renberg, Karl Ove Knausgård og Frank «Tønes» Tønnesen står på samme scene denne høsten. Stavangerforfatteren bak Mannen som elsket Yngve, Kompani Orheim og fjorårets brakroman Vi ses i morgen legger ut på eksklusiv miniturné til Norges fire største byer. Dette skjer nå! Og så skjer det aldri igjen."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2542_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4123"
+    },
+    {
+      "eventID": "1090",
+      "title": "Demotape-konkurranse (Fredag)",
+      "startAt": "2014-10-03T18:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Vil du spille på en av Norges mest spennende scener? Nå har du muligheten!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2471_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4150"
+    },
+    {
+      "eventID": "1091",
+      "title": "Simon Alejandro",
+      "startAt": "2014-09-12T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Simon Alejandro og Lars B har allerde nye prosjekter på gang. Simon jobber en del sammen med rapperen Joel Martinsson, som er bosatt i Stockholm. De holder på med et samarbeidsprosjekt i Stockholm der Lars B kommer til å lage alle beats."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2485_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4162"
+    },
+    {
+      "eventID": "1092",
+      "title": "Klovner i Kamp [EKSTRAKONSERT]",
+      "startAt": "2014-09-13T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 350,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Etter at billettene til første konserten ble revet vekk, bestemte vi oss for å booke tidenes norske hiphop-gruppe til en ekstrakonsert!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2499_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4173"
+    },
+    {
+      "eventID": "1093",
+      "title": "Svankropp",
+      "startAt": "2014-09-13T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "I vår ble de Svankropp ukas urørt, og skal i sommer spille på blant annet Urørtscenen under Pstereo. Samfundet er ikkenoe dårligere, og vi er kjempefornøyde med å kunne presentere Svankropp på Knaus 13. september."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2507_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4163"
+    },
+    {
+      "eventID": "1094",
+      "title": "Søndagsfilm: Barton Fink",
+      "startAt": "2014-09-14T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Skrivesperre, lokale hetebølger og en skikkelig jovial forsikringsselger i 40-tallets Hollywood."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2464_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4143"
+    },
+    {
+      "eventID": "1095",
+      "title": "Bokstavelig Talt: Maria Amelie",
+      "startAt": "2014-09-17T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "DEBATE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Maria Amelie, som ble kjent i Norge gjennom boken \"Ulovlig Norsk\", har nå skrevet boken \"Takk\". Den handler om da hun satt i varetekt på Trandum asylfengsel i 2011, og det enorme engasjementet og lovendringen som skjedde i forbindelse med hennes sak. 17. September kommer hun til Samfundet for å lese opp fra boken, samt å snakke om sine erfaringer fra Trandum."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2477_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4135"
+    },
+    {
+      "eventID": "1096",
+      "title": "Brontupisto",
+      "startAt": "2014-09-19T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Med minst én fot godt planta i country- og folk, spiller Brontupisto rock ́n roll med referanser de fleste vil nikke gjenkjennende til. 3-stemte vokalharmonier, vekselbass, B3 og slidegitar er noen av elementene man finner i dette oppkoket av usensurert sjanger-blanding, og kan gi assosiasjoner til band som Lynyrd Skynyrd, Crosby, Stills & Nash og Led Zeppelin."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2482_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4159"
+    },
+    {
+      "eventID": "1097",
+      "title": "Full Moon Party",
+      "startAt": "2014-09-20T19:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Savner du Thailand? Det blir høy glowstick-faktor i Bodegaen og Strossa!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2504_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4178"
+    },
+    {
+      "eventID": "1098",
+      "title": "Leonov",
+      "startAt": "2014-09-20T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Bølgedaler av håp/fortvilelse, avhengighet/sårbarhet, mørke/lys, i møte med en verden i kaos. Dette er hva som venter deg på Knaus lørdag den 20. september."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2487_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4164"
+    },
+    {
+      "eventID": "1099",
+      "title": "Søndagsfilm: The Sting",
+      "startAt": "2014-09-21T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Gjør deg klar for en av 70-tallets store krim-klassikere!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2449_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4128"
+    },
+    {
+      "eventID": "1100",
+      "title": "Vin & Vinyl",
+      "startAt": "2014-09-25T18:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Vi slår til med nok en helaften med Vin & Vinyl, etter stor suksess tidligere. I Biblioteket blir det en hyggekveld av de sjeldne hvor du kan nyte både rødt og hvitt i godt lag, med din beste vinyl på platespilleren. Ta med deg plater fra din egen samling og DJen vil snurre dem for deg! Dette er også en kveld man kan bli inpsirert av andres smak. Det er Vin & Vinyl i Biblioteket!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2510_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4061"
+    },
+    {
+      "eventID": "1101",
+      "title": "Crazy Whores",
+      "startAt": "2014-09-26T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Er det én musikalsk kvalitet som forener de kjønnspolitisk ukorrekte hamarkompisene i en høyere enhet, er det egenskapen til å la ingen stå likegyldige tilbake etter en gig. Oslobaserte Crazy Whores har de siste årene, foruten å spre fukt rundt om i lokaler på Hamar, via Oslo til Halden, utgitt to EPer: «Rektum Mongo» (2010) og «Electric Jesus» (2014)."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2483_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4160"
+    },
+    {
+      "eventID": "1102",
+      "title": "Fay Wildhagen",
+      "startAt": "2014-09-27T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Fay Wildhagen har på kort tid høstet anerkjennelse for sin musikk fra kjente norske artister og festivaler, selv om de ennå ikke har sluppet noe offisielt. P3's eksperter presenterte 7. februar et knippe internasjonale og nasjonale artister som de mente ville prege 2014, og øverst på listen lå Wildhagen"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2488_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4165"
+    },
+    {
+      "eventID": "1103",
+      "title": "Søndagsfilm: Brazil",
+      "startAt": "2014-09-28T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Terry Gilliam adapterer 1984 og resultatet er ikke heeeelt krise, men snarere ganske så snasent"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2465_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4144"
+    },
+    {
+      "eventID": "1104",
+      "title": "Bokstavelig Talt: Litterær Diskusjon",
+      "startAt": "2014-10-01T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "DEBATE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Dragvolls ypperste litteraturvitere åpner sin kollokviegruppe for hvermann og diskuterer høstens bøker i Bokstavelig talt: Litterær diskusjon i Biblioteket på Studentersamfundet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2275_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4119"
+    },
+    {
+      "eventID": "1105",
+      "title": "SWAG-fest",
+      "startAt": "2014-10-04T19:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 50,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "REGULATOOOORS! Liker du Onkl-P, Store-P, Admiral-P eller Tande-P? Denne lørdagen blir det SWAG-fest, dra med deg alt du har av bling og klær som det kjennes ut som om du svømmer i, for denne kvelden blir det liv i det runde røde huset."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2503_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4177"
+    },
+    {
+      "eventID": "1106",
+      "title": "Søndagsfilm: Les quatre cents coups",
+      "startAt": "2014-10-05T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Truffaut er Gud, og her har du beviset."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2506_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4180"
+    },
+    {
+      "eventID": "1107",
+      "title": "Tirsdagsfilm: Att Angöra en Brygga",
+      "startAt": "2014-10-07T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Har du noensinne prøvd å legge til ved en brygge med en seilebåt? Det er ikke alltid like lett."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2452_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4131"
+    },
+    {
+      "eventID": "1108",
+      "title": "Byttemarked med Framtiden i våre hender",
+      "startAt": "2014-10-08T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Har du lyst på noe nytt og stilig i klesskapet ditt? Eller har du plassmangel på grunn av ting du ikke lenger bruker? Endelig er det duket for et byttemarked på Studentersamfundet i samarbeid med Framtiden i våre hender!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2511_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4158"
+    },
+    {
+      "eventID": "1109",
+      "title": "Sgrow",
+      "startAt": "2014-10-10T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Sgrow [sgrō] er en elektronisk duo bestående av Vilde Nupen på vokal, og Kristoffer Lislegaard på elektronikk og barytongitar. De har laget musikk sammen siden 2009, og debuterte i mars 2013 med EP’en ”Sgrow”, til gode anmeldelser i både norsk og utenlandsk presse."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2479_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4156"
+    },
+    {
+      "eventID": "1110",
+      "title": "Basementrave",
+      "startAt": "2014-10-11T19:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Glad i electronica? For å korte ned på ventetiden frem mot Elektrosamfundet så lager vi Basementrave i Bodegaen!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2505_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4179"
+    },
+    {
+      "eventID": "1111",
+      "title": "The Pinkertons",
+      "startAt": "2014-10-11T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "The Pinkertons er kjent for energiske liveopptredener, noe som blant annet har ført til plass på Øya-programmet for 2014 og en invitasjon til \"TheCubical Presents\" i Liverpool. De spiller rock & roll med referanser til blues, spagettiwesterns og god gammel popmusikk."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2489_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4166"
+    },
+    {
+      "eventID": "1112",
+      "title": "Søndagsfilm: Calamari Union",
+      "startAt": "2014-10-12T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Denne filmen er muligens den beste filmen til Aki Kaurismäki, Finlands største regissør."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2451_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4130"
+    },
+    {
+      "eventID": "1113",
+      "title": "Sonder Jazz Quartett",
+      "startAt": "2014-10-16T19:30:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Kom og nyt en kveld med fengende, akustisk jazz!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2455_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4134"
+    },
+    {
+      "eventID": "1114",
+      "title": "Slutface",
+      "startAt": "2014-10-18T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Stavangerske Slutface er skitten indieskranglete pop-rock. Som et sintere Wombats eller et mer funky Savages blander de britisk pop-rock og New-Wave, legger til en dose amerikansk vestkyst- garage og blir dermed den perfekte oppvarmingen til søndagens fylleangst."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2490_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4167"
+    },
+    {
+      "eventID": "1115",
+      "title": "Søndagsfilm: The Kid",
+      "startAt": "2014-10-19T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Denne filmen er et av filmhistoriens største mesterverk."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2461_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4140"
+    },
+    {
+      "eventID": "1116",
+      "title": "Bokstavelig Talt: Litterær Diskusjon",
+      "startAt": "2014-10-22T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "DEBATE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Dragvolls ypperste litteraturvitere åpner sin kollokviegruppe for hvermann og diskuterer høstens bøker i Bokstavelig talt: Litterær diskusjon i Biblioteket på Studentersamfundet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2275_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4120"
+    },
+    {
+      "eventID": "1117",
+      "title": "Goylem Space Klezmer",
+      "startAt": "2014-10-23T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Nå har du sjansen til å oppleve fengende klezmermusikk på Samfundet!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2460_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4139"
+    },
+    {
+      "eventID": "1118",
+      "title": "Speakeasy & The Hunkydorys",
+      "startAt": "2014-10-24T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Fredag 24. Oktober kommer Speakeasy til Trondheim for å ha sin debutkonsert på Knaus."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2480_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4157"
+    },
+    {
+      "eventID": "1119",
+      "title": "Billie Van",
+      "startAt": "2014-10-25T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 90,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Om du ikke har fått med deg hvem Billie Van er enda, er det på høy tid."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2500_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4174"
+    },
+    {
+      "eventID": "1120",
+      "title": "Blåtime",
+      "startAt": "2014-10-25T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Blåtime er beviset på at selv høsten kan være varm! Er du glad i lun, mystisk og stemningsfull musikk i samme gate som Bon Iver og Sigur Ròs? Da bør du ta turen på Knaus lørdag 1.november."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2494_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4171"
+    },
+    {
+      "eventID": "1121",
+      "title": "Søndagsfilm: Only Lovers Left Alive",
+      "startAt": "2014-10-26T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Filmen som prøver å fange følelsen av kjedsomhet vi så ofte føler når vi blir utsatt for nok en vampyrfilm."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2466_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4145"
+    },
+    {
+      "eventID": "1122",
+      "title": "Vin & Vinyl",
+      "startAt": "2014-10-30T18:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Vi slår til med nok en helaften med Vin & Vinyl, etter stor suksess tidligere. I Biblioteket blir det en hyggekveld av de sjeldne, hvor du kan nyte både rødt og hvitt i godt lag, med din beste vinyl på platespilleren. Ta med deg plater fra din egen samling og DJen vil snurre dem for deg! La deg bli inpsirert av andres smak: Det er Vin & Vinyl i Biblioteket!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2399_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4125"
+    },
+    {
+      "eventID": "1123",
+      "title": "Strå",
+      "startAt": "2014-11-01T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Strå er en melodisk folk-pop duo med røtter i høstens mest stemningsfulle sjangre, nemlig blues og jazz. I sommer har de blant annet opptrådt på Molde Jazzfestival og Kongsberg Jazzfestival, og nå er de endelig klare for Trondheims deiligste høstscene; Knaus."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2492_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4170"
+    },
+    {
+      "eventID": "1124",
+      "title": "Søndagsfilm: Der Himmel über Berlin",
+      "startAt": "2014-11-02T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Wim Wenders og Peter Handke skaper enorm filmkunst med litt hjelp av han karen som spilte Hitler."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2462_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4141"
+    },
+    {
+      "eventID": "1125",
+      "title": "Tirsdagsfilm: Idioterne",
+      "startAt": "2014-11-04T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Har du hatt lyst til å løpe naken i bilveien og oppføre deg som en komplett idiot? Da er denne filmen en ypperlig inspirasjonskilde."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2448_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4127"
+    },
+    {
+      "eventID": "1126",
+      "title": "Casa Murilo",
+      "startAt": "2014-11-08T21:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 90,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Det Norsk/Engelske rockebandet Casa Murilo har for lengst slått røtter i Norge med sine superfengende låter og energiske opptredener. I oktober slipper de en ny skive, og i november kan du oppleve de live på studentersamfundet!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2501_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4175"
+    },
+    {
+      "eventID": "1127",
+      "title": "Sherpa",
+      "startAt": "2014-11-08T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Sherpa er fra Bergen, og noe helt eget. Musikken er en energisk miks av roots og hiphop med et slør av indie - en dansbar og utadvent musikkoplevelse."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2491_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4169"
+    },
+    {
+      "eventID": "1128",
+      "title": "Søndagsfilm: Kirikou et la Sorcière",
+      "startAt": "2014-11-09T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Verdens minste menneske spaserer ut av sin mors mage og sier “Mitt navn er Kirikou!” Slik starter denne franske animasjonsfilmen, som tar oss med på Kirikous reise gjennom det mangfoldige vestafrikanske landskapet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2469_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4148"
+    },
+    {
+      "eventID": "1129",
+      "title": "Bokstavelig Talt: Litterær Diskusjon",
+      "startAt": "2014-11-12T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "DEBATE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Dragvolls ypperste litteraturvitere åpner sin kollokviegruppe for hvermann og diskuterer høstens bøker i Bokstavelig talt: Litterær diskusjon i Biblioteket på Studentersamfundet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2275_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4121"
+    },
+    {
+      "eventID": "1130",
+      "title": "Lumikide",
+      "startAt": "2014-11-14T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Lumikide kommer til Knaus den 14. november sjarmere oss, og for få oss til å danse inn vinteren."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2484_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4161"
+    },
+    {
+      "eventID": "1131",
+      "title": "Søndagsfilm: Fanny och Alexander",
+      "startAt": "2014-11-16T18:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Fanny och Alexander er kanskje en av de beste og mest kjente nordiske filmer gjennom tidene. Kom til Storsalen og finn ut hvorfor."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2470_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4149"
+    },
+    {
+      "eventID": "1132",
+      "title": "Tirsdagsfilm: Le Mari de la Coiffeuse",
+      "startAt": "2014-11-18T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "PRESENTATIONS",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Dersom du går ut etter denne visning uten romantiske kjærlighetssommerfugler i magen og i hele resten av kroppen, er vel i bunn og grunn alt håp ute."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2463_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4142"
+    },
+    {
+      "eventID": "1133",
+      "title": "Vin & Vinyl",
+      "startAt": "2014-11-20T18:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Vi slår til med nok en helaften med Vin & Vinyl, etter stor suksess tidligere. I Biblioteket blir det en hyggekveld av de sjeldne, hvor du kan nyte både rødt og hvitt i godt lag med din beste vinyl på platespilleren. Ta med deg plater fra din egen samling og DJen vil snurre dem for deg! La deg bli inpsirert av andres smak: Det er Vin & Vinyl i Biblioteket!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2399_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4126"
+    },
+    {
+      "eventID": "1134",
+      "title": "Bokassa",
+      "startAt": "2014-11-22T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Powertrioen Bokassa spiller selverklært stonerpunk! De blander elementer fra stoner-rocken ispedd farten og energien til nittitallspunken. Gjør deg klar for en heftig og hard kveld på Knaus!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2495_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4172"
+    },
+    {
+      "eventID": "1139",
+      "title": "Samfundsmøte: Norges våpeneksport",
+      "startAt": "2014-09-20T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 40,
+      "categoryID": "DEBATE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Norsk våpenindustri og eksport, - om krig og fred og sånn."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2541_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4186"
+    },
+    {
+      "eventID": "1140",
+      "title": "Barren Womb (Support: Hymn)",
+      "startAt": "2014-09-26T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 70,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Barren Womb er minimalisme utført av maksimalister. Det er røff og skranglete støyrock spilt av kun to stykker, en på skinn og den andre på strenger. 26. september kommer de til Samfundet for å få veggene i Klubben til å riste."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2528_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4194"
+    },
+    {
+      "eventID": "1141",
+      "title": "Jazzbox: One Trick Pony & Mad Men- tema",
+      "startAt": "2014-10-02T18:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 40,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Har du noen gang drømt om å dra ut med dine venner på et utested hvor musikken som spilles hele kvelden er live og ikke playback? Nå tenker vi ikke på \"harry\" danseband eller sing-a-long, men stilig jazzete baksgrunnsmusikk, slik som det var før i tiden."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2509_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4182"
+    },
+    {
+      "eventID": "1142",
+      "title": "Demotape-konkurranse (Lørdag)",
+      "startAt": "2014-10-04T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Vil du spille på en av Norges mest spennende scener? Nå har du muligheten!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2508_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4181"
+    },
+    {
+      "eventID": "1143",
+      "title": "Green Sky Accident: Bestillingsverk",
+      "startAt": "2014-10-23T18:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Som et av semesterets høydepunkt har vi bestilt et musikkverk av Green Sky Accident. Et bestillingsverk løfter konsertopplevelsen til nye høyder ved at et band blir utfordret til å komponere et stykke musikk hvor de kombinerer nytt materiale med gammelt i nye vrier og sammensetninger. Denne kombinasjonen gjør at akkurat denne konsertopplevelsen blir unik og kan kun sees denne kvelden! Green Sky Accident har tatt utfordringen, og vil gi deg en opplevelse du sent kommer til å glemme."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2516_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4188"
+    },
+    {
+      "eventID": "1144",
+      "title": "Veronica Maggio [UTSOLGT]",
+      "startAt": "2014-10-31T18:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 220,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Etter en fantastisk sommer med mange minnerike festivalopptredener, er det nå klart at en av Sveriges største artister legger ut på en omfattende turné i Skandinavia i høst. Hun har den siste tiden spilt store festivaler og arenaer og vil nå ta en runde kun for fansen, på mindre scener for å komme nærmere publikum igjen. 31. oktober kommer hun til Storsalen!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2527_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4193"
+    },
+    {
+      "eventID": "1146",
+      "title": "Thea & The Wild",
+      "startAt": "2014-09-19T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Den norsk-britiske Oslojenta Thea Glenton Raknes fikk en pangstart på solokarrieren som Thea & The Wild med P3-listing av begge de første singlene hennes Cry Sometimes og Hots For You i 2013. Samme år ble hun booket til både by:larm, Øyafestivalen og Hovefestivalen."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2530_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4197"
+    },
+    {
+      "eventID": "1147",
+      "title": "I Was A King",
+      "startAt": "2014-10-10T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 100,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Egersund-bandet I Was A King slo virkelig gjennom med debutalbumet I Was A King i 2009. Singelen «Norman Bleik» ble lista på P3 og albumet ble hyllet av kritikerne. Siden den gang har det bare gått oppover for bandet, og vi er stolte over å kunne invitere til Konsert i Klubben denne høsten."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2532_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4199"
+    },
+    {
+      "eventID": "1148",
+      "title": "Highasakite [FÅ BILLETTER IGJEN]",
+      "startAt": "2014-10-18T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 230,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Etter at Highasakite slapp albumet 'Silent Treatment' i februar har de blitt et av Norges aller mest populære band. Så godt som hele lanseringsturnéen i februar var utsolgt, og albumet har ligget på øverste halvdel av VG-lista siden det ble utgitt. Hele 2 uker tilbrakte bandet på førsteplass, og Silent Treatment var det mest solgte norske albumet i årets første kvartal. Det skulle kanskje også bare mangle, ettersom albumet var det mest kritikerroste her i landet på mange, mange år."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2529_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4196"
+    },
+    {
+      "eventID": "1149",
+      "title": "Susanne Sundfør",
+      "startAt": "2014-11-14T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 290,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Det begynner å bli en stund siden man sist kunne oppleve Susanne Sundfør på scenen her i Norge, om man ser bort fra sommerens flotte gjesteopptredener med Röyksopp og Robyn på noen av verdens største festivalscener. Midt i ferdigstillingen av sitt fjerde studioalbum tar hun seg nå tid til å gjøre en eksklusiv miniturné, for å opprettholde kontakten med publikum og kjenne på samspillet som oppstår når man spiller live."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2536_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4203"
+    },
+    {
+      "eventID": "1150",
+      "title": "Susanne Sundfør",
+      "startAt": "2014-11-14T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 290,
+      "categoryID": "MUSIC",
+      "descriptions": [],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2535_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4202"
+    },
+    {
+      "eventID": "1154",
+      "title": "The Lionheads",
+      "startAt": "2014-10-11T20:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "The Lionheads fyller Klubben med store gitarlinjer, svevende synther og melodiøs vokal denne høstkvelden i oktober."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2537_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4204"
+    },
+    {
+      "eventID": "1155",
+      "title": "Junk Machine",
+      "startAt": "2014-11-15T21:59:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Junk Machine ble til i de sene nattetimer etter stengetid på Landmark, Bergen Kunsthall, hvor alle bandets medlemmer jobber. Startet å pusle med låtideene til vokalist Daniel Thornhill og straks var Junk Machine født"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2543_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4208"
+    },
+    {
+      "eventID": "1156",
+      "title": "Styrets supperåd",
+      "startAt": "2014-09-17T15:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Styret serverer suppe til alle medlemmer av Studentersamfundet! Kom til biblioteket kl 17 for gratis mat. Gjør det."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2544_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4209"
+    },
+    {
+      "eventID": "1158",
+      "title": "Samfundsmøte: Studentenes rusbruk",
+      "startAt": "2014-09-13T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 40,
+      "categoryID": "DEBATE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Hva kjennetegner rusvanene til dagens studenter? Hvilke helsemessige og økonomiske konsekvenser kan rusbruk og avhengighet ha?"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2548_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4216"
+    },
+    {
+      "eventID": "1159",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-09-16T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4218"
+    },
+    {
+      "eventID": "1160",
+      "title": "Collegefest",
+      "startAt": "2014-09-19T19:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 50,
+      "categoryID": "NIGHTLIFE",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Hvordan hadde Samfundet sett ut om det ikke hadde blitt bygget i Trondheim men i det store Amerika? Og hvordan hadde det vært om de sosiale gruppene ikke var inndelt i QUAKere, BIere, dragvollinger og gløsinger men jocks, cheerleaders, nerder, geeks, emoer og vampyrer? Den 19. april arrangerer vi collegefest i amerikansk stil med femkamp og wrestlingshow i Storsalen for å teste ut nettopp dette!"
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2549_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4228"
+    },
+    {
+      "eventID": "1161",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-09-23T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4219"
+    },
+    {
+      "eventID": "1162",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-09-30T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4220"
+    },
+    {
+      "eventID": "1163",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-10-07T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4221"
+    },
+    {
+      "eventID": "1164",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-10-14T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4222"
+    },
+    {
+      "eventID": "1165",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-10-21T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4223"
+    },
+    {
+      "eventID": "1166",
+      "title": "CALIBAN SESSIONS 2014",
+      "startAt": "2014-10-25T19:30:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 200,
+      "categoryID": "MUSIC",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Caliban Sessions gjeste i år igjen Storsalen. I år er band som Black Debbath, Tugboat, El Doom & The Born Electric, Sweden og Det Glade Vanvidd med den eksplosive minifestivalen, så det er bare å merke av 25. oktober i kalenderen allerede nå."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/2547_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4213"
+    },
+    {
+      "eventID": "1167",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-10-28T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4224"
+    },
+    {
+      "eventID": "1168",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-11-04T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4225"
+    },
+    {
+      "eventID": "1169",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-11-11T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4226"
+    },
+    {
+      "eventID": "1170",
+      "title": "Tirsdagsquiz",
+      "startAt": "2014-11-18T17:00:00.000Z",
+      "placeName": "Studentersamfundet",
+      "address": "Elgeseter gate 1",
+      "latitude": 63.422634,
+      "longitude": 10.394697,
+      "ageLimit": 18,
+      "price": 0,
+      "categoryID": "OTHER",
+      "descriptions": [
+        {
+          "language": "nb",
+          "text": "Edgar har lange tradisjoner for å arrangere den prestisjetunge Tirsdagsquizen. Det blir nok en gang triviell kappestrid og måling av intellektuell kapasitet."
+        }
+      ],
+      "isRecommended": false,
+      "imageURL": "http://www.samfundet.no/upload/images/690_950_300.jpg",
+      "eventURL": "http://www.samfundet.no/arrangement/vis/4227"
+    }
+  ]
+}
