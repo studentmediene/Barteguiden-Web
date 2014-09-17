@@ -1,14 +1,15 @@
 <section class="events">
     <article class="panel panel-default" ng-repeat="event in events | orderBy:'startAt' | filter: query | filter: chosenCategory">
       <header class="panel-heading event-header">
-        <img class="img-responsive" style="height:25px;" ng-src="images/{{event.categoryID}}.png"/>
-        <h3 class="panel-title">{{event.title}}</h3>
+        <img class="img-responsive pull-left" style="height:30px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
+        <h3 class="panel-title"> {{event.title}}</h3>
       </header>
       <div class="panel-body">
         <img class="img-responsive" src="{{event.imageURL}}">
         <p>{{event.descriptions[0].text}}</p>
-        <p><strong>Tid og sted:</strong> <time>{{event.startAt | date:'EEEE d. MMMM y kl. HH:mm'}}</time> på {{event.placeName}}</p>
-        <p><strong>Pris:</strong> {{event.price}} kr</span></p>
+        <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
+        <strong>Sted:</strong> {{event.placeName}} </br>
+        <strong>Pris:</strong> {{event.price | isFreeEvent}}</span></p>
       </div>
     </article>
 </section>
