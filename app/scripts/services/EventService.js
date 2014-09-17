@@ -13,5 +13,5 @@ angular.module('barteguidenWebApp.services')
       getEvent: function(id) {
         return $http.get(baseURL + 'events/' + id);
       }
-    }
+    };
   });
