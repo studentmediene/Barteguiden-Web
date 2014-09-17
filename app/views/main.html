@@ -1,5 +1,5 @@
 <section class="events">
-    <article class="panel panel-default" ng-repeat="event in events | orderBy:'startAt' | filter: query | filter: chosenCategory">
+    <article class="panel panel-default" ng-repeat="event in events | orderBy:'startAt' | filter: query | filter: {categoryID: chosenCategory}">
       <header class="panel-heading event-header">
         <img class="img-responsive pull-left" style="height:30px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
         <h3 class="panel-title"> {{event.title}}</h3>
