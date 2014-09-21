@@ -1,0 +1,15 @@
+<article>
+  <header class="page-header">
+    <img class="img-responsive pull-left" style="height:30px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
+    <h2> {{event.title}}</h2>
+  </header>
+  <img class="img-responsive" src="{{event.imageURL}}">
+  <p>{{event.descriptions[0].text}}</p>
+  <p>
+    <strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
+    <strong>Sted:</strong> {{event.placeName}} </br>
+    <strong>Pris:</strong> {{event.price | isFreeEvent}}</span> </br>
+    <strong>Aldersgrense:</strong> {{event.ageLimit}} år</br>
+    <strong>Link:</strong> {{event.eventURL}}
+  </p>
+</article>

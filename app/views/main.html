@@ -2,7 +2,7 @@
     <article class="panel panel-default" ng-repeat="event in events | orderBy:'startAt' |filter:query">
       <header class="panel-heading event-header">
         <img class="img-responsive pull-left" style="height:30px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
-        <h3 class="panel-title"> {{event.title}}</h3>
+        <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3 class="panel-title"> {{event.title}}</h3></a>
       </header>
       <div class="panel-body">
         <img class="img-responsive" src="{{event.imageURL}}">
