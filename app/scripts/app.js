@@ -23,6 +23,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'google-maps',
     'barteguidenWebApp.controllers',
     'barteguidenWebApp.filters',
     'barteguidenWebApp.services',
