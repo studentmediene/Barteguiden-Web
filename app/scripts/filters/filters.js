@@ -9,12 +9,38 @@ angular.module('barteguidenWebApp.filters')
         return 'Gratis';
       }
       else if(price == undefined) {
-        return 'Har ikke pris';
+        return 'Pris ikke oppgitt';
       }
       else {
         return price.toString() + ' kr';
       }
     };
 
-  });
+})
+
+        .filter('priceFilter', function() {
+            return function(events, wantedPrice) {
+                var filtered = [];
+
+                if(wantedPrice === 'allEvents') {
+                    return events;
+                }
+
+                for(var i = 0; i < events.length; i++) {
+                    var event = events[i];
+                    var eventPrice = 'paidEvents';
+
+                    if(event.price === 0 || event.price === null) {
+                        eventPrice = 'freeEvents';
+                    }
+                    if(eventPrice === wantedPrice) {
+                        filtered.push(event);
+                    }
+
+                }
+
+                return filtered;
+
+            };
+        });
 
