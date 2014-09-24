@@ -23,6 +23,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'google-maps',
     'barteguidenWebApp.controllers',
     'barteguidenWebApp.filters',
     'barteguidenWebApp.services',
@@ -37,6 +38,10 @@ angular
       .when('/om', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/arrangement/:id/:slug?', {
+        templateUrl: 'views/event.html',
+        controller: 'EventCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -1,6 +1,6 @@
 <div class="btn-toolbar" role="toolbar" ng-init=" eventPrice = 'allEvents' ">
     <div class="btn-group pull-right">
-    <button type="button>" class="btn btn-default btn-xs" ng-click="resetFilter()"> Vis alle </button>
+    <button type="button" class="btn btn-default btn-xs" ng-click="resetFilter()"> Vis alle </button>
     </div>
 
     <div class="btn-group pull-right">
@@ -29,20 +29,19 @@
     </div>
 </div>
 <section class="events">
-    <article class="panel panel-default" ng-repeat="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filter: {categoryID: chosenCategory} | filter: {ageLimit: ageLimit} | priceFilter:eventPrice )">
+    <article class="panel panel-default" ng-repeat="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filter: {categoryID: chosenCategory} | filter: {ageLimit: ageLimit} | filterByPrice:eventPrice )">
       <header class="panel-heading event-header">
         <img class="img-responsive pull-left" style="height:30px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
         <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
-
-          <h3 class="panel-title"> {{event.title}}</h3>
+        <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3 class="panel-title"> {{event.title}}</h3></a>
       </header>
       <div class="panel-body">
         <img class="img-responsive" src="{{event.imageURL}}">
         <p>{{event.descriptions[0].text}}</p>
         <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
         <strong>Sted:</strong> {{event.placeName}} </br>
-        <strong>Pris:</strong> {{event.price | isFreeEvent}}</span></p>
+        <strong>Pris:</strong> {{event.price | isFreeEvent}}</p>
       </div>
     </article>
-    <div ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </div>
+    <p ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </p>
 </section>
