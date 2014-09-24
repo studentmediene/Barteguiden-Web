@@ -18,32 +18,77 @@ angular.module('barteguidenWebApp.filters')
 
 })
 
+
+    //TODO - make code better - repetitive
         .filter('filterByPrice', function() {
-            return function(events, wantedPrice) {
+            return function(events, wantedPrices) {
                 var filtered = [];
 
-                if(wantedPrice === 'allEvents') {
+                if(wantedPrices.length === 0) {
                     return events;
                 }
 
                 for(var i = 0; i < events.length; i++) {
-                    var event = events[i];
-                    var eventPrice = 'paidEvents';
+                    var eventPrice = events[i].price;
 
-                    // TODO not sure if unknown(null) prices should be filtered as "free" or not
-                    if(event.price === 0) {
-                        eventPrice = 'freeEvents';
+                    if(eventPrice > 0 || eventPrice === null) {
+                        eventPrice = -1; //-1 means paid event, 0 is free
+                        // has to be done due to different input
                     }
-                    if(eventPrice === wantedPrice) {
-                        filtered.push(event);
+
+                    for(var j = 0; j < wantedPrices.length; j++) {
+                        if(wantedPrices[j].price === eventPrice) {
+                            filtered.push(events[i]);
+                        }
                     }
 
                 }
 
                 return filtered;
-
             };
         })
+
+    .filter('filterByCategory', function() {
+        return function(events, wantedCategories) {
+            var filtered = [];
+
+            if(wantedCategories.length === 0) {
+                return events;
+            }
+
+            for(var i = 0; i < events.length; i++) {
+                for(var j = 0; j < wantedCategories.length; j++) {
+                    if(wantedCategories[j].id === events[i].categoryID) {
+                        filtered.push(events[i]);
+                    }
+                }
+            }
+
+            return filtered;
+
+
+        };
+    })
+
+    .filter('filterByAgeLimit', function() {
+        return function(events, wantedAges) {
+            var filtered = [];
+
+            if(wantedAges.length === 0) {
+                return events;
+            }
+
+            for(var i = 0; i < events.length; i++) {
+                for(var j = 0; j < wantedAges.length; j++) {
+                    if(wantedAges[j].id === events[i].ageLimit) {
+                        filtered.push(events[i]);
+                    }
+                }
+            }
+
+            return filtered;
+        };
+    })
 
   .filter('slugify', function() {
     return function(text) {

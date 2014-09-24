@@ -1,35 +1,25 @@
-<div class="btn-toolbar" role="toolbar" ng-init=" eventPrice = 'allEvents' ">
+<div class="btn-toolbar" role="toolbar" ng-init="showFilterOptions()">
     <div class="btn-group pull-right">
     <button type="button" class="btn btn-default btn-xs" ng-click="resetFilter()"> Vis alle </button>
     </div>
 
     <div class="btn-group pull-right">
-        <button type="button" class="btn btn-default btn-xs" ng-click="eventPrice = 'freeEvents'">Gratis</button>
-        <button type="button" class="btn btn-default btn-xs" ng-click="eventPrice = 'paidEvents'">Betalt</button>
+        <button type="button" class="btn btn-default btn-xs"  ng-repeat="priceOption in priceOptions" ng-click="clickOption(priceOption, chosenPrices)" ng-class="{active: isActive(priceOption, chosenPrices)}">{{priceOption.name}}</button>
 
+    </div>
+
+    <div class="btn-group pull-right">
+        <button type="button" class="btn btn-default btn-xs"  ng-repeat="ageOption in ageLimitOptions" ng-click="clickOption(ageOption, chosenAges)" ng-class="{active: isActive(ageOption, chosenAges)}">{{ageOption.name}}</button>
 
     </div>
     <div class="btn-group pull-right">
-        <button type="button" class="btn btn-default btn-xs" ng-click="ageLimit = 0">Ingen aldersgrense</button>
-        <button type="button" class="btn btn-default btn-xs" ng-click="ageLimit = 18">18+</button>
-        <button type="button" class="btn btn-default btn-xs" ng-click="ageLimit = 20">20+</button>
-
+        <button type="button" class="btn btn-default btn-xs"  ng-repeat="categoryOption in categoryOptions" ng-click="clickOption(categoryOption, chosenCategories)" ng-class="{active: isActive(categoryOption, chosenCategories)}"><img height="17px" ng-src="images/{{categoryOption.id}}.png"></button>
 
     </div>
-    <div class="btn-group pull-right">
-        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'DEBATE'" ><img class="img-responsive pull-left" src="images/DEBATE.png" width="18px"></button>
-        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'EXHIBITIONS'" ><img class="img-responsive pull-left" src="images/EXHIBITIONS.png" width="18px"></button>
-        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'MUSIC'" ><img class="img-responsive pull-left" src="images/MUSIC.png" width="18px"></button>
-        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'NIGHTLIFE'" ><img class="img-responsive pull-left" src="images/NIGHTLIFE.png" width="18px"></button>
-        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'PERFORMANCES'" ><img class="img-responsive pull-left" src="images/PERFORMANCES.png" width="18px"></button>
-        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'PRESENTATIONS'" ><img class="img-responsive pull-left" src="images/PRESENTATIONS.png" width="18px"></button>
-        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'SPORT'" ><img class="img-responsive pull-left" src="images/SPORT.png" width="18px"></button>
-        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'OTHER'" ><img class="img-responsive pull-left" src="images/OTHER.png" width="18px"></button>
 
-    </div>
 </div>
 <section class="events">
-    <article class="panel panel-default" ng-repeat="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filter: {categoryID: chosenCategory} | filter: {ageLimit: ageLimit} | filterByPrice:eventPrice )">
+    <article class="panel panel-default" ng-repeat="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices )">
       <header class="panel-heading event-header">
         <img class="img-responsive pull-left" style="height:30px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
         <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
