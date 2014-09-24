@@ -8,15 +8,43 @@ angular.module('barteguidenWebApp.filters')
       if(price === 0) {
         return 'Gratis';
       }
-      else if(price === undefined || price === null) {
-        return 'Har ikke pris';
+      else if(price == undefined || price == null) {
+          return 'Pris ikke oppgitt';
       }
       else {
         return price.toString() + ' kr';
       }
     };
 
-  })
+})
+
+        .filter('filterByPrice', function() {
+            return function(events, wantedPrice) {
+                var filtered = [];
+
+                if(wantedPrice === 'allEvents') {
+                    return events;
+                }
+
+                for(var i = 0; i < events.length; i++) {
+                    var event = events[i];
+                    var eventPrice = 'paidEvents';
+
+                    // TODO not sure if unknown(null) prices should be filtered as "free" or not
+                    if(event.price === 0) {
+                        eventPrice = 'freeEvents';
+                    }
+                    if(eventPrice === wantedPrice) {
+                        filtered.push(event);
+                    }
+
+                }
+
+                return filtered;
+
+            };
+        })
+
   .filter('slugify', function() {
     return function(text) {
       return text.toString().toLowerCase()

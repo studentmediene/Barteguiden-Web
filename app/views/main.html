@@ -1,7 +1,38 @@
+<div class="btn-toolbar" role="toolbar" ng-init=" eventPrice = 'allEvents' ">
+    <div class="btn-group pull-right">
+    <button type="button" class="btn btn-default btn-xs" ng-click="resetFilter()"> Vis alle </button>
+    </div>
+
+    <div class="btn-group pull-right">
+        <button type="button" class="btn btn-default btn-xs" ng-click="eventPrice = 'freeEvents'">Gratis</button>
+        <button type="button" class="btn btn-default btn-xs" ng-click="eventPrice = 'paidEvents'">Betalt</button>
+
+
+    </div>
+    <div class="btn-group pull-right">
+        <button type="button" class="btn btn-default btn-xs" ng-click="ageLimit = 0">Ingen aldersgrense</button>
+        <button type="button" class="btn btn-default btn-xs" ng-click="ageLimit = 18">18+</button>
+        <button type="button" class="btn btn-default btn-xs" ng-click="ageLimit = 20">20+</button>
+
+
+    </div>
+    <div class="btn-group pull-right">
+        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'DEBATE'" ><img class="img-responsive pull-left" src="images/DEBATE.png" width="18px"></button>
+        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'EXHIBITIONS'" ><img class="img-responsive pull-left" src="images/EXHIBITIONS.png" width="18px"></button>
+        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'MUSIC'" ><img class="img-responsive pull-left" src="images/MUSIC.png" width="18px"></button>
+        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'NIGHTLIFE'" ><img class="img-responsive pull-left" src="images/NIGHTLIFE.png" width="18px"></button>
+        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'PERFORMANCES'" ><img class="img-responsive pull-left" src="images/PERFORMANCES.png" width="18px"></button>
+        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'PRESENTATIONS'" ><img class="img-responsive pull-left" src="images/PRESENTATIONS.png" width="18px"></button>
+        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'SPORT'" ><img class="img-responsive pull-left" src="images/SPORT.png" width="18px"></button>
+        <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'OTHER'" ><img class="img-responsive pull-left" src="images/OTHER.png" width="18px"></button>
+
+    </div>
+</div>
 <section class="events">
-    <article class="content-wrapper" ng-repeat="event in events | orderBy:'startAt' | filter: query | filter: {categoryID: chosenCategory}">
+    <article class="content-wrapper" ng-repeat="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filter: {categoryID: chosenCategory} | filter: {ageLimit: ageLimit} | filterByPrice:eventPrice )">
       <header class="event-header">
-        <img class="img-responsive pull-left" style="height:40px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
+        <img class="img-responsive pull-left" style="height:30px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
+        <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
         <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
       </header>
       <div class="event-body">
@@ -9,7 +40,8 @@
         <p>{{event.descriptions[0].text}}</p>
         <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
         <strong>Sted:</strong> {{event.placeName}} </br>
-        <strong>Pris:</strong> {{event.price | isFreeEvent}}</span></p>
+        <strong>Pris:</strong> {{event.price | isFreeEvent}}</p>
       </div>
     </article>
+    <p ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </p>
 </section>

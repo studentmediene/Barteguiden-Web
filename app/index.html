@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" ng-init="chosenCategory= ''">
+<html class="no-js">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -29,6 +29,7 @@
         </a>
 
     <div class="container">
+
       <header class="header">
         <nav>
           <ul class="nav nav-pills pull-right">
@@ -41,20 +42,9 @@
             </li>
           </ul>
         </nav>
-
-        <a ng-href="/#"><h2 class="text-muted"><img src="images/barteguiden.png"> Barteguiden</h2></a>
-          <div class="btn-group pull-right">
-                  <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'DEBATE'" ><img class="img-responsive pull-left" src="images/DEBATE.png" width="25px"></button>
-                  <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'EXHIBITIONS'" ><img class="img-responsive pull-left" src="images/EXHIBITIONS.png" width="25px"></button>
-                  <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'MUSIC'" ><img class="img-responsive pull-left" src="images/MUSIC.png" width="25px"></button>
-                  <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'NIGHTLIFE'" ><img class="img-responsive pull-left" src="images/NIGHTLIFE.png" width="25px"></button>
-                  <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'PERFORMANCES'" ><img class="img-responsive pull-left" src="images/PERFORMANCES.png" width="25px"></button>
-                  <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'PRESENTATIONS'" ><img class="img-responsive pull-left" src="images/PRESENTATIONS.png" width="25px"></button>
-                  <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'SPORT'" ><img class="img-responsive pull-left" src="images/SPORT.png" width="25px"></button>
-                  <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'OTHER'" ><img class="img-responsive pull-left" src="images/OTHER.png" width="25px"></button>
-                  <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = ''"> Vis alle </button>
-
-          </div>
+        <a ng-href="#/">
+          <h1 class="text-muted"><img src="images/barteguiden.png"> Barteguiden</h1>
+        </a>
       </header>
 
       <div ng-view=""></div>
@@ -63,6 +53,7 @@
         <p><span class="glyphicon glyphicon-heart"></span> fra Studentmediene i Trondheim AS</p>
       </div>
     </div>
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -110,18 +101,19 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/lodash/dist/lodash.underscore.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/event.js"></script>
-        <script src="scripts/services/EventService.js"></script>
-        <script src="scripts/filters/filters.js"></script>
-        <!-- endbuild -->
-</body>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/event.js"></script>
+    <script src="scripts/services/EventService.js"></script>
+    <script src="scripts/filters/filters.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>
+

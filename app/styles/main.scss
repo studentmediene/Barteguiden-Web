@@ -33,7 +33,7 @@ body {
 /* Custom page header */
 .header {
   /* Make the masthead heading the same height as the navigation */
-  h2 {
+  h1 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
@@ -79,7 +79,7 @@ body {
 
 .content-wrapper{
   background-color: rgba(255, 255, 255, 1);
-  padding: 15px 30px 15px 30px;
+  padding: 5px 30px 15px 30px;
   border: 2px solid darken(#1A9CCA, 3%);
   // box-shadow: 0px 0px 20px darken(#fff, 20%);
   border-radius: 10px;

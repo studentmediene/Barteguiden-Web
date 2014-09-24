@@ -17,5 +17,10 @@ angular.module('barteguidenWebApp.controllers')
         console.log(data, status, headers);
       });
 
+    $scope.resetFilter = function() {
+        $scope.chosenCategory = '';
+        $scope.ageLimit = '';
+        $scope.eventPrice = 'allEvents';
+    };
 
   });
