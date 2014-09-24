@@ -20,27 +20,39 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+         <a style="position: absolute; top: 20px; right:20px;"class="pull-right" href="https://play.google.com/store/search?q=pub:Studentmediene i Trondheim AS">
+          <img alt="Get it on Google Play" src="/images/android.png"/>
+        </a>
+        <a style="position: absolute; top: 80px; right:20px;"class="pull-right" href="https://itunes.apple.com/no/app/barteguiden/id648457095?l=nb&mt=8">
+          <img alt="Get it on AppStore"
+       src="/images/appstore.svg" />
+        </a>
+
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Hjem</a></li>
-          <li><a ng-href="#/om">Om</a></li>
-          <li><a ng-href="#">Kontakt</a></li>
-          <li>
-            <div class="form-group">
-              <input ng-model="query" type="text" class="form-control" placeholder="Søk">
-            </div>
-          </li>
-        </ul>
-        <h3 class="text-muted"><img src="images/barteguiden.png"> Barteguiden</h3>
-</div>
+
+      <header class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li><a ng-href="#/om">Om</a></li>
+            <li><a ng-href="#">Kontakt</a></li>
+            <li>
+              <div class="form-group">
+                <input ng-model="query" type="text" class="form-control" placeholder="Søk">
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <a ng-href="#/">
+          <h1 class="text-muted"><img src="images/barteguiden.png"> Barteguiden</h1>
+        </a>
+      </header>
 
       <div ng-view=""></div>
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> fra Studentmediene i Trondheim AS</p>
       </div>
-        </div>
+    </div>
 
 
 
@@ -55,6 +67,10 @@
        ga('send', 'pageview');
     </script>
 
+    <script type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -66,7 +82,7 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="https://code.angularjs.org/1.2.23/i18n/angular-locale_no.js"></script>
+    <script src="bower_components/angular-i18n/angular-locale_nb-no.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
@@ -85,12 +101,8 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?sensor=false">
-    </script>
     <script src="bower_components/lodash/dist/lodash.underscore.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
-
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -104,3 +116,4 @@
     <!-- endbuild -->
   </body>
 </html>
+
