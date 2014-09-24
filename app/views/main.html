@@ -1,10 +1,10 @@
 <section class="events">
-    <article class="panel panel-default" ng-repeat="event in events | orderBy:'startAt' | filter: query | filter: {categoryID: chosenCategory}">
-      <header class="panel-heading event-header">
-        <img class="img-responsive pull-left" style="height:30px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
-        <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3 class="panel-title"> {{event.title}}</h3></a>
+    <article class="content-wrapper" ng-repeat="event in events | orderBy:'startAt' | filter: query | filter: {categoryID: chosenCategory}">
+      <header class="event-header">
+        <img class="img-responsive pull-left" style="height:40px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
+        <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
       </header>
-      <div class="panel-body">
+      <div class="event-body">
         <img class="img-responsive" src="{{event.imageURL}}">
         <p>{{event.descriptions[0].text}}</p>
         <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>

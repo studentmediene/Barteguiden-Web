@@ -20,19 +20,29 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+         <a style="position: absolute; top: 20px; right:20px;"class="pull-right" href="https://play.google.com/store/search?q=pub:Studentmediene i Trondheim AS">
+          <img alt="Get it on Google Play" src="/images/android.png"/>
+        </a>
+        <a style="position: absolute; top: 80px; right:20px;"class="pull-right" href="https://itunes.apple.com/no/app/barteguiden/id648457095?l=nb&mt=8">
+          <img alt="Get it on AppStore"
+       src="/images/appstore.svg" />
+        </a>
+
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Hjem</a></li>
-          <li><a ng-href="#/om">Om</a></li>
-          <li><a ng-href="#">Kontakt</a></li>
-          <li>
-            <div class="form-group">
-              <input ng-model="query" type="text" class="form-control" placeholder="Søk">
-            </div>
-          </li>
-        </ul>
-        <h3 class="text-muted"><img src="images/barteguiden.png"> Barteguiden</h3>
+      <header class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li><a ng-href="#/om">Om</a></li>
+            <li><a ng-href="#">Kontakt</a></li>
+            <li>
+              <div class="form-group">
+                <input ng-model="query" type="text" class="form-control" placeholder="Søk">
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <a ng-href="/#"><h2 class="text-muted"><img src="images/barteguiden.png"> Barteguiden</h2></a>
           <div class="btn-group pull-right">
                   <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'DEBATE'" ><img class="img-responsive pull-left" src="images/DEBATE.png" width="25px"></button>
                   <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = 'EXHIBITIONS'" ><img class="img-responsive pull-left" src="images/EXHIBITIONS.png" width="25px"></button>
@@ -45,7 +55,7 @@
                   <button type="button>" class="btn btn-default btn-xs" ng-click="chosenCategory = ''"> Vis alle </button>
 
           </div>
-      </div>
+      </header>
 
       <div ng-view=""></div>
 
