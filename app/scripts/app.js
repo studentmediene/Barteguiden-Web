@@ -27,7 +27,7 @@ angular
     'barteguidenWebApp.controllers',
     'barteguidenWebApp.filters',
     'barteguidenWebApp.services',
-    'barteguidenWebApp.directives'
+    'barteguidenWebApp.directives',
   ])
   .config(function ($routeProvider) {
     $routeProvider
