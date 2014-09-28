@@ -3,13 +3,13 @@
     <img class="img-responsive pull-left cat-image" ng-src="images/{{event.categoryID}}.png"/>
     <h2> {{event.title}}</h2>
   </header>
-  <img class="img-responsive" src="{{event.imageURL}}">
+  <img class="img-responsive single-evt-image" src="{{event.imageURL}}">
   <p>{{event.descriptions[0].text}}</p>
   <p>
     <strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
     <strong>Sted:</strong> {{event.placeName}} </br>
     <strong>Pris:</strong> {{event.price | isFreeEvent}}</span> </br>
-    <strong>Aldersgrense:</strong> {{event.ageLimit}} år</br>
+    <strong>Aldersgrense:</strong> {{event.ageLimit | isFreeForAll}}</br>
     <strong>Link:</strong> {{event.eventURL}}
   </p>
   <google-map center="map.center" zoom="map.zoom" draggable="true">

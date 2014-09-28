@@ -16,6 +16,12 @@ angular.module('barteguidenWebApp.filters')
       }
     };
 
+}).filter('isFreeForAll', function() {
+  return function(ageLimit) {
+    if(ageLimit == 0)
+      return 'Tillatt for alle';
+    return ageLimit + ' år';
+  };
 })
 
 
