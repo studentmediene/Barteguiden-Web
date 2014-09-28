@@ -21,12 +21,12 @@
 <section class="events">
     <article class="content-wrapper" ng-repeat="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices )">
       <header class="event-header">
-        <img class="img-responsive pull-left" style="height:30px; position: relative; top: -5px; padding-right: 5px;" ng-src="images/{{event.categoryID}}.png"/>
+        <img class="img-responsive pull-left cat-image" ng-src="images/{{event.categoryID}}.png"/>
         <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
         <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
       </header>
       <div class="event-body">
-        <img class="img-responsive" src="{{event.imageURL}}">
+        <img class="img-responsive evt-image" src="{{event.imageURL}}">
         <p>{{event.descriptions[0].text}}</p>
         <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
         <strong>Sted:</strong> {{event.placeName}} </br>
