@@ -24,10 +24,11 @@ angular
     'ngSanitize',
     'ngTouch',
     'google-maps',
+    'angularUtils.directives.dirPagination',
     'barteguidenWebApp.controllers',
     'barteguidenWebApp.filters',
     'barteguidenWebApp.services',
-    'barteguidenWebApp.directives',
+    'barteguidenWebApp.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider

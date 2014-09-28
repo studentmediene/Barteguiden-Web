@@ -13,7 +13,8 @@
     "angular-touch": "~1.2.0",
     "angular-route": "~1.2.0",
     "angular-google-maps": "~1.2.1",
-    "angular-i18n": "~1.2.25"
+    "angular-i18n": "~1.2.25",
+    "angular-utils-pagination": "~0.2.5"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",
@@ -22,7 +23,7 @@
   "appPath": "app",
   "overrides": {
     "angular-i18n": {
-        "main": "angular-locale_nb-no.js"
+      "main": "angular-locale_nb-no.js"
     }
-}
+  }
 }

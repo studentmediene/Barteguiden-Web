@@ -19,7 +19,7 @@
 
 </div>
 <section class="events">
-    <article class="content-wrapper" ng-repeat="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices )">
+    <article class="content-wrapper" dir-paginate="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices) | itemsPerPage: 20 ">
       <header class="event-header">
         <img class="img-responsive pull-left cat-image" ng-src="images/{{event.categoryID}}.png"/>
         <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
@@ -34,4 +34,9 @@
       </div>
     </article>
     <p ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </p>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <dir-pagination-controls template-url="/bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+      </div>
+    </div/>
 </section>
