@@ -4,7 +4,7 @@
     <a ng-href="{{event.eventURL}}"><h2> {{event.title}}</h2></a>
   </header>
   <img class="img-responsive single-evt-image" src="{{event.imageURL}}">
-  <p class="lead">{{event.descriptions[0].text}}</p>
+  <p>{{event.descriptions[0].text}}</p>
 
   <p>
     <strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
