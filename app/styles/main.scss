@@ -38,7 +38,7 @@ body {
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
-    color: #000;
+    color: $gray-dark;
     font-family: "Bevan";
   }
 }
@@ -104,4 +104,28 @@ body {
 
 .single-evt-image {
   margin-bottom: 10px;
+}
+
+header > nav > ul > li > a {
+  color: $gray-dark;
+}
+
+.align {
+  margin-top: 12px;
+}
+
+.nav-pills > li a:hover {
+  background-color: white;
+}
+
+.appstore {
+  position: absolute;
+  top: 80px;
+  right:20px;
+}
+
+.play {
+  position: absolute;
+  top: 20px;
+  right:20px;
 }

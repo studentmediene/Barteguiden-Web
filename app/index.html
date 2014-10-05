@@ -20,19 +20,13 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-         <a style="position: absolute; top: 20px; right:20px;"class="pull-right" href="https://play.google.com/store/search?q=pub:Studentmediene i Trondheim AS">
-          <img alt="Get it on Google Play" src="/images/android.png"/>
-        </a>
-        <a style="position: absolute; top: 80px; right:20px;"class="pull-right" href="https://itunes.apple.com/no/app/barteguiden/id648457095?l=nb&mt=8">
-          <img alt="Get it on AppStore"
-       src="/images/appstore.svg" />
-        </a>
+
 
     <div class="container">
 
       <header class="header">
         <nav>
-          <ul class="nav nav-pills pull-right">
+          <ul class="nav nav-pills pull-right align hover">
             <li><a ng-href="#/om">Om</a></li>
             <li><a ng-href="#">Kontakt</a></li>
             <li>
@@ -45,13 +39,20 @@
         <a ng-href="#/">
           <h1 class="text-muted"><img src="images/barteguiden.png"> Barteguiden</h1>
         </a>
+        <a class="play pull-right" href="https://play.google.com/store/search?q=pub:Studentmediene i Trondheim AS">
+          <img alt="Get it on Google Play" src="/images/android.png"/>
+        </a>
+        <a class="appstore pull-right" href="https://itunes.apple.com/no/app/barteguiden/id648457095?l=nb&mt=8">
+          <img alt="Get it on AppStore"
+       src="/images/appstore.svg" />
+        </a>
       </header>
 
       <div ng-view=""></div>
 
-      <div class="footer">
+      <footer class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> fra Studentmediene i Trondheim AS</p>
-      </div>
+      </footer>
     </div>
 
 
