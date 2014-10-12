@@ -102,5 +102,16 @@ angular.module('barteguidenWebApp.filters')
         .replace()
         .replace(/-+$/, '');         // Trim - from end of text
     };
+  })
+  .filter('cutText', function() {
+    return function(text, n) {
+      var shortText = text.substr(0, n);
+
+      if (/^\S/.test(text.substr(n))) {
+        var shortText = shortText.replace(/\s+\S*$/, "");
+        return shortText === text ? shortText : shortText + '[...]';
+      }
+      return shortText === text ? shortText : shortText + '[...]';
+    };
   });
 
