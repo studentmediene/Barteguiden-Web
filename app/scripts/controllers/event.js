@@ -19,14 +19,14 @@ angular.module('barteguidenWebApp.controllers')
       },
       zoom: 13,
       draggable: 'true'
-    }
+    };
     $scope.marker = {
       id:1,
       coords: {
         latitude: 63.422634,
         longitude:10.394697
       }
-    }
+    };
     EventService.getEventById(id)
       .success(function(data) {
         //just a hack to emulate the api
@@ -43,7 +43,7 @@ angular.module('barteguidenWebApp.controllers')
                 latitude: e.latitude,
                 longitude:e.longitude
               }
-            }
+            };
             $scope.map = {
               center: {
                 latitude: e.latitude,
@@ -51,7 +51,7 @@ angular.module('barteguidenWebApp.controllers')
               },
               zoom: 14,
               draggable: 'true'
-            }
+            };
 
           }
         }
@@ -60,6 +60,4 @@ angular.module('barteguidenWebApp.controllers')
       .error(function(data, status, headers) {
         console.log(data, status, headers);
       });
-
-
   });
