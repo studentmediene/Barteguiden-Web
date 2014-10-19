@@ -137,8 +137,16 @@ header > nav > ul > li > a {
   right:20px;
 }
 
+.appImg {
+  width: 120px;
+}
+
 .btn-toolbar {
   padding-bottom: 20px;
+  .btn {
+    background-color: #ffffff;
+  }
 }
+
 
 
