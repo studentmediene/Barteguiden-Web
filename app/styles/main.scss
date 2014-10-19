@@ -100,7 +100,13 @@ h2, h3, h4 {
 .cat-image {
   height:30px;
   position: relative;
-  top: -5px;
+  top: -2px;
+  padding-right: 10px;
+}
+
+.cat-image-single {
+  height:35px;
+  position: relative;
   padding-right: 10px;
 }
 

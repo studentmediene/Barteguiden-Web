@@ -8,10 +8,10 @@ angular.module('barteguidenWebApp.services')
     return {
       getAllEvents: function() {
         //just get the json file locally now
-        return $http.get('events/events.json');
+        return $http.get(baseURL + 'events');
       },
       getEventById: function(id) {
-        return $http.get('events/events.json');
+        return $http.get(baseURL + 'events/' + id.toString());
       }
     };
   });
