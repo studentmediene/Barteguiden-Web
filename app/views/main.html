@@ -37,7 +37,7 @@
       </header>
       <div class="event-body">
         <img class="img-responsive evt-image" src="{{event.imageURL}}">
-        <p>{{event.descriptions[0].text}}</p>
+        <p>{{event.descriptions[0].text | cutText: 285}}</p>
         <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
         <strong>Sted:</strong> {{event.placeName}} </br>
         <strong>Pris:</strong> {{event.price | isFreeEvent}}</p>

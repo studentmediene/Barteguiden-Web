@@ -8,7 +8,7 @@ angular.module('barteguidenWebApp.filters')
       if(price === 0) {
         return 'Gratis';
       }
-      else if(price == undefined || price == null) {
+      else if(price === undefined || price === null) {
           return 'Pris ikke oppgitt';
       }
       else {
@@ -16,86 +16,79 @@ angular.module('barteguidenWebApp.filters')
       }
     };
 
-}).filter('isFreeForAll', function() {
-  return function(ageLimit) {
-    if(ageLimit === 0 || ageLimit === null)
-      return 'Tillatt for alle';
-    return ageLimit + ' år';
-  };
-})
+  })
+  .filter('isFreeForAll', function() {
+    return function(ageLimit) {
+      if(ageLimit === 0 || ageLimit === null) {
+        return 'Tillatt for alle';
+      }
+      return ageLimit + ' år';
+    };
+  })
+  .filter('filterByPrice', function() {
+    return function(events, wantedPrices) {
+      var filtered = [];
 
+      if(wantedPrices.length === 0) {
+        return events;
+      }
 
-    //TODO - make code better - repetitive
-        .filter('filterByPrice', function() {
-            return function(events, wantedPrices) {
-                var filtered = [];
+      for(var i = 0; i < events.length; i++) {
+        var eventPrice = events[i].price;
 
-                if(wantedPrices.length === 0) {
-                    return events;
-                }
+        if(eventPrice > 0 || eventPrice === null) {
+          eventPrice = -1; //-1 means paid event, 0 is free
+          // has to be done due to different input
+        }
 
-                for(var i = 0; i < events.length; i++) {
-                    var eventPrice = events[i].price;
+        for(var j = 0; j < wantedPrices.length; j++) {
+          if(wantedPrices[j].price === eventPrice) {
+            filtered.push(events[i]);
+          }
+        }
 
-                    if(eventPrice > 0 || eventPrice === null) {
-                        eventPrice = -1; //-1 means paid event, 0 is free
-                        // has to be done due to different input
-                    }
+      }
 
-                    for(var j = 0; j < wantedPrices.length; j++) {
-                        if(wantedPrices[j].price === eventPrice) {
-                            filtered.push(events[i]);
-                        }
-                    }
+      return filtered;
+    };
+  })
+  .filter('filterByCategory', function() {
+    return function(events, wantedCategories) {
+      var filtered = [];
 
-                }
+      if(wantedCategories.length === 0) {
+        return events;
+      }
 
-                return filtered;
-            };
-        })
+      for(var i = 0; i < events.length; i++) {
+        for(var j = 0; j < wantedCategories.length; j++) {
+          if(wantedCategories[j].id === events[i].categoryID) {
+            filtered.push(events[i]);
+          }
+        }
+      }
+      return filtered;
+    };
+  })
+  .filter('filterByAgeLimit', function() {
+    return function(events, wantedAges) {
+      var filtered = [];
 
-    .filter('filterByCategory', function() {
-        return function(events, wantedCategories) {
-            var filtered = [];
+      if(wantedAges.length === 0) {
+        return events;
+      }
 
-            if(wantedCategories.length === 0) {
-                return events;
-            }
+      for(var i = 0; i < events.length; i++) {
+        for(var j = 0; j < wantedAges.length; j++) {
+          if(wantedAges[j].id === events[i].ageLimit) {
+            filtered.push(events[i]);
+          }
+        }
+      }
 
-            for(var i = 0; i < events.length; i++) {
-                for(var j = 0; j < wantedCategories.length; j++) {
-                    if(wantedCategories[j].id === events[i].categoryID) {
-                        filtered.push(events[i]);
-                    }
-                }
-            }
-
-            return filtered;
-
-
-        };
-    })
-
-    .filter('filterByAgeLimit', function() {
-        return function(events, wantedAges) {
-            var filtered = [];
-
-            if(wantedAges.length === 0) {
-                return events;
-            }
-
-            for(var i = 0; i < events.length; i++) {
-                for(var j = 0; j < wantedAges.length; j++) {
-                    if(wantedAges[j].id === events[i].ageLimit) {
-                        filtered.push(events[i]);
-                    }
-                }
-            }
-
-            return filtered;
-        };
-    })
-
+      return filtered;
+    };
+  })
   .filter('slugify', function() {
     return function(text) {
       return text.toString().toLowerCase()
@@ -108,6 +101,17 @@ angular.module('barteguidenWebApp.filters')
         .replace(/^-+/, '')          // Trim - from start of text
         .replace()
         .replace(/-+$/, '');         // Trim - from end of text
+    };
+  })
+  .filter('cutText', function() {
+    return function(text, n) {
+      var shortText = text.substr(0, n);
+
+      if (/^\S/.test(text.substr(n))) {
+        var shortText = shortText.replace(/\s+\S*$/, "");
+        return shortText === text ? shortText : shortText + '[...]';
+      }
+      return shortText === text ? shortText : shortText + '[...]';
     };
   });
 
