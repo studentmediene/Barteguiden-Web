@@ -37,12 +37,14 @@ angular
         controller: 'MainCtrl'
       })
       .when('/om', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        templateUrl: 'views/about.html'
       })
       .when('/arrangement/:id/:slug?', {
         templateUrl: 'views/event.html',
         controller: 'EventCtrl'
+      })
+      .when('/kontakt', {
+        templateUrl: 'views/contact.html'
       })
       .otherwise({
         redirectTo: '/'

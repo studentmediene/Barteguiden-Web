@@ -26,7 +26,7 @@
         <nav>
           <ul class="nav nav-pills pull-right align hover">
             <li><a ng-href="#/om">Om</a></li>
-            <li><a ng-href="#">Kontakt</a></li>
+            <li><a ng-href="#/kontakt">Kontakt</a></li>
             <li>
               <div class="form-group">
                 <input style="margin-left: 5px;" ng-model="query" type="text" class="form-control" placeholder="Søk">
@@ -110,12 +110,10 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/event.js"></script>
     <script src="scripts/services/EventService.js"></script>
-    <script src="scripts/filters/filters.js"></script>
-    <script src="scripts/controllers/calendar.js"></script>
-    <script src="scripts/controllers/calendarOptions.js"></script>
+    <script src="scripts/filters/appFilters.js"></script>
+    <script src="scripts/filters/eventFilters.js"></script>
     <!-- endbuild -->
   </body>
 </html>
