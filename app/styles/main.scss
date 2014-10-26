@@ -25,21 +25,24 @@ body {
 
 
 header {
-  background: #f5f5f5;
 
 }
 
 .content {
-  margin: 110px;
+  margin-top: 120px;
 }
 
 .header-fixed {
-  padding-top: 10px;
-  height: 100px;
+  background: #f5f5f5;
+  padding-top: 15px;
+  height: 90px;
   width: 100%;
   position: fixed;
   top: 0px;
   z-index: 1;
+  box-shadow: 0 6px 4px -4px #999999;
+
+
 
 }
 
@@ -60,7 +63,7 @@ header {
     line-height: 80px;
     padding-bottom: 19px;
     .img-responsive {
-      max-width: 320px;
+      max-width: 250px;
     }
   }
 }
@@ -108,15 +111,21 @@ h2, h3, h4 {
   border: 0px solid darken(#1A9CCA, 3%);
   border-radius: 10px;
   margin-bottom: 20px;
-  box-shadow: 3px 3px 25px #888888;
+  box-shadow: 0px 0px 10px #999999;
 
 }
 
 .calendar-wrapper {
-  background-color: lighten(#000, 66.7%);
+  background-color: #e0e0e0;
+  box-shadow: inset 0px 0px 5px #999999;
   padding: 5px 30px 15px 30px;
   border-radius: 10px;
   margin-bottom: 20px;
+
+  h2 {
+    text-shadow: 1px 1px 2px #777777;
+    padding-bottom: 5px;
+  }
 }
 
 .glyphicon-star {
@@ -190,17 +199,20 @@ header > nav > ul > li > a {
 }
 
 .btn-group-vertical {
-  width: 132px;
+  width: auto;
   border-width: 0px;
   .btn {
     text-align: left;
   }
-.btn-group-justified {
-  width: 132px;
-  .btn {
-    width: 66px;
-}
-}
+  .btn-group-justified {
+    width: auto;
+    .btn {
+      width: auto;
+    }
+  }
+  .filter-menu {
+    position: fixed;
+  }
 }
 
 

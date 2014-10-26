@@ -20,9 +20,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-      <header class="header header-fixed">
+    <header class="header header-fixed">
+
+      <div class="container">
         <div class="row">
+
           <div class="col-md-8 col-md-offset-2">
             <nav>
               <ul class="nav nav-pills pull-right align hover">
@@ -38,19 +40,20 @@
                 <h1><img class="img-responsive" src="images/barteguidenlogotext.png"></h1>
               </a>
             </nav>
-
           </div>
         </div>
-      </header>
-      <div class="content">
-        <ng-view></ng-view>
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <footer class="footer">
-              <p><span class="glyphicon glyphicon-heart"></span> fra Studentmediene i Trondheim AS</p>
-            </footer>
+      </div>
+    </header>
 
-          </div>
+    <div class="content">
+        <ng-view></ng-view>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <footer class="footer">
+            <p><span class="glyphicon glyphicon-heart"></span> fra Studentmediene i Trondheim AS</p>
+          </footer>
         </div>
       </div>
     </div>
