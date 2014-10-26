@@ -28,31 +28,36 @@
 
 
   <div class="col-md-8 col-md-pull-2">
-    <section class="events">
-      <article class="content-wrapper" dir-paginate="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices) | itemsPerPage: 20 ">
-        <header class="event-header">
-          <img class="img-responsive pull-left cat-image" ng-src="images/{{event.categoryID}}.png"/>
-          <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
-          <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
-        </header>
-        <div class="event-body">
-          <img class="img-responsive evt-image" src="{{event.imageURL}}">
-          <p>{{event.descriptions[0].text | cutText: 285}}</p>
-          <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
-            <strong>Sted:</strong> {{event.placeName}} </br>
-            <strong>Pris:</strong> {{event.price | isFreeEvent}}</p>
-        </div>
-      </article>
+
+    <section>
+      <section class="calendar-wrapper" ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : pageSize - (pageSize * currentPage - filteredEvents.length) | groupByDate">
+        <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
+        <article class="content-wrapper" ng-repeat="event in events">
+          <header class="event-header">
+            <img class="img-responsive pull-left cat-image" ng-src="images/{{event.categoryID}}.png"/>
+            <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
+            <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
+          </header>
+          <div class="event-body">
+            <img class="img-responsive evt-image" src="{{event.imageURL}}">
+            <p>{{event.descriptions[0].text | cutText: 285}}</p>
+            <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
+              <strong>Sted:</strong> {{event.placeName}} </br>
+              <strong>Pris:</strong> {{event.price | isFreeEvent}}</p>
+          </div>
+        </article>
+      </section>
       <p ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </p>
+    </section>
+    <section>
       <div class="row">
-        <div class="col-md-">
-          <dir-pagination-controls template-url="/bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+        <div class="col-md-8 col-md-offset-2">
+          <pagination total-items="filteredEvents.length" ng-model="currentPage" items-per-page="pageSize" previous-text="Forrige" next-text="Neste" max-size="5" boundary-links="true" first-text="Første" last-text="Siste" rotate="false" ng-change="scroll()"></pagination>
         </div>
       </div>
     </section>
   </div>
-
-
-
-
 </div>
+
+
+

@@ -1,4 +1,6 @@
 'use strict';
+/*global _:false */
+
 
 
 
@@ -66,4 +68,23 @@ angular.module('barteguidenWebApp.filters')
 
       return filtered;
     };
-  });
+  })
+  .filter('groupByDate', ['filterStabilize', function(stabilize) {
+    return stabilize(function(events) {
+      return _.groupBy(events, function(e) {
+        var date = new Date(e.startAt);
+        date.setHours(0,0,0,0);
+        return date.toJSON();
+      });
+    });
+
+  }])
+  .filter('paginate', ['filterStabilize',function(stabilize) {
+    return stabilize(function(events, start, end) {
+      if (events) {
+        return events.slice(start, end);
+      }
+      return;
+    });
+  }]);
+
