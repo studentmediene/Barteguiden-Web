@@ -13,12 +13,9 @@ angular.module('barteguidenWebApp.controllers')
     $scope.pageSize = 20;
     $scope.currentPage = 1;
 
-    EventService.getAllEvents()
-      .success(function(data) {
-        $scope.events = data.events;
-      })
-      .error(function(data, status, headers) {
-        console.log(data, status, headers);
+    EventService.getEvents()
+      .then(function(data) {
+        $scope.events = data;
       });
 
     $scope.showFilterOptions = function() {

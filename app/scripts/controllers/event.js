@@ -8,8 +8,8 @@
  * Controller of the barteguidenWebApp
  */
 angular.module('barteguidenWebApp.controllers')
-  .controller('EventCtrl', function ($scope, EventService, $route) {
-    var id = $route.current.params.id;
+  .controller('EventCtrl', ['$scope', 'EventService', '$routeParams', function ($scope, EventService, $routeParams) {
+    var id = $routeParams.id;
 
     //seems like we need some initial data before we get event data from the service.
     $scope.map = {
@@ -28,7 +28,7 @@ angular.module('barteguidenWebApp.controllers')
       }
     };
     EventService.getEventById(id)
-      .success(function(data) {
+      .then(function(data) {
         var e = data;
         $scope.event = e;
         $scope.marker = {
@@ -46,8 +46,5 @@ angular.module('barteguidenWebApp.controllers')
           zoom: 14,
           draggable: 'true'
         };
-      })
-      .error(function(data, status, headers) {
-        console.log(data, status, headers);
       });
-  });
+  }]);
