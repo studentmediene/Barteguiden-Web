@@ -24,7 +24,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'google-maps',
-    'angularUtils.directives.dirPagination',
+    'ui.bootstrap',
     'barteguidenWebApp.controllers',
     'barteguidenWebApp.filters',
     'barteguidenWebApp.services',
