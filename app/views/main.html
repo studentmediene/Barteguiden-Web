@@ -13,9 +13,10 @@
         <button type="button" class="btn btn-default btn-sm" ng-click="resetFilter()"> Vis alle </button>
     </div>
   </div>
+  <datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
 </section>
 <section>
-  <section class="calendar-wrapper" ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : pageSize - (pageSize * currentPage - filteredEvents.length) | groupByDate">
+  <section class="calendar-wrapper" ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices | filterByDate: dt) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : pageSize - (pageSize * currentPage - filteredEvents.length) | groupByDate">
     <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
     <article class="content-wrapper" ng-repeat="event in events">
       <header class="event-header">

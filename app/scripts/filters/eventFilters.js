@@ -69,6 +69,18 @@ angular.module('barteguidenWebApp.filters')
       return filtered;
     };
   })
+  .filter('filterByDate', function() {
+    return function(events, date) {
+      if(date === undefined) {
+        return events;
+      }
+      return _.filter(events, function(e) {
+        var eDate = new Date(e.startAt);
+        eDate.setHours(0,0,0,0);
+        return new Date(date).valueOf() === eDate.valueOf();
+      });
+    };
+  })
   .filter('groupByDate', ['filterStabilize', function(stabilize) {
     return stabilize(function(events) {
       return _.groupBy(events, function(e) {
