@@ -18,8 +18,29 @@ $font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-seri
 
 /* Space out content a bit */
 body {
+  margin: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+
+header {
+  background: #f5f5f5;
+
+}
+
+.content {
+  margin: 110px;
+}
+
+.header-fixed {
+  padding-top: 10px;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -63,9 +84,7 @@ h2, h3, h4 {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+
 
   /* Remove the padding we set earlier */
   .header,
@@ -135,12 +154,16 @@ header > nav > ul > li > a {
   position: absolute;
   top: 80px;
   right:20px;
+  z-index: 2;
+
 }
 
 .play {
   position: absolute;
   top: 20px;
   right:20px;
+  z-index: 2;
+
 }
 
 .appImg {
@@ -156,6 +179,21 @@ header > nav > ul > li > a {
 
 .angular-google-map {
   padding-bottom: 15px;
+
+}
+
+.btn-group-vertical {
+  width: 132px;
+  border-width: 0px;
+  .btn {
+    text-align: left;
+  }
+.btn-group-justified {
+  width: 132px;
+  .btn {
+    width: 66px;
+}
+}
 }
 
 

@@ -1,38 +1,58 @@
-<section class="filters">
-  <div class="btn-toolbar" role="toolbar" ng-init="showFilterOptions()">
-    <div class="btn-group">
-        <button type="button" class="btn btn-default btn-sm"  ng-repeat="categoryOption in categoryOptions" ng-click="clickOption(categoryOption, chosenCategories)" ng-class="{active: isActive(categoryOption, chosenCategories)}"><img height="15px" ng-src="images/{{categoryOption.id}}.png"> {{categoryOption.name}}</button>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-default btn-sm"  ng-repeat="priceOption in priceOptions" ng-click="clickOption(priceOption, chosenPrices)" ng-class="{active: isActive(priceOption, chosenPrices)}"> {{priceOption.name}}</button>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-default btn-sm"  ng-repeat="ageOption in ageLimitOptions" ng-click="clickOption(ageOption, chosenAges)" ng-class="{active: isActive(ageOption, chosenAges)}"> {{ageOption.name}}</button>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-default btn-sm" ng-click="resetFilter()"> Vis alle </button>
-    </div>
+
+
+<div class="row">
+
+  <div class="col-md-2">
+    Tid her
   </div>
-</section>
-<section class="events">
-    <article class="content-wrapper" dir-paginate="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices) | itemsPerPage: 20 ">
-      <header class="event-header">
-        <img class="img-responsive pull-left cat-image" ng-src="images/{{event.categoryID}}.png"/>
-        <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
-        <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
-      </header>
-      <div class="event-body">
-        <img class="img-responsive evt-image" src="{{event.imageURL}}">
-        <p>{{event.descriptions[0].text | cutText: 285}}</p>
-        <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
-        <strong>Sted:</strong> {{event.placeName}} </br>
-        <strong>Pris:</strong> {{event.price | isFreeEvent}}</p>
+  <div class="col-md-2 col-md-push-8">
+
+    <section class="filters"resize>
+      <div role="toolbar" ng-init="showFilterOptions()">
+        <div ng-class="{'btn-group-vertical': style(), 'btn-group-horizontal': !style()}">
+          <button type="button" class="btn btn-default btn-sm"  ng-repeat="categoryOption in categoryOptions" ng-click="clickOption(categoryOption, chosenCategories)" ng-class="{active: isActive(categoryOption, chosenCategories)}"><img height="15px" ng-src="images/{{categoryOption.id}}.png"> {{categoryOption.name}}</button>
+        </div>
+        <div class="btn-group btn-group-justified">
+          <div class="btn-group" ng-repeat="priceOption in priceOptions"><button type="button" class="btn btn-default btn-sm" ng-click="clickOption(priceOption, chosenPrices)" ng-class="{active: isActive(priceOption, chosenPrices)}"> {{priceOption.name}}</button></div>
+        </div>
+        <div ng-class="{'btn-group-vertical': style(), 'btn-group-horizontal': !style()}">
+          <button type="button" class="btn btn-default btn-sm"  ng-repeat="ageOption in ageLimitOptions" ng-click="clickOption(ageOption, chosenAges)" ng-class="{active: isActive(ageOption, chosenAges)}"> {{ageOption.name}}</button>
+        </div>
+        <div ng-class="{'btn-group-vertical': style(), 'btn-group-horizontal': !style()}">
+          <button type="button" class="btn btn-default btn-sm" ng-click="resetFilter()"> Vis alle </button>
+        </div>
       </div>
-    </article>
-    <p ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </p>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <dir-pagination-controls template-url="/bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+    </section>
+
+  </div>
+
+
+  <div class="col-md-8 col-md-pull-2">
+    <section class="events">
+      <article class="content-wrapper" dir-paginate="event in filteredEvents =  (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices) | itemsPerPage: 20 ">
+        <header class="event-header">
+          <img class="img-responsive pull-left cat-image" ng-src="images/{{event.categoryID}}.png"/>
+          <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
+          <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
+        </header>
+        <div class="event-body">
+          <img class="img-responsive evt-image" src="{{event.imageURL}}">
+          <p>{{event.descriptions[0].text | cutText: 285}}</p>
+          <p><strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
+            <strong>Sted:</strong> {{event.placeName}} </br>
+            <strong>Pris:</strong> {{event.price | isFreeEvent}}</p>
+        </div>
+      </article>
+      <p ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </p>
+      <div class="row">
+        <div class="col-md-">
+          <dir-pagination-controls template-url="/bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+        </div>
       </div>
-    </div/>
-</section>
+    </section>
+  </div>
+
+
+
+
+</div>
