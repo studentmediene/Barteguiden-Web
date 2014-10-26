@@ -93,6 +93,13 @@ h2, h3, h4 {
 
 }
 
+.calendar-wrapper {
+  background-color: lighten(#000, 66.7%);
+  padding: 5px 30px 15px 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 .glyphicon-star {
   color: red;
 }

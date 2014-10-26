@@ -8,7 +8,11 @@
  * Controller of the barteguidenWebApp
  */
 angular.module('barteguidenWebApp.controllers')
-  .controller('MainCtrl', function ($scope, EventService) {
+  .controller('MainCtrl', ['$scope', 'EventService',function ($scope, EventService) {
+
+    $scope.pageSize = 20;
+    $scope.currentPage = 1;
+
     EventService.getAllEvents()
       .success(function(data) {
         $scope.events = data.events;
@@ -62,4 +66,8 @@ angular.module('barteguidenWebApp.controllers')
       }
       return false;
     };
-  });
+
+    $scope.scroll = function() {
+      window.scrollTo(0, 150);
+    };
+  }]);

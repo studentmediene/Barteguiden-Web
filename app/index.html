@@ -46,7 +46,7 @@
         </a>
       </header>
 
-      <div ng-view=""></div>
+      <ng-view></ng-view>
 
       <footer class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> fra Studentmediene i Trondheim AS</p>
@@ -103,7 +103,7 @@
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <script src="bower_components/angular-i18n/angular-locale_nb-no.js"></script>
-    <script src="bower_components/angular-utils-pagination/dirPagination.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -111,9 +111,10 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/event.js"></script>
-    <script src="scripts/services/EventService.js"></script>
+    <script src="scripts/services/eventService.js"></script>
     <script src="scripts/filters/appFilters.js"></script>
     <script src="scripts/filters/eventFilters.js"></script>
+    <script src="scripts/services/stabilizeFilter.js"></script>
     <!-- endbuild -->
   </body>
 </html>
