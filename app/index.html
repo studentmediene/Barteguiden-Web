@@ -16,59 +16,63 @@
   </head>
   <body ng-app="barteguidenWebApp">
     <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <header class="header header-fixed">
+      <div class="container">
 
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2">
+            <a ng-href="#/">
+              <h1><img class="img-responsive" src="images/barteguidenlogotext.png"></h1>
+            </a>
+          </div>
+
+          <div class="col-md-5">
+            <nav>
+              <ul class="nav nav-pills" style="padding-top:10px;">
+                <li><a ng-href="#/om">Om</a></li>
+                <li><a ng-href="#/kontakt">Kontakt</a></li>
+                <div class="form-group pull-right">
+                  <input ng-model="query" type="text" class="form-control" placeholder="Søk">
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="container">
-      <header class="header">
-        <nav>
-          <ul class="nav nav-pills pull-right align hover">
-            <li><a ng-href="#/om">Om</a></li>
-            <li><a ng-href="#/kontakt">Kontakt</a></li>
-            <li>
-              <div class="form-group">
-                <input style="margin-left: 5px;" ng-model="query" type="text" class="form-control" placeholder="Søk">
-              </div>
-            </li>
-          </ul>
-        </nav>
-        <a ng-href="#/">
-          <h1><img class="img-responsive" src="images/barteguidenlogotext.png"></h1>
-        </a>
-        <a class="play pull-right" href="https://play.google.com/store/search?q=pub:Studentmediene i Trondheim AS">
-          <img class="appImg" alt="Get it on Google Play" src="/images/android.png"/>
-        </a>
-        <a class="appstore pull-right" href="https://itunes.apple.com/no/app/barteguiden/id648457095?l=nb&mt=8">
-          <img class="appImg" alt="Get it on AppStore"
-       src="/images/appstore.svg" />
-        </a>
-      </header>
 
-      <ng-view></ng-view>
+      <div class="content">
+        <ng-view></ng-view>
+      </div>
 
-      <footer class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> fra Studentmediene i Trondheim AS</p>
-      </footer>
-
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <footer class="footer">
+            <p><span class="glyphicon glyphicon-heart"></span> fra Studentmediene i Trondheim AS</p>
+          </footer>
+        </div>
+      </div>
     </div>
 
 
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+      ga('create', 'UA-XXXXX-X');
+      ga('send', 'pageview');
     </script>
 
     <script type="text/javascript"
-          src="https://maps.googleapis.com/maps/api/js?sensor=false">
+            src="https://maps.googleapis.com/maps/api/js?sensor=false">
     </script>
 
     <!-- build:js(.) scripts/oldieshim.js -->
@@ -115,6 +119,7 @@
     <script src="scripts/filters/appFilters.js"></script>
     <script src="scripts/filters/eventFilters.js"></script>
     <script src="scripts/services/stabilizeFilter.js"></script>
+    <script src="scripts/directives/windowDirective.js"></script>
     <!-- endbuild -->
   </body>
 </html>
