@@ -1,8 +1,13 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-$body-bg: #f5f5f5;
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,400,100,300);
 $font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+
+$header-height: 120px;
+
+//colours
+$body-bg: #f5f5f5;
+$barteguiden-blue: #1A9CCA;
 
 
 // bower:scss
@@ -29,13 +34,13 @@ header {
 }
 
 .content {
-  margin-top: 120px;
+  margin-top: $header-height + 10px;
 }
 
 .header-fixed {
-  background: #f5f5f5;
+  background: $body-bg;
   padding-top: 15px;
-  height: 90px;
+  height: $header-height;
   width: 100%;
   position: fixed;
   top: 0px;
@@ -103,12 +108,13 @@ h2, h3, h4 {
 
 }
 
-.angular-google-map-container { height: 400px; }
-
+.angular-google-map-container {
+  height: 400px;
+}
 .content-wrapper{
-  background-color: #FFFFFF;
+  background-color: white;
   padding: 5px 30px 15px 30px;
-  border: 0px solid darken(#1A9CCA, 3%);
+  border: 0px solid darken($barteguiden-blue, 3%);
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 10px #999999;
@@ -116,7 +122,7 @@ h2, h3, h4 {
 }
 
 .calendar-wrapper {
-  background-color: #e0e0e0;
+  background-color: #c9c9c9;
   box-shadow: inset 0px 0px 5px #999999;
   padding: 5px 30px 15px 30px;
   border-radius: 10px;
@@ -189,7 +195,7 @@ header > nav > ul > li > a {
 .btn-toolbar {
   padding-bottom: 20px;
   .btn {
-    background-color: #ffffff;
+    background-color: white;
   }
 }
 
@@ -199,19 +205,27 @@ header > nav > ul > li > a {
 }
 
 .btn-group-vertical {
-  width: auto;
+  width: 120px + 2px;
   border-width: 0px;
   .btn {
     text-align: left;
   }
   .btn-group-justified {
-    width: auto;
+    width: 120px;
     .btn {
-      width: auto;
+      width: 120px - 4px;
     }
   }
   .filter-menu {
     position: fixed;
+    top: $header-height + 10px;
+    
+
+  }
+
+  .filter-btn-group {
+
+
   }
 }
 
