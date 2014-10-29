@@ -2,16 +2,39 @@
 
 
 angular.module('barteguidenWebApp.services')
-  .service('EventService', function ($http) {
-    var baseURL = 'http://barteguiden.no/v1/';
-    //$http.get(baseURL + 'events');
+  .factory('EventService', ['$http', '$q', function ($http, $q) {
+    var baseURL = 'http://barteguiden.no/v2/';
+    var cache = [];
+    var cacheById = {};
+
     return {
-      getAllEvents: function() {
-        //just get the json file locally now
-        return $http.get(baseURL + 'events');
-      },
       getEventById: function(id) {
-        return $http.get(baseURL + 'events/' + id.toString());
+        var deferred = $q.defer();
+        // if the event exists in memory, just return it
+        if(cacheById.hasOwnProperty(id)) {
+          deferred.resolve(cacheById[id]);
+        }
+        else {
+          $http.get(baseURL + 'events/' + id.toString()).then(function(response) {
+            cacheById[id] = response.data;
+            deferred.resolve(response.data);
+          });
+        }
+        return deferred.promise;
+
+      },
+      getEvents: function() {
+        var deferred = $q.defer();
+        if(!cache.length) {
+          $http.get(baseURL + 'events').then(function(response) {
+            cache = response.data.events;
+            deferred.resolve(cache);
+          });
+        }
+        else {
+          deferred.resolve(cache);
+        }
+        return deferred.promise;
       }
     };
-  });
+  }]);
