@@ -12,6 +12,7 @@ angular.module('barteguidenWebApp.controllers')
 
     $scope.pageSize = 20;
     $scope.currentPage = 1;
+    $scope.minDate = new Date();
 
     EventService.getEvents()
       .then(function(data) {
@@ -66,5 +67,12 @@ angular.module('barteguidenWebApp.controllers')
 
     $scope.scroll = function() {
       window.scrollTo(0, 150);
+    };
+
+    $scope.resetFilter = function() {
+      $scope.chosenCategories = [];
+      $scope.chosenAges = [];
+      $scope.chosenPrices = [];
+      $scope.dt = undefined;
     };
   }]);
