@@ -40,10 +40,11 @@ angular.module('barteguidenWebApp.filters')
     };
   })
   .filter('cutText', function() {
-    return function(text, n) {
-      if(text === undefined || text === '') {
-        return;
+    return function(obj, n) {
+      if(obj === undefined || obj === null) {
+        return '';
       }
+      var text = obj.text;
       var shortText = text.substr(0, n);
 
       if (/^\S/.test(text.substr(n))) {
