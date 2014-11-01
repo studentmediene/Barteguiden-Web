@@ -9,7 +9,7 @@ angular.module('barteguidenWebApp.filters')
         return 'Gratis';
       }
       else if(price === undefined || price === null) {
-          return 'Pris ikke oppgitt';
+          return 'Ikke oppgitt';
       }
       else {
         return price.toString() + ' kr';
@@ -41,6 +41,9 @@ angular.module('barteguidenWebApp.filters')
   })
   .filter('cutText', function() {
     return function(text, n) {
+      if(text === undefined || text === '') {
+        return;
+      }
       var shortText = text.substr(0, n);
 
       if (/^\S/.test(text.substr(n))) {
