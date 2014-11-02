@@ -17,12 +17,9 @@ angular.module('barteguidenWebApp.directives', []);
 
 angular
   .module('barteguidenWebApp', [
-    'ngAnimate',
-    'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
     'google-maps',
     'ui.bootstrap',
     'barteguidenWebApp.controllers',

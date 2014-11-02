@@ -19,3 +19,11 @@ Clone the repo with
     grunt serve
 
 This might take some time. Now, the site should be available at `http://localhost:9000/`
+
+# Build
+
+Before you build, please comment out ( // ) unnecessary Bootstrap SASS in `bower_components/bootstrap-sass-official/stylesheets/bootstrap/_bootstrap.scss` and remove unnecessary Bootstrap Javascript in `app/index.html`.
+
+    grunt build
+
+The minified files are now in the dist folder.

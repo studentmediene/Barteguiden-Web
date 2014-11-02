@@ -1,21 +1,28 @@
-<article class="content-wrapper">
-  <header>
-    <img class="img-responsive pull-left cat-image-single" ng-src="images/{{event.categoryID}}.png"/>
-    <a ng-href="{{event.eventURL}}"><h2> {{event.title}}</h2></a>
-  </header>
-  <img class="img-responsive single-evt-image" src="{{event.imageURL}}">
-  <p>{{event.descriptions[0].text}}</p>
+<div class="col-md-8 col-md-offset-2">
 
-  <p>
-    <strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
-    <strong>Sted:</strong> {{event.placeName}} </br>
-    <strong>Pris:</strong> {{event.price | isFreeEvent}}</span> </br>
-    <strong>Aldersgrense:</strong> {{event.ageLimit | isFreeForAll}}</br>
+  <article class="content-wrapper">
+    <header>
+      <img class="img-responsive pull-left cat-image-single" ng-src="images/{{event.categoryID}}.png"/>
+      <a ng-href="{{event.eventURL}}"><h2> {{event.title}}</h2></a>
+    </header>
+    <img class="img-responsive single-evt-image" src="{{event.imageURL}}">
+    <p>{{event.descriptions[0].text}}</p>
+    <dl class="dl-horizontal">
+      <dt>Tid:</dt>
+      <dd><time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
+      <dt>Sted:</dt>
+      <dd>{{event.placeName}}</dd>
+      <dt>Pris:</dt>
+      <dd>{{event.price | isFreeEvent}}</dd>
+      <dt>Alder:</dt>
+      <dd>{{event.ageLimit | isFreeForAll}}</dd>
+    </dl>
     <a ng-href="{{event.eventURL}}" target="_blank">{{event.eventURL}}</a>
-  </p>
-  <h3>Kart</h3>
-  <google-map center="map.center" zoom="map.zoom" draggable="true">
-    <marker coords="marker.coords" idkey="marker.id">
-    </marker>
-  </google-map>
-</article>
+    </p>
+    <h3>Kart</h3>
+    <google-map center="map.center" zoom="map.zoom" draggable="true">
+      <marker coords="marker.coords" idkey="marker.id">
+      </marker>
+    </google-map>
+  </article>
+</div>
