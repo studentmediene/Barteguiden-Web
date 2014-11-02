@@ -7,13 +7,17 @@
     </header>
     <img class="img-responsive single-evt-image" src="{{event.imageURL}}">
     <p>{{event.descriptions[0].text}}</p>
-
-    <p>
-      <strong>Tid:</strong> <time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </br>
-      <strong>Sted:</strong> {{event.placeName}} </br>
-      <strong>Pris:</strong> {{event.price | isFreeEvent}}</span> </br>
-      <strong>Aldersgrense:</strong> {{event.ageLimit | isFreeForAll}}</br>
-      <a ng-href="{{event.eventURL}}" target="_blank">{{event.eventURL}}</a>
+    <dl class="dl-horizontal">
+      <dt>Tid:</dt>
+      <dd><time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
+      <dt>Sted:</dt>
+      <dd>{{event.placeName}}</dd>
+      <dt>Pris:</dt>
+      <dd>{{event.price | isFreeEvent}}</dd>
+      <dt>Alder:</dt>
+      <dd>{{event.ageLimit | isFreeForAll}}</dd>
+    </dl>
+    <a ng-href="{{event.eventURL}}" target="_blank">{{event.eventURL}}</a>
     </p>
     <h3>Kart</h3>
     <google-map center="map.center" zoom="map.zoom" draggable="true">

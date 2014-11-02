@@ -1,5 +1,7 @@
 'use strict';
 
+/*global $:false */
+
 /**
  * @ngdoc function
  * @name barteguidenWebApp.controller:MainCtrl
@@ -13,6 +15,10 @@ angular.module('barteguidenWebApp.controllers')
     $scope.pageSize = 20;
     $scope.currentPage = 1;
     $scope.minDate = new Date();
+    $('#sidebar').affix({
+      offset: {
+        top: 0      }
+    });
 
     EventService.getEvents()
       .then(function(data) {
@@ -66,7 +72,7 @@ angular.module('barteguidenWebApp.controllers')
     };
 
     $scope.scroll = function() {
-      window.scrollTo(0, 150);
+      window.scrollTo(0, 50);
     };
 
     $scope.resetFilter = function() {
