@@ -14,7 +14,6 @@ Clone the repo with
 
 `cd` into the directory and run
 
-    cd Barteguiden-Web
     npm install
     bower install
     grunt serve
