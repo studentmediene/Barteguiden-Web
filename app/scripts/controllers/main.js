@@ -53,7 +53,8 @@ angular.module('barteguidenWebApp.controllers')
       $scope.chosenPrices = [];
     };
 
-    $scope.clickOption = function(option, chosenOptionList) {
+    $scope.clickOption = function(option, chosenOptionList, e) {
+      e.currentTarget.blur();
       var index = chosenOptionList.indexOf(option);
       if(index === -1) {
         chosenOptionList.push(option);
@@ -75,7 +76,8 @@ angular.module('barteguidenWebApp.controllers')
       window.scrollTo(0, 50);
     };
 
-    $scope.resetFilter = function() {
+    $scope.resetFilter = function(e) {
+      e.currentTarget.blur();
       $scope.chosenCategories = [];
       $scope.chosenAges = [];
       $scope.chosenPrices = [];
