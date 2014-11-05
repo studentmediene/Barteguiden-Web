@@ -18,7 +18,7 @@
       </div>
     </section>
     <section>
-      <section class="calendar-wrapper" ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices | filterByDate: dt) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : pageSize - (pageSize * currentPage - filteredEvents.length) | groupByDate">
+      <section class="calendar-wrapper" ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices | filterByDate: dt) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : -(pageSize - (pageSize * currentPage - filteredEvents.length)) | groupByDate">
         <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
         <article class="content-wrapper" ng-repeat="event in events">
           <header class="event-header">
