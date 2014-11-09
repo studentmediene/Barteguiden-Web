@@ -1,7 +1,9 @@
 
+
 <div class="row">
   <div class="col-md-8">
-  <section class="hidden-md hidden-lg">
+
+    <section class="hidden-md hidden-lg">
       <div class="well well-sm" role="toolbar" ng-init="showFilterOptions()">
         <div class="btn-group">
           <button type="button" class="btn btn-default btn-sm"  ng-repeat="categoryOption in categoryOptions" ng-click="clickOption(categoryOption, chosenCategories)" ng-class="{active: isActive(categoryOption, chosenCategories)}"><img height="15px" ng-src="images/{{categoryOption.id}}.png"> {{categoryOption.name}}</button>
@@ -45,11 +47,12 @@
     <section>
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <pagination total-items="filteredEvents.length" ng-model="currentPage" items-per-page="pageSize" previous-text="Forrige" next-text="Neste" max-size="4" boundary-links="true" first-text="Første" last-text="Siste" rotate="false" ng-change="scroll()"></pagination>
+          <pagination total-items="filteredEvents.length" ng-model="currentPage" items-per-page="pageSize" previous-text="Forrige" next-text="Neste" max-size="style(420) ? 3 : 0" boundary-links="true" first-text="Første" last-text="Siste" rotate="false" ng-change="scroll()" resize-directive></pagination>
         </div>
       </div>
     </section>
   </div>
+
 
   <div class="col-md-4 hidden-sm hidden-xs">
     <aside class="filters" id="sidebar">
