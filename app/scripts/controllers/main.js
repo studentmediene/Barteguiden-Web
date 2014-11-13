@@ -38,14 +38,14 @@ angular.module('barteguidenWebApp.controllers')
       ];
 
       $scope.ageLimitOptions = [
-        {name: 'Ingen aldersgrense', id: 0},
-        {name: '18+', id: 18},
-        {name: '20+', id: 20}
+        {name: 'Ingen aldersgrense', id: 0, short: 'Alle'},
+        {name: '18+', id: 18, short: '18+'},
+        {name: '20+', id: 20, short: '20+'}
       ];
 
       $scope.priceOptions = [
-        {name: 'Gratis', price: 0},
-        {name: 'Betalt', price: -1}
+        {name: 'Gratis', price: 0, short: '0,-'},
+        {name: 'Betalt', price: -1, short: '$'}
       ];
 
       $scope.chosenCategories = [];
