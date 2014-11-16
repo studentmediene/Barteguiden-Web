@@ -58,8 +58,6 @@ angular.module('barteguidenWebApp.controllers')
       $scope.firstDate = 0;
       $scope.moreThanOneDay = false;
 
-      console.log('CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED');
-
 
       var index = chosenOptionList.indexOf(option);
       if(index === -1) {
@@ -91,7 +89,6 @@ angular.module('barteguidenWebApp.controllers')
       $scope.firstDate = 0;
       $scope.moreThanOneDay = false;
 
-      console.log('CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED');
 
     };
 
@@ -108,6 +105,9 @@ angular.module('barteguidenWebApp.controllers')
 
     $scope.checkIfTooManyAds = function(date) {
       if($scope.firstDate === 0) {
+        $scope.firstDate = date;
+      }
+      if($scope.firstDate > date) {
         $scope.firstDate = date;
       }
       if($scope.firstDate !== date) {
