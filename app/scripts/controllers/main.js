@@ -55,6 +55,12 @@ angular.module('barteguidenWebApp.controllers')
 
     $scope.clickOption = function(option, chosenOptionList, e) {
       e.currentTarget.blur();
+      $scope.firstDate = 0;
+      $scope.moreThanOneDay = false;
+
+      console.log('CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED');
+
+
       var index = chosenOptionList.indexOf(option);
       if(index === -1) {
         chosenOptionList.push(option);
@@ -82,5 +88,31 @@ angular.module('barteguidenWebApp.controllers')
       $scope.chosenAges = [];
       $scope.chosenPrices = [];
       $scope.dt = undefined;
+      $scope.firstDate = 0;
+      $scope.moreThanOneDay = false;
+
+      console.log('CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED ----- CLICKED ---- CLICKED');
+
+    };
+
+    //ads
+
+    $scope.firstDate = 0;
+    $scope.moreThanOneDay = false;
+
+
+    $scope.resetCal = function() {
+      $scope.firstDate = 0;
+      $scope.moreThanOneDay = false;
+    };
+
+    $scope.checkIfTooManyAds = function(date) {
+      if($scope.firstDate === 0) {
+        $scope.firstDate = date;
+      }
+      if($scope.firstDate !== date) {
+        $scope.moreThanOneDay = true;
+      }
+      return (date === $scope.firstDate) && $scope.moreThanOneDay;
     };
   }]);
