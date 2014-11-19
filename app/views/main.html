@@ -19,7 +19,7 @@
 
             <div class="btn-group btn-group-justified">
             <div class="btn-group" ng-repeat="priceOption in priceOptions">
-            <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(priceOption, chosenPrices, $event)" ng-class="{active: isActive(priceOption, chosenPrices)}"> {{priceOption.short}}</button>
+            <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(priceOption, chosenPrices, $event)" ng-class="{active: isActive(priceOption, chosenPrices)}"> <div ng-show="isLargerThan(650)">{{priceOption.name}}</div><div ng-show="!isLargerThan(650)">{{priceOption.short}}</div></button>
           </div>
           </div>
             </div>
@@ -35,7 +35,7 @@
           <div class="btn-group col-xs-3">
             <div class="btn-group btn-group-justified" >
               <div class="btn-group" >
-            <button type="button" class="btn btn-default btn-sm" ng-click="resetFilter($event)"> Vis alle </button>
+            <button type="button" class="btn btn-info btn-sm" ng-click="resetFilter($event)"> Vis alle </button>
           </div>
               </div>
             </div>

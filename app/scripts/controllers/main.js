@@ -45,7 +45,7 @@ angular.module('barteguidenWebApp.controllers')
 
       $scope.priceOptions = [
         {name: 'Gratis', price: 0, short: '0,-'},
-        {name: 'Betalt', price: -1, short: '$'}
+        {name: 'Betalt', price: -1, short: 'kr'}
       ];
 
       $scope.chosenCategories = [];
