@@ -42,7 +42,13 @@
 
             <div class="btn-group btn-group-justified">
             <div class="btn-group" ng-repeat="priceOption in priceOptions">
-            <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(priceOption, chosenPrices, $event)" ng-class="{active: isActive(priceOption, chosenPrices)}"> <div ng-show="isLargerThan(650)">{{priceOption.name}}</div><div ng-show="!isLargerThan(650)">{{priceOption.short}}</div></button>
+            <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(priceOption, chosenPrices, $event)" ng-class="{active: isActive(priceOption, chosenPrices)}">
+              <div ng-show="isLargerThan(650)">{{priceOption.name}}
+              </div>
+              <div ng-show="!isLargerThan(650)"><div ng-show="priceOption === priceOptions[0]">{{priceOption.short}}</div>
+                <i ng-class="priceOption === priceOptions[1] ? 'fa fa-money' : ''"></i>
+              </div>
+            </button>
           </div>
           </div>
             </div>
