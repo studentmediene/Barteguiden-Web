@@ -27,7 +27,7 @@ angular.module('barteguidenWebApp.controllers')
 
     $scope.showFilterOptions = function() {
       $scope.categoryOptions = [
-        {name: 'Debatter', id: 'DEBATE', short: 'Debatter'},
+        {name: 'Debatter', id: 'DEBATE', short: 'Debatt'},
         {name: 'Utstillinger', id: 'EXHIBITIONS', short: 'Utst.'},
         {name: 'Musikk', id: 'MUSIC', short: 'Musikk'},
         {name: 'Uteliv', id: 'NIGHTLIFE', short: 'Uteliv'},

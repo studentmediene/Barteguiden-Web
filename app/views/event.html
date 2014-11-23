@@ -1,4 +1,4 @@
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2 no-pad">
   <article class="content-wrapper">
     <header>
       <img class="img-responsive pull-left cat-image-single" ng-src="images/{{event.categoryID}}.png"/>
@@ -16,7 +16,7 @@
       <dt>Alder:</dt>
       <dd>{{event.ageLimit | isFreeForAll}}</dd>
     </dl>
-    <a ng-href="{{event.eventURL}}" target="_blank">{{event.eventURL}}</a>
+    <a ng-href="{{event.eventURL}}" target="_blank">Link til arrangementet</a>
     <h3>Kart</h3>
     <google-map center="map.center" zoom="map.zoom" draggable="true">
       <marker coords="marker.coords" idkey="marker.id">
