@@ -27,25 +27,25 @@ angular.module('barteguidenWebApp.controllers')
 
     $scope.showFilterOptions = function() {
       $scope.categoryOptions = [
-        {name: 'Debatter', id: 'DEBATE'},
-        {name: 'Utstillinger', id: 'EXHIBITIONS'},
-        {name: 'Musikk', id: 'MUSIC'},
-        {name: 'Uteliv', id: 'NIGHTLIFE'},
-        {name: 'Forestillinger', id: 'PERFORMANCES'},
-        {name: 'Presentasjoner', id: 'PRESENTATIONS'},
-        {name: 'Sport', id: 'SPORT'},
-        {name: 'Andre', id: 'OTHER'}
+        {name: 'Debatter', id: 'DEBATE', short: 'Debatt'},
+        {name: 'Utstillinger', id: 'EXHIBITIONS', short: 'Utst.'},
+        {name: 'Musikk', id: 'MUSIC', short: 'Musikk'},
+        {name: 'Uteliv', id: 'NIGHTLIFE', short: 'Uteliv'},
+        {name: 'Forestillinger', id: 'PERFORMANCES', short: 'Forest.'},
+        {name: 'Presentasjoner', id: 'PRESENTATIONS', short: 'Pres.'},
+        {name: 'Sport', id: 'SPORT', short: 'Sport'},
+        {name: 'Andre', id: 'OTHER', short: 'Andre'}
       ];
 
       $scope.ageLimitOptions = [
-        {name: 'Ingen aldersgrense', id: 0},
-        {name: '18+', id: 18},
-        {name: '20+', id: 20}
+        {name: 'Ingen aldersgrense', id: 0, short: 'Alle'},
+        {name: '18+', id: 18, short: '18+'},
+        {name: '20+', id: 20, short: '20+'}
       ];
 
       $scope.priceOptions = [
-        {name: 'Gratis', price: 0},
-        {name: 'Betalt', price: -1}
+        {name: 'Gratis', price: 0, short: '0,-'},
+        {name: 'Betalt', price: -1, short: 'kr'}
       ];
 
       $scope.chosenCategories = [];
@@ -53,7 +53,8 @@ angular.module('barteguidenWebApp.controllers')
       $scope.chosenPrices = [];
     };
 
-    $scope.clickOption = function(option, chosenOptionList) {
+    $scope.clickOption = function(option, chosenOptionList, e) {
+      e.currentTarget.blur();
       var index = chosenOptionList.indexOf(option);
       if(index === -1) {
         chosenOptionList.push(option);
@@ -75,7 +76,8 @@ angular.module('barteguidenWebApp.controllers')
       window.scrollTo(0, 50);
     };
 
-    $scope.resetFilter = function() {
+    $scope.resetFilter = function(e) {
+      e.currentTarget.blur();
       $scope.chosenCategories = [];
       $scope.chosenAges = [];
       $scope.chosenPrices = [];
