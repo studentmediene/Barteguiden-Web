@@ -27,14 +27,14 @@ angular.module('barteguidenWebApp.controllers')
 
     $scope.showFilterOptions = function() {
       $scope.categoryOptions = [
-        {name: 'Debatter', id: 'DEBATE'},
-        {name: 'Utstillinger', id: 'EXHIBITIONS'},
-        {name: 'Musikk', id: 'MUSIC'},
-        {name: 'Uteliv', id: 'NIGHTLIFE'},
-        {name: 'Forestillinger', id: 'PERFORMANCES'},
-        {name: 'Presentasjoner', id: 'PRESENTATIONS'},
-        {name: 'Sport', id: 'SPORT'},
-        {name: 'Andre', id: 'OTHER'}
+        {name: 'Debatter', id: 'DEBATE', short: 'Debatter'},
+        {name: 'Utstillinger', id: 'EXHIBITIONS', short: 'Utst.'},
+        {name: 'Musikk', id: 'MUSIC', short: 'Musikk'},
+        {name: 'Uteliv', id: 'NIGHTLIFE', short: 'Uteliv'},
+        {name: 'Forestillinger', id: 'PERFORMANCES', short: 'Forest.'},
+        {name: 'Presentasjoner', id: 'PRESENTATIONS', short: 'Pres.'},
+        {name: 'Sport', id: 'SPORT', short: 'Sport'},
+        {name: 'Andre', id: 'OTHER', short: 'Andre'}
       ];
 
       $scope.ageLimitOptions = [
