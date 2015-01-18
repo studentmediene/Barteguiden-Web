@@ -119,6 +119,5 @@ angular.module('barteguidenWebApp.controllers')
 
     $scope.checkIfFirstDay = function(date) {
 
-      console.log(date);
     }
   }]);

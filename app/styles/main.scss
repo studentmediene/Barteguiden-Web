@@ -199,9 +199,9 @@ header > nav > ul > li > a {
 .ad-wrapper {
   background-color: white;
   box-shadow: inset 0px 0px 3px #999999;
-  padding: 8px;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  padding: 3px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 .well {
   padding: 10px;
@@ -249,6 +249,12 @@ header > nav > ul > li > a {
   }
   .well {
     padding: 19px;
+  }
+
+  .ad-wrapper {
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 25px;
   }
 }
 
