@@ -5,6 +5,7 @@
     <title>Barteguiden - din kulturguide til Trondheim</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
@@ -28,7 +29,8 @@
             <span class="icon-bar"></span>
           </button>
           <a ng-href="#/" class="logo-container">
-            <img src="images/barteguidenlogotext.png" alt="Barteguiden" height="60">
+            <img class="hidden-xs" src="images/barteguidenlogotext.png" alt="Barteguiden">
+            <img class="hidden-md hidden-lg hidden-sm small-logo" src="images/barteguidenlogotext-liten.png" alt="Barteguiden">
           </a>
         </div>
         <nav id="navbar" class="collapse navbar-collapse" role="navigation">
@@ -121,6 +123,7 @@
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <script src="bower_components/angular-i18n/angular-locale_nb-no.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 

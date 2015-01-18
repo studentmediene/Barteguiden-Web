@@ -49,9 +49,9 @@ angular.module('barteguidenWebApp.filters')
 
       if (/^\S/.test(text.substr(n))) {
         shortText = shortText.replace(/\s+\S*$/, '');
-        return shortText === text ? shortText : shortText + '[...]';
+        return shortText === text ? shortText : shortText + ' [...]';
       }
-      return shortText === text ? shortText : shortText + '[...]';
+      return shortText === text ? shortText : shortText + ' [...]';
     };
   });
 
