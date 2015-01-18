@@ -115,4 +115,10 @@ angular.module('barteguidenWebApp.controllers')
       }
       return (date === $scope.firstDate) && $scope.moreThanOneDay;
     };
+
+
+    $scope.checkIfFirstDay = function(date) {
+
+      console.log(date);
+    }
   }]);

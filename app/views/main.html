@@ -24,7 +24,10 @@
       <div ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices | filterByDate: dt) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : -(pageSize - (pageSize * currentPage - filteredEvents.length)) | groupByDate">
         <section class="calendar-wrapper">
           <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
-        <article class="content-wrapper" ng-repeat="event in events">
+
+          <div ng-repeat="event in events">
+            <div class="row">
+            <article class="content-wrapper col-md-12">
           <header class="event-header">
             <img class="img-responsive pull-left cat-image" ng-src="images/{{event.categoryID}}.png"/>
             <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
@@ -43,9 +46,15 @@
             </dl>
           </div>
         </article>
-
-
+              <div class="ad-wrapper col-md-12 col-xs-12" ng-show="true">
+                <div class="row">
+                  <img class="col-md-12 col-xs-12" src="images/ad-very-thin.png">
+                </div>
+              </div>
+            </div>
+          </div>
       </section>
+        <!--
         <div class="row" ng-show="checkIfTooManyAds(date)">
           <div class="ad-wrapper col-md-12">
             <div class="row">
@@ -53,7 +62,7 @@
             </div>
           </div>
         </div>
-
+        -->
         </div>
 
       <p ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </p>
