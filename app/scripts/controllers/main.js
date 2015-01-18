@@ -104,10 +104,8 @@ angular.module('barteguidenWebApp.controllers')
     };
 
     $scope.checkIfTooManyAds = function(date) {
-      if($scope.firstDate === 0) {
-        $scope.firstDate = date;
-      }
-      if($scope.firstDate > date) {
+      console.log(date);
+      if($scope.firstDate === 0 || $scope.firstDate > date) {
         $scope.firstDate = date;
       }
       if($scope.firstDate !== date) {
@@ -116,8 +114,4 @@ angular.module('barteguidenWebApp.controllers')
       return (date === $scope.firstDate) && $scope.moreThanOneDay;
     };
 
-
-    $scope.checkIfFirstDay = function(date) {
-
-    }
   }]);
