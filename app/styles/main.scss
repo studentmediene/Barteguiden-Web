@@ -266,3 +266,9 @@ header > nav > ul > li > a {
   padding-left: 0px;
   padding-right: 0px;
 }
+/* Hack for Safari bug */
+.mobileHoverFix:hover,
+.mobileHoverFix.hover{
+    background-position: 0 0px;
+}
+

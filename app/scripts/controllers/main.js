@@ -20,6 +20,14 @@ angular.module('barteguidenWebApp.controllers')
         top: 0      }
     });
 
+    //Hack for Safari bug
+    $("button").on("touchstart", function(){
+      $(this).removeClass("mobileHoverFix");
+    });
+    $("button").on("touchend", function(){
+      $(this).addClass("mobileHoverFix");
+    });
+
     EventService.getEvents()
       .then(function(data) {
         $scope.events = data;
