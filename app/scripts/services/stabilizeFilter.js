@@ -25,6 +25,10 @@ THE SOFTWARE.
 
 
 angular.module('barteguidenWebApp.services')
+
+  /*
+   * Stabilizes filters with memoization. 
+   */
   .factory('filterStabilize', ['memoize', function(memoize) {
     function service(fn) {
       function filter() {
@@ -42,6 +46,7 @@ angular.module('barteguidenWebApp.services')
       return service;
     }
   ])
+
   .factory('memoize', [function() {
     function service() {
       /*jshint validthis:true */
