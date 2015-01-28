@@ -9,7 +9,6 @@ $navbar-height: 50px;
 $body-bg: #f5f5f5;
 $barteguiden-blue: #1A9CCA;
 
-
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -55,15 +54,17 @@ h2, h3, h4 {
 .angular-google-map-container {
   height: 400px;
 }
+
 .content-wrapper{
   background-color: white;
-  padding: 5px 15px 15px 15px;
+  padding: 5px 15px 10px 15px;
   border: 0px solid darken($barteguiden-blue, 3%);
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 10px #999999;
   h3 {
-    font-size: 19px;
+    font-size: 16px;
+    padding-bottom: 10px;
   }
 
 }
@@ -71,14 +72,14 @@ h2, h3, h4 {
 .calendar-wrapper {
   background-color: #c9c9c9;
   box-shadow: inset 0px 0px 5px #999999;
-  padding: 5px 15px 15px 15px;
+  padding: 5px 10px 10px 10px;
   border-radius: 10px;
   margin-bottom: 20px;
 
   h2 {
     text-shadow: 1px 1px 2px #777777;
     padding-bottom: 5px;
-    font-size: 25px;
+    font-size: 24px;
     margin-top: 10px;
   }
 }
@@ -132,6 +133,10 @@ header > nav > ul > li > a {
 
 .appImg {
   height: 40px;
+}
+
+.btn {
+  font-size: 10px;
 }
 
 .btn-toolbar {
@@ -215,6 +220,11 @@ header > nav > ul > li > a {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
+  .btn {
+    font-size: 12px;
+
+  }
   .logo-container {
     padding: 10px 5px;
     img {
@@ -271,4 +281,5 @@ header > nav > ul > li > a {
 .mobileHoverFix.hover{
     background-position: 0 0px;
 }
+
 
