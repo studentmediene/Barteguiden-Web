@@ -9,7 +9,7 @@
           <div class="col-xs-12">
             <div class="btn-group btn-group-justified">
               <div class="btn-group" ng-repeat="categoryOption in categoryOptions | limitTo: 4">
-                <button type="button" class="btn btn-default btn-sm"   ng-click="clickOption(categoryOption, chosenCategories, $event)" ng-class="{active: isActive(categoryOption, chosenCategories)}">
+                <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(categoryOption, chosenCategories, $event)" ng-class="{active: isActive(categoryOption, chosenCategories)}">
                   <div><img height="15px" ng-src="images/{{categoryOption.id}}.png">
                     <div style="display: inline-block"ng-show="isLargerThan(520)"> {{categoryOption.name}}
                     </div>
@@ -131,7 +131,7 @@
           </div>
         </div>
         <div class="datepicker-wrapper">
-          <datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="datepicker-wrapper"></datepicker>
+          <datepicker ng-model="dt" min-date="minDate" show-weeks="false" starting-day="1" class="datepicker-wrapper"></datepicker>
         </div>
       </div>
     </aside>
