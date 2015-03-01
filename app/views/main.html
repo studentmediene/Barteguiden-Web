@@ -36,6 +36,8 @@
             </div>
           </div>
           </div>
+        <div class="non-mobile-options">
+
         <div class="row">
           <div class="col-xs-4">
 
@@ -55,7 +57,6 @@
             <div class="btn-group btn-group-justified">
               <div class="btn-group" ng-repeat="ageOption in ageLimitOptions">
 
-
               <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(ageOption, chosenAges, $event)" ng-class="{active: isActive(ageOption, chosenAges)}"> {{ageOption.short}}</button>
           </div>
               </div>
@@ -70,6 +71,8 @@
             </div>
         </div>
       </div>
+      </div>
+
     </section>
 
     <section>
