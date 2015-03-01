@@ -30,10 +30,12 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
+        title: 'Barteguiden - din guide til kulturlivet i Trondheim',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .when('/om', {
+        title: 'Om Barteguiden',
         templateUrl: 'views/about.html'
       })
       .when('/arrangement/:id/:slug?', {
@@ -41,9 +43,16 @@ angular
         controller: 'EventCtrl'
       })
       .when('/kontakt', {
+        title: 'Kontakt Barteguiden',
         templateUrl: 'views/contact.html'
       })
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function ($route, $rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function(){
+      // change page title, based on route information
+      $rootScope.title = $route.current.title;
+    });
   });
