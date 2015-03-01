@@ -23,54 +23,54 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="btn-group btn-group-justified">
-          <div class="btn-group" ng-repeat="categoryOption in categoryOptions | limitTo: -4">
-            <button type="button" class="btn btn-default btn-sm"   ng-click="clickOption(categoryOption, chosenCategories, $event)" ng-class="{active: isActive(categoryOption, chosenCategories)}">
-              <div><img class="category-image" ng-src="images/{{categoryOption.id}}.png">
-                <div style="display: inline-block"ng-show="isLargerThan(520)"> {{categoryOption.name}}
-                </div>
-                <div style="display: inline-block" ng-show="!isLargerThan(520)"> {{categoryOption.short}}
-                </div>
+              <div class="btn-group" ng-repeat="categoryOption in categoryOptions | limitTo: -4">
+                <button type="button" class="btn btn-default btn-sm"   ng-click="clickOption(categoryOption, chosenCategories, $event)" ng-class="{active: isActive(categoryOption, chosenCategories)}">
+                  <div><img class="category-image" ng-src="images/{{categoryOption.id}}.png">
+                    <div style="display: inline-block"ng-show="isLargerThan(520)"> {{categoryOption.name}}
+                    </div>
+                    <div style="display: inline-block" ng-show="!isLargerThan(520)"> {{categoryOption.short}}
+                    </div>
+                  </div>
+                </button>
               </div>
-              </button>
-          </div>
             </div>
           </div>
-          </div>
+        </div>
         <div class="non-mobile-options">
 
-        <div class="row">
-          <div class="col-xs-4">
+          <div class="row">
+            <div class="col-xs-4">
 
-            <div class="btn-group btn-group-justified">
-            <div class="btn-group" ng-repeat="priceOption in priceOptions">
-            <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(priceOption, chosenPrices, $event)" ng-class="{active: isActive(priceOption, chosenPrices)}">
-              <div ng-show="isLargerThan(650)">{{priceOption.name}}
-              </div>
-              <div ng-show="!isLargerThan(650)"><div ng-show="priceOption === priceOptions[0]">{{priceOption.short}}</div>
-                <i ng-class="priceOption === priceOptions[1] ? 'fa fa-money' : ''"></i>
-              </div>
-            </button>
-          </div>
-          </div>
-            </div>
-          <div class="btn-group col-xs-5">
-            <div class="btn-group btn-group-justified">
-              <div class="btn-group" ng-repeat="ageOption in ageLimitOptions">
-
-              <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(ageOption, chosenAges, $event)" ng-class="{active: isActive(ageOption, chosenAges)}"> {{ageOption.short}}</button>
-          </div>
+              <div class="btn-group btn-group-justified">
+                <div class="btn-group" ng-repeat="priceOption in priceOptions">
+                  <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(priceOption, chosenPrices, $event)" ng-class="{active: isActive(priceOption, chosenPrices)}">
+                    <div ng-show="isLargerThan(650)">{{priceOption.name}}
+                    </div>
+                    <div ng-show="!isLargerThan(650)"><div ng-show="priceOption === priceOptions[0]">{{priceOption.short}}</div>
+                      <i ng-class="priceOption === priceOptions[1] ? 'fa fa-money' : ''"></i>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
-          <div class="btn-group col-xs-3">
-            <div class="btn-group btn-group-justified" >
-              <div class="btn-group" >
-            <button type="button" class="btn btn-info btn-sm" ng-click="resetFilter($event)"> Vis alle </button>
-          </div>
+            <div class="btn-group col-xs-5">
+              <div class="btn-group btn-group-justified">
+                <div class="btn-group" ng-repeat="ageOption in ageLimitOptions">
+
+                  <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(ageOption, chosenAges, $event)" ng-class="{active: isActive(ageOption, chosenAges)}"> {{ageOption.short}}</button>
+                </div>
+              </div>
+            </div>
+            <div class="btn-group col-xs-3">
+              <div class="btn-group btn-group-justified" >
+                <div class="btn-group" >
+                  <button type="button" class="btn btn-info btn-sm" ng-click="resetFilter($event)"> Vis alle </button>
+                </div>
 
               </div>
             </div>
+          </div>
         </div>
-      </div>
       </div>
 
     </section>
@@ -83,46 +83,36 @@
 
           <div class="row" ng-repeat="event in events">
             <div class="col-md-12 col-xs-12">
-            <article class="content-wrapper">
-          <header class="event-header">
-            <img class="img-responsive pull-left category-image" ng-src="images/{{event.categoryID | defaultCategory}}.png"/>
-            <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
-            <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
-          </header>
-          <div class="event-body">
-            <img class="img-responsive event-image center-block" ng-src="{{event.imageURL}}">
-            <p ng-bind-html="event.descriptions[0] | cutText: 285"></p>
-            <dl class="dl-horizontal">
-              <dt>Tid:</dt>
-              <dd><time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
-              <dt>Sted:</dt>
-              <dd>{{event.placeName}}</dd>
-              <dt>Pris:</dt>
-              <dd>{{event.price | isFreeEvent}}</dd>
-            </dl>
-          </div>
-        </article>
+              <article class="content-wrapper">
+                <header class="event-header">
+                  <img class="img-responsive pull-left category-image" ng-src="images/{{event.categoryID | defaultCategory}}.png"/>
+                  <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
+                  <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
+                </header>
+                <div class="event-body">
+                  <img class="img-responsive event-image center-block" ng-src="{{event.imageURL}}">
+                  <p ng-bind-html="event.descriptions[0] | cutText: 285"></p>
+                  <dl class="dl-horizontal">
+                    <dt>Tid:</dt>
+                    <dd><time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
+                    <dt>Sted:</dt>
+                    <dd>{{event.placeName}}</dd>
+                    <dt>Pris:</dt>
+                    <dd>{{event.price | isFreeEvent}}</dd>
+                  </dl>
+                </div>
+              </article>
             </div>
             <div class="col-md-12 col-xs-12">
-              <div class="ad-wrapper" ng-show="checkIfTooManyAds(event.startAt)">
+              <div class="banner-wrapper" ng-show="checkIfTooManyAds(event.startAt)">
                 <div class="row">
-                  <img class="col-md-12 col-xs-12" src="images/ad-very-thin.png">
+                  <img class="col-md-12 col-xs-12" src="images/konkurransebanner.png">
                 </div>
               </div>
             </div>
-            </div>
-      </section>
-        <!--
-        <div class="row" ng-show="checkIfTooManyAds(date)">
-          <div class="ad-wrapper col-md-12">
-            <div class="row">
-              <img class="col-md-12 col-xs-12" src="images/ad-thin-h.png">
-            </div>
           </div>
-        </div>
-        -->
-        </div>
-
+        </section>
+      </div>
       <h5 ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </h5>
     </section>
     <section>

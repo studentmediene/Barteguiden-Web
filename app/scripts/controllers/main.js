@@ -141,7 +141,6 @@ angular.module('barteguidenWebApp.controllers')
     };
 
     $scope.checkIfTooManyAds = function(date) {
-      console.log(date);
       if($scope.firstDate === 0 || $scope.firstDate > date) {
         $scope.firstDate = date;
       }
