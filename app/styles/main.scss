@@ -110,6 +110,10 @@ h2 {
   padding-bottom: 1em;
 }
 
+.non-mobile-options {
+  display: none;
+}
+
 .well {
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -164,6 +168,7 @@ h2 {
 
   h2 {
     font-weight: 300;
+    margin-top: 0px;
   }
 
   h3 {
@@ -238,7 +243,6 @@ h2 {
 
 @media screen and (min-width: 600px) {
 
-  /* Space out content a bit */
   body {
     margin-top: 70px;
   }
@@ -249,6 +253,7 @@ h2 {
 
   h2 {
     font-size: 3em;
+    margin-top: 20px;
   }
 
   .btn {
@@ -258,6 +263,10 @@ h2 {
       padding-right: 1px;
 
     }
+  }
+
+  .non-mobile-options {
+    display: inline-block;
   }
 
   .logo-container {
