@@ -1,5 +1,5 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-@import url(http://fonts.googleapis.com/css?family=Roboto:700,400,100,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,100,400);
 $font-family-sans-serif: "Helvetica Neue", "Roboto", Helvetica, Arial, sans-serif;
 
 
@@ -29,7 +29,7 @@ $datepickerWidth: 252px;
  ///  General  ///
 /////////////////
 html {
-  background: url('../images/testbakgrunn.jpg') no-repeat center center fixed;
+  background: url('../images/samfundet1960.jpg') no-repeat right top fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -53,13 +53,13 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: "Roboto";
-  font-weight: 300; // On smaller screens
+  font-weight: 400;
   color: white;
-  text-shadow: 1px 1px 3px black;
 }
 
 h2 {
   font-size: 1.7em;
+  margin-top: 5px;
 }
 
 .col-md-4 {
@@ -70,7 +70,7 @@ h2 {
  /// Navbar ///
 //////////////
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
 
   .navbar-form {
     margin-top: 13px;
@@ -116,7 +116,7 @@ h2 {
 
 .well {
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   margin-right: 1em;
   border-radius: 10px;
 
@@ -247,10 +247,6 @@ h2 {
     margin-top: 70px;
   }
 
-  h1, h2, h3, h4 {
-    font-weight: 100;
-  }
-
   h2 {
     font-size: 3em;
     margin-top: 20px;
@@ -299,10 +295,6 @@ h2 {
 
   .well {
     padding: 15px;
-  }
-
-  h1, h2, h3, h4 {
-    font-weight: 100;
   }
 
   h2 {
