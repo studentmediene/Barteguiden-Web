@@ -10,7 +10,7 @@
             <div class="btn-group btn-group-justified">
               <div class="btn-group" ng-repeat="categoryOption in categoryOptions | limitTo: 4">
                 <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(categoryOption, chosenCategories, $event)" ng-class="{active: isActive(categoryOption, chosenCategories)}">
-                  <div><img height="15px" ng-src="images/{{categoryOption.id}}.png">
+                  <div><img class="category-image" ng-src="images/{{categoryOption.id}}.png">
                     <div style="display: inline-block"ng-show="isLargerThan(520)"> {{categoryOption.name}}
                     </div>
                     <div style="display: inline-block" ng-show="!isLargerThan(520)"> {{categoryOption.short}}
@@ -26,7 +26,7 @@
             <div class="btn-group btn-group-justified">
           <div class="btn-group" ng-repeat="categoryOption in categoryOptions | limitTo: -4">
             <button type="button" class="btn btn-default btn-sm"   ng-click="clickOption(categoryOption, chosenCategories, $event)" ng-class="{active: isActive(categoryOption, chosenCategories)}">
-              <div><img height="15px" ng-src="images/{{categoryOption.id}}.png">
+              <div><img class="category-image" ng-src="images/{{categoryOption.id}}.png">
                 <div style="display: inline-block"ng-show="isLargerThan(520)"> {{categoryOption.name}}
                 </div>
                 <div style="display: inline-block" ng-show="!isLargerThan(520)"> {{categoryOption.short}}
@@ -37,6 +37,8 @@
             </div>
           </div>
           </div>
+        <div class="non-mobile-options">
+
         <div class="row">
           <div class="col-xs-4">
 
@@ -56,7 +58,6 @@
             <div class="btn-group btn-group-justified">
               <div class="btn-group" ng-repeat="ageOption in ageLimitOptions">
 
-
               <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(ageOption, chosenAges, $event)" ng-class="{active: isActive(ageOption, chosenAges)}"> {{ageOption.short}}</button>
           </div>
               </div>
@@ -71,6 +72,8 @@
             </div>
         </div>
       </div>
+      </div>
+
     </section>
 
     <section>
@@ -78,12 +81,12 @@
         <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
         <article class="content-wrapper" ng-repeat="event in events">
           <header class="event-header">
-            <img class="img-responsive pull-left cat-image" ng-src="images/{{event.categoryID | defaultCategory}}.png"/>
+            <img class="img-responsive pull-left category-image" ng-src="images/{{event.categoryID | defaultCategory}}.png"/>
             <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
             <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
           </header>
           <div class="event-body">
-            <img class="img-responsive evt-image center-block" ng-src="{{event.imageURL}}">
+            <img class="img-responsive event-image center-block" ng-src="{{event.imageURL}}">
             <p ng-bind-html="event.descriptions[0] | cutText: 285"></p>
             <dl class="dl-horizontal">
               <dt>Tid:</dt>
@@ -96,7 +99,7 @@
           </div>
         </article>
       </section>
-      <p ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </p>
+      <h5 ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </h5>
     </section>
     <section>
       <div class="row">
@@ -110,12 +113,12 @@
 
   <div class="col-md-4 hidden-sm hidden-xs">
     <aside class="filters" id="sidebar">
-      <h4 class="text-center">Filter</h4>
+      <h3 class="text-center">Filter</h3>
       <div class="well well-sm" role="toolbar" ng-init="showFilterOptions()">
         <div class="row">
           <div class="col-md-6">
             <div class="category-wrapper btn-group-vertical">
-              <button type="button" class="btn btn-default btn-sm"  ng-repeat="categoryOption in categoryOptions" ng-click="clickOption(categoryOption, chosenCategories, $event)" ng-class="{active: isActive(categoryOption, chosenCategories)}"><img height="15px" ng-src="images/{{categoryOption.id}}.png"> {{categoryOption.name}}</button>
+              <button type="button" class="btn btn-default btn-sm"  ng-repeat="categoryOption in categoryOptions" ng-click="clickOption(categoryOption, chosenCategories, $event)" ng-class="{active: isActive(categoryOption, chosenCategories)}"><img class="category-image" ng-src="images/{{categoryOption.id}}.png"> {{categoryOption.name}}</button>
             </div>
           </div>
           <div class="col-md-6">
