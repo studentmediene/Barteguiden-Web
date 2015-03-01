@@ -27,7 +27,9 @@ angular
     'barteguidenWebApp.services',
     'barteguidenWebApp.directives'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('!');
     $routeProvider
       .when('/', {
         title: 'Barteguiden - din guide til kulturlivet i Trondheim',
@@ -49,6 +51,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+
   })
   .run(function ($route, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function(){
