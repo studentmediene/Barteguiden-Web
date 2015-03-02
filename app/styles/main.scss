@@ -154,6 +154,12 @@ h2 {
   /////////////////
  ///  Event    ///
 /////////////////
+
+.banner-wrapper {
+  background-color: white;
+  padding: 3px;
+  margin-bottom: 10px;
+}
 .content-wrapper {
   background-color: white;
   padding: 5px 10px 5px 10px;
@@ -242,6 +248,11 @@ h2 {
 
 
 @media screen and (min-width: 600px) {
+
+  .banner-wrapper {
+    padding: 7px;
+    margin-bottom: 20px;
+  }
 
   body {
     margin-top: 70px;
