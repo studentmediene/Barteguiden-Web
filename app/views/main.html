@@ -34,87 +34,77 @@
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="non-mobile-options">
-
-          <div class="row">
-            <div class="col-xs-4">
-
-              <div class="btn-group btn-group-justified">
-                <div class="btn-group" ng-repeat="priceOption in priceOptions">
-                  <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(priceOption, chosenPrices, $event)" ng-class="{active: isActive(priceOption, chosenPrices)}">
-                    <div ng-show="isLargerThan(650)">{{priceOption.name}}
+            <div class="non-mobile-options">
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="btn-group btn-group-justified">
+                    <div class="btn-group" ng-repeat="priceOption in priceOptions">
+                      <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(priceOption, chosenPrices, $event)" ng-class="{active: isActive(priceOption, chosenPrices)}">
+                        <div ng-show="isLargerThan(650)">{{priceOption.name}}
+                        </div>
+                        <div ng-show="!isLargerThan(650)"><div ng-show="priceOption === priceOptions[0]">{{priceOption.short}}</div>
+                          <i ng-class="priceOption === priceOptions[1] ? 'fa fa-money' : ''"></i>
+                        </div>
+                      </button>
                     </div>
-                    <div ng-show="!isLargerThan(650)"><div ng-show="priceOption === priceOptions[0]">{{priceOption.short}}</div>
-                      <i ng-class="priceOption === priceOptions[1] ? 'fa fa-money' : ''"></i>
+                  </div>
+                </div>
+                <div class="btn-group col-xs-5">
+                  <div class="btn-group btn-group-justified">
+                    <div class="btn-group" ng-repeat="ageOption in ageLimitOptions">
+                      <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(ageOption, chosenAges, $event)" ng-class="{active: isActive(ageOption, chosenAges)}"> {{ageOption.short}}</button>
                     </div>
-                  </button>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="btn-group col-xs-5">
-              <div class="btn-group btn-group-justified">
-                <div class="btn-group" ng-repeat="ageOption in ageLimitOptions">
+                <div class="btn-group col-xs-3">
+                  <div class="btn-group btn-group-justified" >
+                    <div class="btn-group" >
+                      <button type="button" class="btn btn-info btn-sm" ng-click="resetFilter($event)"> Vis alle </button>
+                    </div>
 
-                  <button type="button" class="btn btn-default btn-sm"  ng-click="clickOption(ageOption, chosenAges, $event)" ng-class="{active: isActive(ageOption, chosenAges)}"> {{ageOption.short}}</button>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="btn-group col-xs-3">
-              <div class="btn-group btn-group-justified" >
-                <div class="btn-group" >
-                  <button type="button" class="btn btn-info btn-sm" ng-click="resetFilter($event)"> Vis alle </button>
-                </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </section>
 
-    <section>
-
-      <div ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices | filterByDate: dt) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : -(pageSize - (pageSize * currentPage - filteredEvents.length)) | groupByDate">
-        <section class="calendar-wrapper">
-          <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
-
-          <div class="row" ng-repeat="event in events">
-            <div class="col-md-12 col-xs-12">
-              <article class="content-wrapper">
-                <header class="event-header">
-                  <img class="img-responsive pull-left category-image" ng-src="images/{{event.categoryID | defaultCategory}}.png"/>
-                  <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
-                  <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
-                </header>
-                <div class="event-body">
-                  <img class="img-responsive event-image center-block" ng-src="{{event.imageURL}}">
-                  <p ng-bind-html="event.descriptions[0] | cutText: 285"></p>
-                  <dl class="dl-horizontal">
-                    <dt>Tid:</dt>
-                    <dd><time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
-                    <dt>Sted:</dt>
-                    <dd>{{event.placeName}}</dd>
-                    <dt>Pris:</dt>
-                    <dd>{{event.price | isFreeEvent}}</dd>
-                  </dl>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-12 col-xs-12">
-              <div class="banner-wrapper" ng-show="checkIfTooManyAds(event.startAt)">
-                <div class="row">
-                  <img class="col-md-12 col-xs-12" src="images/konkurransebanner.png">
-                </div>
+      <section class="calendar-wrapper" ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices | filterByDate: dt) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : -(pageSize - (pageSize * currentPage - filteredEvents.length)) | groupByDate">
+        <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
+        <div class="row" ng-repeat="event in events">
+          <div class="col-md-12 col-xs-12">
+            <article class="content-wrapper">
+              <header class="event-header">
+                <img class="img-responsive pull-left category-image" ng-src="images/{{event.categoryID | defaultCategory}}.png"/>
+                <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
+                <a ng-href="#/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
+              </header>
+              <div class="event-body">
+                <img class="img-responsive event-image center-block" ng-src="{{event.imageURL}}">
+                <p ng-bind-html="event.descriptions[0] | cutText: 285"></p>
+                <dl class="dl-horizontal">
+                  <dt>Tid:</dt>
+                  <dd><time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
+                  <dt>Sted:</dt>
+                  <dd>{{event.placeName}}</dd>
+                  <dt>Pris:</dt>
+                  <dd>{{event.price | isFreeEvent}}</dd>
+                </dl>
               </div>
+            </article>
+          </div>
+        </div>
+        <div class="col-md-12 col-xs-12">
+          <div class="banner-wrapper" ng-show="checkIfTooManyAds(date)">
+            <div class="row">
+              <a ng-href="#/konkurranse"><img class="col-md-12 col-xs-12" src="images/konkurransebanner.png"></a>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
       <h5 ng-hide="filteredEvents.length"> Ingen hendelser passer søket ditt. </h5>
-    </section>
     <section>
       <div class="row">
         <div class="col-md-8 col-md-offset-2">

@@ -89,6 +89,7 @@ angular.module('barteguidenWebApp.controllers')
       e.currentTarget.blur();
       $scope.firstDate = 0;
       $scope.moreThanOneDay = false;
+
       $scope.clickToggle(e);
       var index = chosenOptionList.indexOf(option);
       if(index === -1) {
@@ -97,6 +98,7 @@ angular.module('barteguidenWebApp.controllers')
       else {
         chosenOptionList.splice(index, 1);
       }
+
     };
 
     /*
@@ -147,7 +149,7 @@ angular.module('barteguidenWebApp.controllers')
       if($scope.firstDate !== date) {
         $scope.moreThanOneDay = true;
       }
-      return (date === $scope.firstDate) && $scope.moreThanOneDay;
+      return (date === $scope.firstDate);
     };
 
   }]);

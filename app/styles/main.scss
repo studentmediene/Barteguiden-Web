@@ -185,6 +185,76 @@ h2 {
   }
 }
 
+
+.dl-horizontal dt{ //Affects time, place and price in event content.
+  text-align: left;
+  width: 4em;
+}
+
+.dl-horizontal dd{
+  margin-left: 0px; //Distance between time, place, price and actual content. Overrides standard value.
+}
+
+.category-image {
+  height:20px;
+  position: relative;
+  padding-right: 10px;
+}
+
+.event-image {
+  max-height: 200px;
+  margin-bottom: 10px;
+}
+
+  /////////////////////////////
+ ///  Inside single event  ///
+/////////////////////////////
+
+.category-image-single {
+  height: 35px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.event-image-single {
+  margin-bottom: 10px;
+  max-height: 250px;
+}
+
+.angular-google-map-container {
+  height: 400px;
+  margin-bottom: 20px;
+
+}
+
+
+  /////////////////
+ ///  Event    ///
+/////////////////
+.content-wrapper {
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  h1, h2, h3, h4, h5 {
+    color: $barteguiden-blue;
+    text-shadow: none;
+
+  }
+
+  h2 {
+    font-weight: 300;
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-top: 5px;
+  }
+}
+
 .glyphicon-star {
   color: red;
 }
@@ -231,9 +301,6 @@ h2 {
 }
 
 
-
-
-
   //////////////////////////////////////
  ///  Specifics for larger screens  ///
 //////////////////////////////////////
@@ -245,8 +312,6 @@ h2 {
   }
 
 }
-
-
 
 @media screen and (min-width: 600px) {
 
@@ -336,4 +401,3 @@ h2 {
 .appImg {
   height: 40px;
 }
-
