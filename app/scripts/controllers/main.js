@@ -80,6 +80,7 @@ angular.module('barteguidenWebApp.controllers')
       $scope.chosenCategories = [];
       $scope.chosenAges = [];
       $scope.chosenPrices = [];
+      $scope.recommended = false;
     };
 
     /*
@@ -95,6 +96,11 @@ angular.module('barteguidenWebApp.controllers')
       else {
         chosenOptionList.splice(index, 1);
       }
+    };
+
+    $scope.clickRecommended = function(e) {
+      e.currentTarget.blur();
+      $scope.recommended = ($scope.recommended ? false : true);
     };
 
     /*
@@ -121,5 +127,6 @@ angular.module('barteguidenWebApp.controllers')
       $scope.chosenAges = [];
       $scope.chosenPrices = [];
       $scope.dt = undefined;
+      $scope.recommended = false;
     };
   }]);
