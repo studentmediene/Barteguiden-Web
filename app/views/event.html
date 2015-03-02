@@ -16,7 +16,7 @@
       <dt>Alder:</dt>
       <dd>{{event.ageLimit | isFreeForAll}}</dd>
     </dl>
-    <a ng-href="{{event.eventURL}}" target="_blank">Link til arrangementet</a>
+    <a ng-show="event.eventURL != null" ng-href="{{event.eventURL}}" target="_blank">Link til arrangementet</a>
     <h3>Kart</h3>
     <google-map center="map.center" zoom="map.zoom" draggable="true">
       <marker coords="marker.coords" idkey="marker.id">
