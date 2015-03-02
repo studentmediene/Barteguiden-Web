@@ -87,6 +87,9 @@ angular.module('barteguidenWebApp.controllers')
      */
     $scope.clickOption = function(option, chosenOptionList, e) {
       e.currentTarget.blur();
+      $scope.firstDate = 0;
+      $scope.moreThanOneDay = false;
+
       $scope.clickToggle(e);
       var index = chosenOptionList.indexOf(option);
       if(index === -1) {
@@ -95,6 +98,7 @@ angular.module('barteguidenWebApp.controllers')
       else {
         chosenOptionList.splice(index, 1);
       }
+
     };
 
     /*
@@ -121,5 +125,31 @@ angular.module('barteguidenWebApp.controllers')
       $scope.chosenAges = [];
       $scope.chosenPrices = [];
       $scope.dt = undefined;
+      $scope.firstDate = 0;
+      $scope.moreThanOneDay = false;
+
+
     };
+
+    //ads
+
+    $scope.firstDate = 0;
+    $scope.moreThanOneDay = false;
+
+
+    $scope.resetCal = function() {
+      $scope.firstDate = 0;
+      $scope.moreThanOneDay = false;
+    };
+
+    $scope.checkIfTooManyAds = function(date) {
+      if($scope.firstDate === 0 || $scope.firstDate > date) {
+        $scope.firstDate = date;
+      }
+      if($scope.firstDate !== date) {
+        $scope.moreThanOneDay = true;
+      }
+      return (date === $scope.firstDate);
+    };
+
   }]);
