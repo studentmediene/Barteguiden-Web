@@ -10,6 +10,7 @@ $navbar-height: 50px;
 ///////////////////
 $body-bg: none;
 $barteguiden-blue: #1A9CCA;
+$barteguiden-red: #e8624b;
 $filterWidth: 340px;
 $datepickerWidth: 252px;
 
@@ -107,7 +108,7 @@ h2 {
 }
 
 .right-bar {
-  padding-bottom: 1em;
+  padding-bottom: 0.62em;
 }
 
 .non-mobile-options {
@@ -185,7 +186,7 @@ h2 {
 }
 
 .glyphicon-star {
-  color: red;
+  color: $barteguiden-red;
 }
 
 .dl-horizontal dt{ //Affects time, place and price in event content.

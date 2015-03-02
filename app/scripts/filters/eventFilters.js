@@ -44,6 +44,15 @@ angular.module('barteguidenWebApp.filters')
     };
   })
 
+  .filter('filterRecommended', function() {
+    return function(events, recommended) {
+      if(recommended === false) { //Show all events if recommended button is not clicked
+        return events;
+      }
+      return _.filter(events, 'isRecommended', true);
+    };
+  })
+
   .filter('filterByDate', function() {
     return function(events, date) {
       if(date === undefined) {  //No options chosen. Return entire list of events.
