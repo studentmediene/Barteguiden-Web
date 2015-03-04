@@ -79,7 +79,7 @@
     <section>
       <section class="calendar-wrapper" ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterRecommended:recommended | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices | filterByDate: dt) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : -(pageSize - (pageSize * currentPage - filteredEvents.length)) | groupByDate">
         <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
-        <div  ng-repeat="event in events">
+        <div  ng-repeat="event in events track by event.eventID">
           <article class="content-wrapper">
             <header class="event-header">
               <img class="img-responsive pull-left category-image" ng-src="images/{{event.categoryID | defaultCategory}}.png"/>
