@@ -17,9 +17,7 @@ angular.module('barteguidenWebApp.directives', []);
 
 angular
   .module('barteguidenWebApp', [
-    'ngResource',
     'ngRoute',
-    'ngSanitize',
     'google-maps',
     'ui.bootstrap',
     'barteguidenWebApp.controllers',
