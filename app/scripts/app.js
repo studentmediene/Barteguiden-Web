@@ -21,6 +21,7 @@ angular
     'ngSanitize',
     'google-maps',
     'ui.bootstrap',
+    'angular-loading-bar',
     'barteguidenWebApp.controllers',
     'barteguidenWebApp.filters',
     'barteguidenWebApp.services',
