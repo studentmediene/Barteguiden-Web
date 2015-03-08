@@ -29,13 +29,23 @@ $datepickerWidth: 252px;
   /////////////////
  ///  General  ///
 /////////////////
-html {
-  background: url('../images/samfundet1960.jpg') no-repeat right top fixed;
+.bg {
+  background: url('../images/samfundet1960.jpg');
+  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  overflow: visible;
 }
+
 
 .browsehappy {
   // For message shown in outdated browsers
