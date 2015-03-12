@@ -12,6 +12,9 @@
 angular.module('barteguidenWebApp.controllers')
   .controller('MainCtrl', ['$scope', 'EventService',function ($scope, EventService) {
 
+    /*
+     * Pagination
+     */
     $scope.pageSize = 20;
     $scope.currentPage = 1;
     $scope.minDate = new Date();
@@ -20,11 +23,37 @@ angular.module('barteguidenWebApp.controllers')
         top: 0      }
     });
 
+    //Hack for Safari bug. Doesn't work :(
+    $('button').on('touchstart', function(){
+      $(this).removeClass('mobileHoverFix');
+    });
+    $('button').on('touchend', function(){
+      $(this).addClass('mobileHoverFix');
+    });
+
+    /*
+     * TODO put something like this to clickOption and remove isActive
+     */
+    $scope.clickToggle = function($event){
+      var elem = angular.element($event.srcElement);
+      if(elem.hasClass('active')){
+        elem.removeClass( 'active' );
+      }else{
+        elem.addClass('active');
+      }
+    };
+
+    /*
+     * Waits until EventService fetches all events, then saves them to $scope.
+     */
     EventService.getEvents()
       .then(function(data) {
         $scope.events = data;
       });
 
+    /*
+     * Initializes button categories.
+     */
     $scope.showFilterOptions = function() {
       $scope.categoryOptions = [
         {name: 'Debatter', id: 'DEBATE', short: 'Debatt'},
@@ -44,17 +73,22 @@ angular.module('barteguidenWebApp.controllers')
       ];
 
       $scope.priceOptions = [
-        {name: 'Gratis', price: 0, short: '0,-'},
-        {name: 'Betalt', price: -1, short: 'kr'}
+        {name: 'Gratis', id: 0, short: '0,-'},
+        {name: 'Betalt', id: -1, short: 'kr'}
       ];
 
       $scope.chosenCategories = [];
       $scope.chosenAges = [];
       $scope.chosenPrices = [];
+      $scope.recommended = false;
     };
 
+    /*
+     * Adds or removes category from chosen list on button click.
+     */
     $scope.clickOption = function(option, chosenOptionList, e) {
       e.currentTarget.blur();
+      $scope.clickToggle(e);
       var index = chosenOptionList.indexOf(option);
       if(index === -1) {
         chosenOptionList.push(option);
@@ -64,7 +98,16 @@ angular.module('barteguidenWebApp.controllers')
       }
     };
 
-    $scope.isActive = function(option, chosenOptionList ) {
+    $scope.clickRecommended = function(e) {
+      e.currentTarget.blur();
+      $scope.recommended = ($scope.recommended ? false : true);
+    };
+
+    /*
+     * Returns true if category is chosen
+     * Used in main to check if button should be active or not
+     */
+    $scope.isActive = function(option, chosenOptionList) {
       var index = chosenOptionList.indexOf(option);
       if(index !== -1) {
         return true;
@@ -72,15 +115,18 @@ angular.module('barteguidenWebApp.controllers')
       return false;
     };
 
+    // Scrolls back up after using pagination
     $scope.scroll = function() {
       window.scrollTo(0, 50);
     };
 
+    // Resets the filter when user clicks 'Vis alle'
     $scope.resetFilter = function(e) {
       e.currentTarget.blur();
       $scope.chosenCategories = [];
       $scope.chosenAges = [];
       $scope.chosenPrices = [];
       $scope.dt = undefined;
+      $scope.recommended = false;
     };
   }]);

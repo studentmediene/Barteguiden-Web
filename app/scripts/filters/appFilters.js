@@ -39,19 +39,39 @@ angular.module('barteguidenWebApp.filters')
         .replace(/-+$/, '');         // Trim - from end of text
     };
   })
+  .filter('defaultCategory', function() {
+    return function(obj) {
+      if(obj === undefined || obj === null) {
+        return 'OTHER';
+      }
+      return obj;
+    };
+  })
   .filter('cutText', function() {
     return function(obj, n) {
+      //In case we don't have text in the description
       if(obj === undefined || obj === null) {
         return '';
       }
-      var text = obj.text;
-      var shortText = text.substr(0, n);
-
-      if (/^\S/.test(text.substr(n))) {
-        shortText = shortText.replace(/\s+\S*$/, '');
-        return shortText === text ? shortText : shortText + ' [...]';
+      //this function linkifies a url with the text Link
+      //in case someone provides a link in the description
+      function linkify(text) {
+        var urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+        return text.replace(urlRegex, function(url) {
+          return '<a href="' + url + '">' + 'Link' + '</a>';
+        });
       }
-      return shortText === text ? shortText : shortText + ' [...]';
+      //get and shorten the text
+      var text = obj.text;
+      text += ' ';
+      var trimmed = text.substr(0,n);
+      //cut remaining chars not part of a word
+      trimmed = trimmed.substr(0, Math.min(trimmed.length, trimmed.lastIndexOf(' ')));
+      //detect links
+      trimmed = linkify(trimmed);
+      //add [...] if we must cut a description
+      return text.length > n ? trimmed + ' [...]' : trimmed;
+
     };
   });
 
