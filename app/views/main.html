@@ -92,24 +92,24 @@
 
     <section>
       <section class="calendar-wrapper" ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterRecommended:recommended | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices | filterByDate: dt) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : -(pageSize - (pageSize * currentPage - filteredEvents.length)) | groupByDate">
-        <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
+        <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{::date | date:'fullDate'}}</h2>
         <div  ng-repeat="event in events track by event.eventID">
           <article class="content-wrapper">
             <header class="event-header">
-              <img class="img-responsive pull-left category-image" ng-src="images/{{event.categoryID | defaultCategory}}.png"/>
-              <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
-              <a ng-href="/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
+              <img class="img-responsive pull-left category-image" ng-src="images/{{::event.categoryID | defaultCategory}}.png"/>
+              <div class="pull-right" ng-show="::event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
+              <a ng-href="/arrangement/{{::event.eventID}}/{{::event.title | slugify}}"><h3> {{::event.title}}</h3></a>
             </header>
             <div class="event-body">
-              <a ng-href="/arrangement/{{event.eventID}}/{{event.title | slugify}}"><img class="img-responsive event-image center-block" ng-src="{{event.imageURL}}"></a>
+              <a ng-href="/arrangement/{{::event.eventID}}/{{::event.title | slugify}}"><img class="img-responsive event-image center-block" ng-src="{{::event.imageURL}}"></a>
               <p ng-bind-html="event.descriptions[0] | cutText: 285"></p>
               <dl class="dl-horizontal">
                 <dt>Tid:</dt>
-                <dd><time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
+                <dd><time>{{::event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
                 <dt>Sted:</dt>
-                <dd>{{event.placeName}}</dd>
+                <dd>{{::event.placeName}}</dd>
                 <dt>Pris:</dt>
-                <dd>{{event.price | isFreeEvent}}</dd>
+                <dd>{{::event.price | isFreeEvent}}</dd>
               </dl>
             </div>
           </article>
