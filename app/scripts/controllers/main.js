@@ -42,7 +42,7 @@ angular.module('barteguidenWebApp.controllers')
         elem.addClass('active');
       }
     };
-
+    
     /*
      * Waits until EventService fetches all events, then saves them to $scope.
      */

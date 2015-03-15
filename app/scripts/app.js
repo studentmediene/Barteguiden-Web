@@ -22,10 +22,13 @@ angular
     'google-maps',
     'ui.bootstrap',
     'angular-loading-bar',
+    'google-maps',                      
+    'ui.bootstrap',
+    'angulike',
     'barteguidenWebApp.controllers',
     'barteguidenWebApp.filters',
     'barteguidenWebApp.services',
-    'barteguidenWebApp.directives'
+    'barteguidenWebApp.directives'    
   ])
   .config(function ($routeProvider, $locationProvider) {
     $locationProvider
@@ -61,5 +64,6 @@ angular
     $rootScope.$on('$routeChangeSuccess', function(){
       // change page title, based on route information
       $rootScope.title = $route.current.title;
+      $rootScope.facebookAppId = '[FacebookAppId]';
     });
   });
