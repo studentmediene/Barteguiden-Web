@@ -35,7 +35,7 @@ angular
   .module('barteguidenWebApp', [
     'ngRoute',
     'ngSanitize',
-    'google-maps',
+    'uiGmapgoogle-maps',
     'ui.bootstrap',
     'angular-loading-bar',
     'google-maps',

@@ -34,10 +34,10 @@
     </dl>
     <a ng-show="event.eventURL != null" ng-href="{{event.eventURL}}" target="_blank">Link til arrangementet</a>
     <h3>Kart</h3>
-    <google-map center="map.center" zoom="map.zoom" draggable="true">
-      <marker coords="marker.coords" idkey="marker.id">
-      </marker>
-    </google-map>
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true">
+      <ui-gmap-marker coords="marker.coords" idkey="marker.id">
+      </ui-gmap-marker>
+    </ui-gmap-google-map>
     <div class= 'row'>
         <div class="col-md-1">
             <div tweet='event.title'></div>
