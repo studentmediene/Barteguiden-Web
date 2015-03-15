@@ -6,4 +6,4 @@ bower_components
 .DS_Store
 app/events/
 .idea/
-nbproject/
+nbproject
