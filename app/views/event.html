@@ -28,9 +28,9 @@
       <dt>Sted:</dt>
       <dd>{{::event.placeName}}</dd>
       <dt>Pris:</dt>
-      <dd>{{::event.price | isFreeEvent}}</dd>
+      <dd>{{event.price | isFreeEvent}}</dd>
       <dt>Alder:</dt>
-      <dd>{{::event.ageLimit | isFreeForAll}}</dd>
+      <dd>{{event.ageLimit | isFreeForAll}}</dd>
     </dl>
     <a ng-show="event.eventURL != null" ng-href="{{::event.eventURL}}" target="_blank">Link til arrangementet</a>
     <h3>Kart</h3>
