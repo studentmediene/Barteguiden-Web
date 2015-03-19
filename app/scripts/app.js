@@ -68,10 +68,6 @@ angular
         title: 'Kontakt Barteguiden',
         templateUrl: 'views/contact.html'
       })
-      .when('/konkurranse', {
-        title: 'Konkurranse - Barteguiden',
-        templateUrl: '/views/comp.html'
-      })
       .otherwise({
         redirectTo: '/'
       });
