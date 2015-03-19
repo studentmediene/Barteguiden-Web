@@ -33,7 +33,7 @@ angular.module('barteguidenWebApp.filters')
   })
   .filter('isFreeForAll', function() {
     return function(ageLimit) {
-      if(ageLimit === 0 || ageLimit === null) {
+      if(ageLimit === 0 || ageLimit === null || ageLimit === undefined) {
         return 'Tillatt for alle';
       }
       return ageLimit + ' år';
