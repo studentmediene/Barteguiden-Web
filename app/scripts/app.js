@@ -76,7 +76,8 @@ angular
   })
   .run(function ($route, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function(){
-      // change page title, based on route information
+      $rootScope.isMain = $route.current.templateUrl === 'views/main.html';
+        // change page title, based on route information
       $rootScope.title = $route.current.title;
       $rootScope.facebookAppId = '[FacebookAppId]';
     });
