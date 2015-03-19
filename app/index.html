@@ -55,9 +55,9 @@
           </a>
         </div>
         <nav id="navbar" class="collapse navbar-collapse" role="navigation">
-          <form class="navbar-form navbar-right" role="search">
+          <form class="navbar-form navbar-right" role="search" ng-show="isMain">
             <div class="form-group">
-              <input ng-model="query" type="text" class="form-control" placeholder="Søk etter arrangement">
+              <input ng-model="query" type="text" ng-model-options="{ debounce: 250 }" class="form-control" placeholder="Søk etter arrangement">
             </div>
           </form>
           <ul class="nav navbar-nav navbar-right">
