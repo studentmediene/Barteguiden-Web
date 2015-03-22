@@ -113,13 +113,15 @@
               </dl>
             </div>
           </article>
-          <div class="row">
-            <div class="col-md-12 col-xs-12" ng-show="$index === 0 && $parent.$index === 0">
-              <div class="banner-wrapper">
-                <div class="row">
-                  <a ng-href="/konkurranse"><img class="col-md-12 col-xs-12" src="images/konkurransebanner.png"></a>
-                </div>
-              </div>
+          <div class="content-wrapper" ng-show="$index === 0 && $parent.$index === 0">
+            <header class="event-header">
+              <img class="img-responsive pull-left category-image" src="images/PERFORMANCES.png"/>
+              <h3>Promofilm for Barteguiden</h3>
+            </header>
+            <div align="center" class="embed-responsive embed-responsive-16by9">
+              <video controls class="embed-responsive-item">
+              <source src="" type="video/mp4">
+              </video>
             </div>
           </div>
         </div>
