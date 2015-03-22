@@ -84,10 +84,6 @@ h2 {
   margin-top: 5px;
 }
 
-.col-md-4 {
-  padding: 0px;
-}
-
   //////////////
  /// Navbar ///
 //////////////
@@ -176,6 +172,12 @@ h2 {
   /////////////////
  ///  Event    ///
 /////////////////
+
+.promo-glyph {
+  height: 20px;
+  padding-right: 10px;
+  margin-top: 0px;
+}
 
 .banner-wrapper {
   background-color: white;
@@ -270,6 +272,10 @@ h2 {
 
 
 @media screen and (min-width: 600px) {
+
+  .promo-glyph {
+    margin-top: 3px;
+  }
 
   .banner-wrapper {
     padding: 7px;
