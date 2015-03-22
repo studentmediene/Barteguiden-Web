@@ -1,4 +1,18 @@
-
+<!--
+~ Copyright 2015 Studentmediene i Trondheim AS
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~ http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+-->
 
 <div class="row">
   <div class="col-md-8">
@@ -78,34 +92,36 @@
 
     <section>
       <section class="calendar-wrapper" ng-repeat="(date, events) in filteredEvents = (events | orderBy:'startAt' | filter: query | filterRecommended:recommended | filterByCategory:chosenCategories | filterByAgeLimit:chosenAges | filterByPrice:chosenPrices | filterByDate: dt) | limitTo: pageSize * currentPage | limitTo: pageSize * currentPage < filteredEvents.length ? -pageSize : -(pageSize - (pageSize * currentPage - filteredEvents.length)) | groupByDate">
-        <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{date | date:'fullDate'}}</h2>
+        <h2 style="color:white;" class="text-center"><span class="glyphicon glyphicon-calendar"></span>  {{::date | date:'fullDate'}}</h2>
         <div  ng-repeat="event in events track by event.eventID">
           <article class="content-wrapper">
             <header class="event-header">
-              <img class="img-responsive pull-left category-image" ng-src="images/{{event.categoryID | defaultCategory}}.png"/>
-              <div class="pull-right" ng-show="event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
-              <a ng-href="/arrangement/{{event.eventID}}/{{event.title | slugify}}"><h3> {{event.title}}</h3></a>
+              <img class="img-responsive pull-left category-image" ng-src="images/{{::event.categoryID | defaultCategory}}.png"/>
+              <div class="pull-right" ng-show="::event.isRecommended"><span class="glyphicon glyphicon-star"></span> Anbefalt </div>
+              <a ng-href="/arrangement/{{::event.eventID}}/{{::event.title | slugify}}"><h3> {{::event.title}}</h3></a>
             </header>
             <div class="event-body">
-              <a ng-href="/arrangement/{{event.eventID}}/{{event.title | slugify}}"><img class="img-responsive event-image center-block" ng-src="{{event.imageURL}}"></a>
+              <a ng-href="/arrangement/{{::event.eventID}}/{{::event.title | slugify}}"><img class="img-responsive event-image center-block" ng-src="{{::event.imageURL}}"></a>
               <p ng-bind-html="event.descriptions[0] | cutText: 285"></p>
               <dl class="dl-horizontal">
                 <dt>Tid:</dt>
-                <dd><time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
+                <dd><time>{{::event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
                 <dt>Sted:</dt>
-                <dd>{{event.placeName}}</dd>
+                <dd>{{::event.placeName}}</dd>
                 <dt>Pris:</dt>
-                <dd>{{event.price | isFreeEvent}}</dd>
+                <dd>{{::event.price | isFreeEvent}}</dd>
               </dl>
             </div>
           </article>
-          <div class="row">
-            <div class="col-md-12 col-xs-12" ng-show="$index === 0 && $parent.$index === 0">
-              <div class="banner-wrapper">
-                <div class="row">
-                  <a ng-href="/konkurranse"><img class="col-md-12 col-xs-12" src="images/konkurransebanner.png"></a>
-                </div>
-              </div>
+          <div class="content-wrapper" ng-show="$index === 0 && $parent.$index === 0">
+            <header class="event-header">
+              <img class="img-responsive pull-left category-image" src="images/PERFORMANCES.png"/>
+              <h3>Promofilm for Barteguiden</h3>
+            </header>
+            <div align="center" class="embed-responsive embed-responsive-16by9">
+              <video controls class="embed-responsive-item">
+              <source src="http://barteguiden.no/v1/images/promovideo.mp4" type="video/mp4">
+              </video>
             </div>
           </div>
         </div>

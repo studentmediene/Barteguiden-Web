@@ -1,3 +1,19 @@
+/*
+ * Copyright 2015 Studentmediene i Trondheim AS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 'use strict';
 
 /**
@@ -8,7 +24,7 @@
  * Controller of the barteguidenWebApp
  */
 angular.module('barteguidenWebApp.controllers')
-  .controller('EventCtrl', ['$scope', 'EventService', '$routeParams', '$document', function ($scope, EventService, $routeParams, $document) {
+  .controller('EventCtrl', ['$scope', 'EventService', '$routeParams', '$document', '$location', function ($scope, EventService, $routeParams, $document, $location) {
     var id = $routeParams.id;
     //seems like we need some initial data before we get event data from the service.
     $scope.map = {
@@ -26,7 +42,7 @@ angular.module('barteguidenWebApp.controllers')
         longitude:10.394697
       }
     };
-    EventService.getEventById(id)
+   EventService.getEventById(id)
       .then(function(data) {
         var e = data;
         $scope.event = e;
@@ -37,6 +53,7 @@ angular.module('barteguidenWebApp.controllers')
             longitude:e.longitude
           }
         };
+        $scope.URL = $location.absUrl();
         $document[0].title = 'Barteguiden - ' + e.title;
         $scope.map = {
           center: {

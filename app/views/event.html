@@ -1,26 +1,49 @@
+<!--
+~ Copyright 2015 Studentmediene i Trondheim AS
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~ http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+-->
+
 <div class="col-md-8 col-md-offset-2 no-pad">
   <article class="content-wrapper">
     <header>
-      <img class="img-responsive pull-left category-image-single" ng-src="images/{{event.categoryID}}.png"/>
-      <h2> {{event.title}}</h2>
+      <img class="img-responsive pull-left category-image-single" ng-src="images/{{::event.categoryID}}.png"/>
+      <h2> {{::event.title}}</h2>
     </header>
-    <img class="img-responsive event-image-single" ng-src="{{event.imageURL}}">
-    <p>{{event.descriptions[0].text}}</p>
+    <img class="img-responsive event-image-single" ng-src="{{::event.imageURL}}">
+    <p>{{::event.descriptions[0].text}}</p>
     <dl class="dl-horizontal">
       <dt>Tid:</dt>
-      <dd><time>{{event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
+      <dd><time>{{::event.startAt | date:'EEEE d. MMM y kl. HH:mm'}}</time> </dd>
       <dt>Sted:</dt>
-      <dd>{{event.placeName}}</dd>
+      <dd>{{::event.placeName}}</dd>
       <dt>Pris:</dt>
       <dd>{{event.price | isFreeEvent}}</dd>
       <dt>Alder:</dt>
       <dd>{{event.ageLimit | isFreeForAll}}</dd>
     </dl>
-    <a ng-show="event.eventURL != null" ng-href="{{event.eventURL}}" target="_blank">Link til arrangementet</a>
+    <a ng-show="event.eventURL != null" ng-href="{{::event.eventURL}}" target="_blank">Link til arrangementet</a>
     <h3>Kart</h3>
-    <google-map center="map.center" zoom="map.zoom" draggable="true">
-      <marker coords="marker.coords" idkey="marker.id">
-      </marker>
-    </google-map>
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true">
+      <ui-gmap-marker coords="marker.coords" idkey="marker.id">
+      </ui-gmap-marker>
+    </ui-gmap-google-map>
+    <div class= 'row'>
+        <div class="col-md-1">
+            <div tweet='event.title'></div>
+        </div>
+      <div class="col-md-0 col-sm-offset-2">
+        <div fb-like='URL'></div>
+    </div>
   </article>
 </div>
