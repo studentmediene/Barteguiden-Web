@@ -173,6 +173,12 @@ h2 {
  ///  Event    ///
 /////////////////
 
+.promo-glyph {
+  height: 20px;
+  padding-right: 10px;
+  margin-top: 0px;
+}
+
 .banner-wrapper {
   background-color: white;
   padding: 3px;
@@ -266,6 +272,10 @@ h2 {
 
 
 @media screen and (min-width: 600px) {
+
+  .promo-glyph {
+    margin-top: 3px;
+  }
 
   .banner-wrapper {
     padding: 7px;
