@@ -66,6 +66,10 @@ angular
         title: 'Kontakt Barteguiden',
         templateUrl: 'views/contact.html'
       })
+      .when('/konkurranse', {
+        title: 'Konkurranse - Vinn billetter til The Fjords på Brukbar/Blæst!',
+        templateUrl: 'views/competition.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
