@@ -22,7 +22,7 @@ angular.module('barteguidenWebApp.filters')
       if(price === 0) {
         return 'Gratis';
       }
-      else if(price === undefined || price === null) {
+      else if(!price) {
           return 'Ikke oppgitt';
       }
       else {
@@ -33,7 +33,7 @@ angular.module('barteguidenWebApp.filters')
   })
   .filter('isFreeForAll', function() {
     return function(ageLimit) {
-      if(ageLimit === 0 || ageLimit === null || ageLimit === undefined) {
+      if(!ageLimit) {
         return 'Tillatt for alle';
       }
       return ageLimit + ' år';
@@ -55,7 +55,7 @@ angular.module('barteguidenWebApp.filters')
   })
   .filter('defaultCategory', function() {
     return function(obj) {
-      if(obj === undefined || obj === null) {
+      if(!obj) {
         return 'OTHER';
       }
       return obj;
@@ -64,7 +64,7 @@ angular.module('barteguidenWebApp.filters')
   .filter('cutText', function() {
     return function(obj, n) {
       //In case we don't have text in the description
-      if(obj === undefined || obj === null) {
+      if(!obj) {
         return '';
       }
       //this function linkifies a url with the text Link
@@ -86,6 +86,11 @@ angular.module('barteguidenWebApp.filters')
       //add [...] if we must cut a description
       return text.length > n ? trimmed + ' [...]' : trimmed;
 
+    };
+  })
+  .filter('samfundetImage', function() {
+    return function(imageURL) {
+      return imageURL.replace('/large/', '/medium/');
     };
   });
 
