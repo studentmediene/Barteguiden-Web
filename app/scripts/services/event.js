@@ -17,7 +17,7 @@
 'use strict';
 
 angular.module('barteguidenWebApp.services')
-  .factory('EventService', ['$http', '$q', function ($http, $q) {
+  .factory('Event', ['$http', '$q', function ($http, $q) {
     var baseURL = 'http://barteguiden.no/v2/';
     var cache = [];
     var cacheById = {};

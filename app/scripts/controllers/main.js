@@ -26,7 +26,7 @@
  * Controller of the barteguidenWebApp
  */
 angular.module('barteguidenWebApp.controllers')
-  .controller('MainCtrl', ['$scope', 'EventService',function ($scope, EventService) {
+  .controller('MainCtrl', ['$scope', 'Event',function ($scope, Event) {
 
     /*
      * Pagination
@@ -62,7 +62,7 @@ angular.module('barteguidenWebApp.controllers')
     /*
      * Waits until EventService fetches all events, then saves them to $scope.
      */
-    EventService.getEvents()
+    Event.getEvents()
       .then(function(data) {
         $scope.events = data;
       });
