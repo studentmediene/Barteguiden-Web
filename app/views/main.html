@@ -102,7 +102,8 @@
             </header>
             <div class="event-body">
               <a ng-href="/arrangement/{{::event.eventID}}/{{::event.title | slugify}}">
-                <img class="img-responsive event-image center-block" ng-src="{{::event.placeName == 'Studentersamfundet' ? (event.imageURL | samfundetImage) : event.imageURL}}">
+                <img class="img-responsive event-image center-block" ng-src="{{::event.placeName == 'Studentersamfundet' ? (event.imageURL | samfundetImage) : event.imageURL}}
+                " onerror="this.style.display='none'">
               </a>
               <p ng-bind-html="event.descriptions[0] | cutText: 285"></p>
               <dl class="dl-horizontal">
