@@ -22,24 +22,25 @@
     <meta name="description" content="Kulturguide til Trondheim">
     <meta name="keywords" content="Kulturguide, Trondheim, Barteguiden, Studentmediene, Arrangementer, Kultur">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <base href="/">
     <meta name="fragment" content="!">
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-4404225-5']);
+      _gaq.push(['_trackPageview']);
+    </script>
   </head>
   <body>
   <div class="bg" background></div>
-    <!--[if lt IE 7]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
     <header class="navbar navbar-default navbar-fixed-top" role="banner">
       <div class="container">
         <div class="navbar-header">
@@ -89,26 +90,14 @@
       </div>
     </footer>
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-4404225-5', 'auto');
-      ga('send', 'pageview');
+    <script type="text/javascript">  (function() {
+      var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;
+      ga.src =('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
+      var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
 
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?sensor=false">
-    </script>
-
-    <!-- build:js(.) scripts/oldieshim.js -->
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <![endif]-->
-    <!-- endbuild -->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -133,11 +122,11 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/event.js"></script>
-    <script src="scripts/services/EventService.js"></script>
-    <script src="scripts/filters/appFilters.js"></script>
-    <script src="scripts/filters/eventFilters.js"></script>
-    <script src="scripts/services/stabilizeFilter.js"></script>
-    <script src="scripts/directives/resizedirective.js"></script>
+    <script src="scripts/services/event.js"></script>
+    <script src="scripts/filters/app.js"></script>
+    <script src="scripts/filters/events.js"></script>
+    <script src="scripts/services/stabilize.js"></script>
+    <script src="scripts/directives/resize.js"></script>
     <script src="scripts/directives/background.js"></script>
     <!-- endbuild -->
   </body>

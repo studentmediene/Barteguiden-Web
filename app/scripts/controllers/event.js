@@ -24,7 +24,7 @@
  * Controller of the barteguidenWebApp
  */
 angular.module('barteguidenWebApp.controllers')
-  .controller('EventCtrl', ['$scope', 'EventService', '$routeParams', '$document', '$location', function ($scope, EventService, $routeParams, $document, $location) {
+  .controller('EventCtrl', ['$scope', 'Event', '$routeParams', '$document', '$location', function ($scope, Event, $routeParams, $document, $location) {
     var id = $routeParams.id;
     //seems like we need some initial data before we get event data from the service.
     $scope.map = {
@@ -42,7 +42,7 @@ angular.module('barteguidenWebApp.controllers')
         longitude:10.394697
       }
     };
-   EventService.getEventById(id)
+   Event.getEventById(id)
       .then(function(data) {
         var e = data;
         $scope.event = e;
