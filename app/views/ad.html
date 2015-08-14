@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-12 col-xs-12"
+    ng-if="$parent.$index === 0 && $parent.$parent.$index === index">
+    <div class="banner-wrapper">
+      <div class="row">
+        <a ng-href={{ad.url}} target="_blank" ng-click="trackAd()">
+          <img class="col-md-12 col-xs-12"
+            ng-src="{{ad.src}}">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
