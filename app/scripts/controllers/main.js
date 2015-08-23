@@ -26,7 +26,7 @@
  * Controller of the barteguidenWebApp
  */
 angular.module('barteguidenWebApp.controllers')
-  .controller('MainCtrl', ['$scope', 'Event',function ($scope, Event) {
+  .controller('MainCtrl', ['$scope', 'Event' ,'Ad',function ($scope, Event, Ad) {
 
     /*
      * Pagination
@@ -66,6 +66,11 @@ angular.module('barteguidenWebApp.controllers')
       .then(function(data) {
         $scope.events = data;
       });
+
+    /*
+     * Fetch ads
+     */
+     $scope.ads = Ad.getAds();
 
     /*
      * Initializes button categories.

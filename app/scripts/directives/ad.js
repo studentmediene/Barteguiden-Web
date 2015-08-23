@@ -24,17 +24,16 @@
  */
 
  angular.module('barteguidenWebApp.directives')
-  .directive('ad', function(Ad) {
+  .directive('ad', function() {
     return {
       templateUrl: 'views/ad.html',
       restrict: 'E',
       scope: {
-        index: '=index'
+        ad: '=ad'
       },
-      link: function(scope, el, attrs) {
-        scope.ad = Ad.getAd(scope.index);
-        scope.trackAd = function() {
-          _gaq.push(['_trackEvent', 'ads', 'click', scope.ad.ref]);
+      link: function(scope) {
+        scope.trackAd = function(ad) {
+          _gaq.push(['_trackEvent', 'ads', 'click', ad.ref]);
         };
       }
     };
@@ -57,8 +56,8 @@
     ads = shuffle(ads);
 
     return {
-      getAd: function(index) {
-        return ads[index];
+      getAds: function() {
+        return ads;
       }
     };
   });
