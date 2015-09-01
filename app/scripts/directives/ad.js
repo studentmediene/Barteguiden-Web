@@ -42,9 +42,7 @@
   .factory('Ad', function() {
     var ads = [
       {url: 'http://sirkusshopping.no', src: 'images/barteguiden_annonse.jpg',
-        ref: 'CirkusShopping'},
-      {url: 'http://billettservice.no/event/royksopp-highasakite-billetter/450279',
-        src: 'images/barteguiden_annonse_evry.jpg', ref: 'Evry'}
+        ref: 'CirkusShopping'}
     ];
 
     function shuffle(o) {
