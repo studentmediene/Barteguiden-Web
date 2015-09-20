@@ -40,10 +40,7 @@
 
   })
   .factory('Ad', function() {
-    var ads = [
-      {url: 'http://sirkusshopping.no', src: 'images/barteguiden_annonse.jpg',
-        ref: 'CirkusShopping'}
-    ];
+    var ads = [];
 
     function shuffle(o) {
       for(var j, x, i = o.length; i;
