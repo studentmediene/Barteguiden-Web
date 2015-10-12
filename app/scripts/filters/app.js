@@ -76,7 +76,7 @@ angular.module('barteguidenWebApp.filters')
         });
       }
       //get and shorten the text
-      var text = obj.text;
+      var text = obj;
       text += ' ';
       var trimmed = text.substr(0,n);
       //cut remaining chars not part of a word

@@ -44,7 +44,7 @@ angular.module('barteguidenWebApp.filters')
       }
 
       return _.filter(events, function (event) { //Returned filtered events
-        return _.include(_.pluck(wantedCategories, 'id'), event.categoryID);
+        return _.include(_.pluck(wantedCategories, 'id'), event.category);
       });
     };
   })
