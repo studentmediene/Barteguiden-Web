@@ -47,18 +47,18 @@ angular.module('barteguidenWebApp.controllers')
         var e = data;
         $scope.event = e;
         $scope.marker = {
-          id:parseInt(e.eventID),
+          id:1,
           coords: {
-            latitude: e.latitude,
-            longitude:e.longitude
+            latitude: e.venue.latitude,
+            longitude:e.venue.longitude
           }
         };
         $scope.URL = $location.absUrl();
         $document[0].title = 'Barteguiden - ' + e.title;
         $scope.map = {
           center: {
-            latitude: e.latitude,
-            longitude: e.longitude
+            latitude: e.venue.latitude,
+            longitude: e.venue.longitude
           },
           zoom: 14,
           draggable: 'true'
