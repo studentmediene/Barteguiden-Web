@@ -17,7 +17,7 @@
 <div class="col-md-8 col-md-offset-2 no-pad">
   <article class="content-wrapper">
     <header>
-      <img class="img-responsive pull-left category-image-single" ng-src="images/{{::event.category}}.png"/>
+      <img class="img-responsive pull-left category-image-single" ng-src="images/{{::event.category | defaultCategory}}.png"/>
       <h2> {{::event.title}}</h2>
     </header>
     <img class="img-responsive event-image-single" ng-src="{{::event.imageUrl}}"
