@@ -65,7 +65,7 @@ angular.module('barteguidenWebApp.filters')
       if(recommended === false) { //Show all events if recommended button is not clicked
         return events;
       }
-      return _.filter(events, 'isRecommended', true);
+      return _.filter(events, 'isPromoted', true);
     };
   })
 
