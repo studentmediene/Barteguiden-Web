@@ -18,7 +18,7 @@
 
 angular.module('barteguidenWebApp.services')
   .factory('Event', ['$http', '$q', function ($http, $q) {
-    var baseURL = 'http://barteguiden.no/v2/';
+    var baseURL = 'http://barteguiden.no/api/';
     var cache = [];
     var cacheById = {};
 
@@ -42,7 +42,7 @@ angular.module('barteguidenWebApp.services')
         var deferred = $q.defer();
         if(!cache.length) {
           $http.get(baseURL + 'events').then(function(response) {
-            cache = response.data.events;
+            cache = response.data;
             deferred.resolve(cache);
           });
         }

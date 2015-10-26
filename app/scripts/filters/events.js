@@ -44,7 +44,7 @@ angular.module('barteguidenWebApp.filters')
       }
 
       return _.filter(events, function (event) { //Returned filtered events
-        return _.include(_.pluck(wantedCategories, 'id'), event.categoryID);
+        return _.include(_.pluck(wantedCategories, 'id'), event.category);
       });
     };
   })
@@ -65,7 +65,7 @@ angular.module('barteguidenWebApp.filters')
       if(recommended === false) { //Show all events if recommended button is not clicked
         return events;
       }
-      return _.filter(events, 'isRecommended', true);
+      return _.filter(events, 'isPromoted', true);
     };
   })
 
