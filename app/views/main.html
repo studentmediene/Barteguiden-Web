@@ -124,7 +124,7 @@
     <section>
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <pagination total-items="filteredEvents.length" ng-model="currentPage" items-per-page="pageSize" previous-text="Forrige" next-text="Neste" max-size="isLargerThan(420) ? 3 : 0" boundary-links="true" first-text="Første" last-text="Siste" rotate="false" ng-change="scroll()" resize></pagination>
+          <uib-pagination total-items="filteredEvents.length" ng-model="currentPage" items-per-page="pageSize" previous-text="Forrige" next-text="Neste" max-size="isLargerThan(420) ? 3 : 0" boundary-links="true" first-text="Første" last-text="Siste" rotate="false" ng-change="scroll()" resize></uib-pagination>
         </div>
       </div>
     </section>
@@ -157,7 +157,7 @@
           </div>
         </div>
         <div class="datepicker-wrapper">
-          <datepicker ng-model="dt" min-date="minDate" show-weeks="false" starting-day="1" class="datepicker-wrapper"></datepicker>
+          <uib-datepicker ng-model="dt" min-date="minDate" show-weeks="false" starting-day="1" class="datepicker-wrapper"></uib-datepicker>
         </div>
       </div>
     </aside>

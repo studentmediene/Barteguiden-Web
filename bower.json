@@ -2,25 +2,28 @@
   "name": "barteguiden-web",
   "version": "1.0.0",
   "dependencies": {
-    "angular": "~1.3.14",
+    "angular": "~1.4.0",
     "bootstrap-sass-official": "~3.2.0",
-    "angular-route": "~1.3.14",
-    "angular-google-maps": "~2.0.16",
-    "angular-i18n": "~1.3.14",
-    "angular-bootstrap": "~0.12.1",
-    "angular-sanitize": "~1.3.14",
+    "angular-route": "~1.4.0",
+    "angular-google-maps": "~2.3.0",
+    "angular-i18n": "~1.4.0",
+    "angular-bootstrap": "~0.14.0",
+    "angular-sanitize": "~1.4.0",
     "angular-loading-bar": "~0.7.1",
     "angulike": "*",
     "font-awesome": "~4.3.0"
   },
   "devDependencies": {
-    "angular-mocks": "~1.3.14",
-    "angular-scenario": "~1.3.14"
+    "angular-mocks": "~1.4.0",
+    "angular-scenario": "~1.4.0"
   },
   "appPath": "app",
   "overrides": {
     "angular-i18n": {
       "main": "angular-locale_nb-no.js"
     }
+  },
+  "resolutions": {
+    "angular": "~1.4.0"
   }
 }
