@@ -30,7 +30,7 @@ angular.module('barteguidenWebApp.filters')
           eventPrice = -1; //-1 means paid event, 0 is free
           // has to be done due to different input
         }
-        return _.include(_.pluck(wantedPrices, 'id'), eventPrice);
+        return _.includes(_.map(wantedPrices, 'id'), eventPrice);
       });
 
 
@@ -44,7 +44,7 @@ angular.module('barteguidenWebApp.filters')
       }
 
       return _.filter(events, function (event) { //Returned filtered events
-        return _.include(_.pluck(wantedCategories, 'id'), event.category);
+        return _.includes(_.map(wantedCategories, 'id'), event.category);
       });
     };
   })
@@ -55,7 +55,7 @@ angular.module('barteguidenWebApp.filters')
         return events;
       }
       return _.filter(events, function (event) {
-        return _.include(_.pluck(wantedAges,'id'), event.ageLimit);
+        return _.includes(_.map(wantedAges,'id'), event.ageLimit);
       });
     };
   })
