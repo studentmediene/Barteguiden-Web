@@ -18,7 +18,7 @@
 
 angular.module('barteguidenWebApp.services')
   .factory('Event', ['$http', '$q', function ($http, $q) {
-    var baseURL = 'http://barteguiden.no/api/';
+    var baseURL = 'https://barteguiden.no/api/';
     var cache = [];
     var cacheById = {};
 
