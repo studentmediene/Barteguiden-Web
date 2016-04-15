@@ -8,21 +8,24 @@ import { fetchEvents } from './actions'
 
 
 class App extends React.Component {
+
   componentWillMount() {
     const { dispatch } = this.props;
-    console.log('will mount. props: ');
-      console.log(this.props);
-    fetchEvents()(this.props.dispatch);
+    fetchEvents()(dispatch);
   }
 
   render() {
     return (
       <div>
         <h1>martin er kul</h1>
-        <EventList events={initialEvents}/>
+        <EventList events={this.props.events} />
       </div>
     )
   }
 }
 
-export default connect()(App);
+function mapStateToProps(state) {
+  return state
+}
+
+export default connect(mapStateToProps)(App);

@@ -16,11 +16,11 @@ const Event = props => {
 }
 
 const EventList = props => {
-  const events = props.events;
+  const { items } = props.events;
   return (
     <div className="eventlist">
       <ul>
-        {events.map((e, i) => <Event key={i} evt={e}/>)}
+        {items.map((e, i) => <Event key={i} evt={e}/>)}
       </ul>
     </div>
   )

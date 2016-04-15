@@ -15,7 +15,8 @@ const store = createStore(
   combineReducers({
     ...reducers,
     routing: routerReducer
-  })
+  }),
+  window.devToolsExtension ? window.devToolsExtension() : f => f,
 )
 
 const history = syncHistoryWithStore(browserHistory, store)
