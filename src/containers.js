@@ -5,9 +5,9 @@ import { connect } from 'react-redux'
 class EventPage extends Component {
   render() {
     console.log(this.props);
-    const eventId = Number(this.props.routeParams.id);
+    const eventId = this.props.routeParams.id;
     const showingEvent = this.props.events.items
-      .filter((e) => e.externalId == eventId)[0];
+      .filter((e) => e._id == eventId)[0];
     return (
         <div>
         <Link to='/' >back</Link>

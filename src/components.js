@@ -6,7 +6,7 @@ const Event = props => {
   const e = props.evt
   return (
     <div className='eventbox'>
-      <h2><Link to={'/events/' + e.externalId}>
+      <h2><Link to={'/events/' + e._id}>
         {e.title}
       </Link></h2>
       <img src={e.imageUrl} />
