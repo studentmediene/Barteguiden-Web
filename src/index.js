@@ -9,6 +9,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 
 import reducers from './reducers'
 import App from './App'
+import { EventPage } from './containers'
 
 const store = createStore(
   combineReducers({
