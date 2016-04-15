@@ -1,0 +1,30 @@
+{
+  "name": "martinerkul",
+  "version": "1.0.0",
+  "description": "Describe martinerkul here",
+  "private": true,
+  "scripts": {
+    "build": "nwb build",
+    "clean": "nwb clean",
+    "start": "nwb serve",
+    "test": "nwb test",
+    "test:watch": "nwb test --server"
+  },
+  "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.6.5",
+    "isomorphic-fetch": "^2.2.1",
+    "nwb-sass": "^0.5.0",
+    "react": "0.14.x",
+    "react-dom": "0.14.x",
+    "react-redux": "^4.4.2",
+    "react-router": "^2.0.1",
+    "react-router-redux": "^4.0.2",
+    "redux": "^3.4.0"
+  },
+  "devDependencies": {
+    "nwb": "0.9.x"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": ""
+}

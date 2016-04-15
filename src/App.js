@@ -1,8 +1,20 @@
 import React from 'react'
 import { EventList } from './components'
 import initialEvents from './init_data'
+import { connect } from 'react-redux'
+
+import { fetchEvents } from './actions'
+
+
 
 class App extends React.Component {
+  componentWillMount() {
+    const { dispatch } = this.props;
+    console.log('will mount. props: ');
+      console.log(this.props);
+    fetchEvents()(this.props.dispatch);
+  }
+
   render() {
     return (
       <div>
@@ -13,4 +25,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect()(App);

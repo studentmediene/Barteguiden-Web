@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { connect } from 'react-redux'
+
 class EventPage extends Component {
   render() {
     return (
@@ -10,4 +12,6 @@ class EventPage extends Component {
   }
 }
 
-export { EventPage }
+const VisibleEventPage = connect()(EventPage)
+
+export { VisibleEventPage }

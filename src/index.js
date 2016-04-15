@@ -7,9 +7,9 @@ import { Provider } from 'react-redux'
 import { Router, Route, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 
-import reducers from './reducers'
+import * as reducers from './reducers'
 import App from './App'
-import { EventPage } from './containers'
+import { VisibleEventPage } from './containers'
 
 const store = createStore(
   combineReducers({
@@ -24,9 +24,9 @@ render(
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={App} >
-          <Route path="/hue" component={EventPage} />
+          <Route path="/hue" component={VisibleEventPage} />
         </Route>
-        <Route path="/events/:id" component={EventPage} />
+        <Route path="/events/:id" component={VisibleEventPage} />
       </Router>
     </Provider>,
     document.querySelector('#app'))
