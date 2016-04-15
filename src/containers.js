@@ -1,23 +1,25 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router'
 import { connect } from 'react-redux'
 
 class EventPage extends Component {
   render() {
     console.log(this.props);
+    const eventId = Number(this.props.routeParams.id);
+    const showingEvent = this.props.events.items
+      .filter((e) => e.externalId == eventId)[0];
     return (
-      <p>
-        eventpage :)
-      </p>
+        <div>
+        <Link to='/' >back</Link>
+        <h1>{showingEvent.title}</h1>
+        <p> eventpage :) </p>
+      </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  const { events } = state;
-  return {
-    events: items,
-  }
+  return state;
 }
 
 const VisibleEventPage = connect(mapStateToProps)(EventPage)
