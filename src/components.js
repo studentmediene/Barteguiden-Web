@@ -5,7 +5,15 @@ import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import { fetchEvents } from './actions'
 
-const Event = props => {
+export const Loading = props => {
+  return (
+      <div>
+        <p>Loading ...</p>
+      </div>
+  );
+}
+
+export const Event = props => {
   const e = props.evt
   return (
     <div className='eventbox'>
@@ -18,8 +26,11 @@ const Event = props => {
   )
 }
 
-const EventList = props => {
-  const { items } = props.events;
+export const EventList = props => {
+  const { items, isFetching } = props.events;
+  if (isFetching) {
+    return <Loading />
+  }
   return (
     <div className="eventlist">
       <ul>
@@ -53,5 +64,3 @@ function mapStateToProps(state) {
 
 
 export default connect(mapStateToProps)(App);
-export { EventList, Event }
-

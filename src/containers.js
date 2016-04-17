@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
 
+import { Loading } from './components'
+
 import { fetchEvent } from './actions'
 
 class EventPage extends Component {
@@ -12,9 +14,13 @@ class EventPage extends Component {
   }
 
   render() {
-    const event = this.props.events.item;
-    console.log(event);
-    if (!event) {
+    const { item, isFetching } = this.props.events;
+    if (isFetching) {
+      return (
+        <Loading />
+      )
+    }
+    if (!item) {
       return (
         <div>
           Could not find event {this.props.params.id}.
@@ -24,7 +30,7 @@ class EventPage extends Component {
     return (
         <div>
         <Link to='/' >back</Link>
-        <h1>{event.title}</h1>
+        <h1>{item.title}</h1>
         <p> eventpage :) </p>
       </div>
     );

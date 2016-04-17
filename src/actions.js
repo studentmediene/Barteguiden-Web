@@ -1,67 +1,59 @@
 import fetch from 'isomorphic-fetch'
 
-export const REQUEST_EVENT = 'REQUEST_EVENT'
-export const RECEIVE_EVENT = 'RECEIVE_EVENT'
-export const FAILED_FETCH_EVENT = 'FAILED_FETCH_EVENT'
-
-export const REQUEST_EVENTS = 'REQUEST_EVENTS'
-export const RECEIVE_EVENTS = 'RECEIVE_EVENTS'
-export const FAILED_FETCH_EVENTS = 'FAILED_FETCH_EVENTS'
+export const REQUEST_URL = 'REQUEST_URL'
+export const RECEIVE_URL = 'RECEIVE_URL'
+export const REQUEST_FAILED = 'REQUEST_FAILED'
 
 const URL = 'http://barteguiden.no/api/events'
 
-// NOTE: do we really need all these functions? 
-export function requestEvents() {
+/**
+ * If the reducer needs more data, add a param here,
+ * and check if it is `undefined` (for when we don't
+ * supply any data).
+ */
+export function request() {
   return {
-    type: REQUEST_EVENTS,
+    type: REQUEST_URL,
   }
 }
 
-export function requestEvent(id) {
+export function receive(json) {
   return {
-    type: REQUEST_EVENTS,
-    data: id
-  }
-}
-
-export function receiveEvent(json) {
-  return {
-    type: RECEIVE_EVENT,
-    data: json,
-  }
-}
-
-export function receiveEvents(json) {
-  return {
-    type: RECEIVE_EVENTS,
+    type: RECEIVE_URL,
     data: json,
   }
 }
 
 export function fetchEvent(id) {
-  console.log('want to fetch event ' + id);
   return dispatch => {
-    dispatch(requestEvent(id));
+    dispatch(request());
+    // @TODO: remove the settimeout.
+    // only used for testing the Loading component
+    setTimeout(() =>  {
     return fetch(URL + '/' + id)
       .then(res => res.json())
-      .then(json => dispatch(receiveEvent(json)))
+      .then(json => dispatch(receive(json)))
       .catch(err => dispatch({
-        type: FAILED_FETCH_EVENT,
+        type: REQUEST_FAILED,
         error: err,
       }))
+
+    }, 1000);
   }
 }
 
 export function fetchEvents() {
-  console.log('want to fetch all events');
   return dispatch => {
-    dispatch(requestEvents());
+    dispatch(request());
+    setTimeout(() => {
     return fetch(URL)
       .then(res => res.json())
-      .then(json => dispatch(receiveEvents(json)))
+      .then(json => dispatch(receive(json)))
       .catch(err => dispatch({
-        type: FAILED_FETCH_EVENTS,
+        type: REQUEST_FAILED,
         error: err,
       }))
+    }, 1000);
+
   }
 }
