@@ -1,6 +1,9 @@
+import initialEvents from './init_data'
+
 import React from 'react'
 import { Link } from 'react-router'
-
+import { connect } from 'react-redux'
+import { fetchEvents } from './actions'
 
 const Event = props => {
   const e = props.evt
@@ -26,4 +29,29 @@ const EventList = props => {
   )
 }
 
+
+class App extends React.Component {
+
+  componentWillMount() {
+    const { dispatch } = this.props;
+    fetchEvents()(dispatch);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>martin er kul</h1>
+        <EventList events={this.props.events} />
+      </div>
+    )
+  }
+}
+
+function mapStateToProps(state) {
+  return state
+}
+
+
+export default connect(mapStateToProps)(App);
 export { EventList, Event }
+

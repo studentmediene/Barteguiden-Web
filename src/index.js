@@ -8,7 +8,7 @@ import { Router, Route, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 
 import * as reducers from './reducers'
-import App from './App'
+import App from './components'
 import { VisibleEventPage } from './containers'
 
 const store = createStore(
