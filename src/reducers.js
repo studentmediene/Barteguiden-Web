@@ -1,14 +1,8 @@
 import {
-  REQUEST_EVENT,
-  RECEIVE_EVENT,
-  FAILED_FETCH_EVENT,
-  REQUEST_EVENTS,
-  RECEIVE_EVENTS,
-  FAILED_FETCH_EVENTS,
-
   REQUEST_URL,
   RECEIVE_URL,
   REQUEST_FAILED,
+  SEARCHBOX_CHANGE,
 } from './actions'
 
 const initialEventState = {
@@ -34,14 +28,32 @@ const events = (state = initialEventState, action) => {
       }
       s.isFetching = false;
       return s;
+
+    case (SEARCHBOX_CHANGE):
+      const text = action.text.toLowerCase();
+      if (text == '')
+        return Object.assign({}, state, {
+          items: state.all_items,
+        });
+      const items = state.all_items || state.items;
+
+      const filteredEvents = items.filter((e) =>
+        e.title.toLowerCase().startsWith(text)
+      );
+      return Object.assign({}, state, {
+        items: filteredEvents,
+        all_items: state.items,
+      });
+
     case (REQUEST_URL):
       return Object.assign({}, state, {isFetching: true});
       break;
-    case FAILED_FETCH_EVENTS:
+
+    case REQUEST_FAILED:
       console.log('failed to fetch: ');
       console.log(action);
-    // @TODO: add some kind of error handing, if the fetch fails
       return Object.assign({}, state, {isFetching: false});
+
     default:
   }
   return state;

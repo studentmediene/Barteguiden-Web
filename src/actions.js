@@ -24,6 +24,13 @@ export function receive(json) {
   }
 }
 
+export function error(e) {
+  return {
+    type: REQUEST_FAILED,
+    error: e,
+  }
+}
+
 export function fetchEvent(id) {
   return dispatch => {
     dispatch(request());
@@ -33,11 +40,7 @@ export function fetchEvent(id) {
     return fetch(URL + '/' + id)
       .then(res => res.json())
       .then(json => dispatch(receive(json)))
-      .catch(err => dispatch({
-        type: REQUEST_FAILED,
-        error: err,
-      }))
-
+      .catch(err => dispatch(error(err)))
     }, 1000);
   }
 }
@@ -45,15 +48,23 @@ export function fetchEvent(id) {
 export function fetchEvents() {
   return dispatch => {
     dispatch(request());
+    // @TODO: remove the settimeout.
+    // only used for testing the Loading component
     setTimeout(() => {
     return fetch(URL)
       .then(res => res.json())
       .then(json => dispatch(receive(json)))
-      .catch(err => dispatch({
-        type: REQUEST_FAILED,
-        error: err,
-      }))
+      .catch(err => dispatch(error(err)))
     }, 1000);
 
   }
+}
+
+export const SEARCHBOX_CHANGE = 'SEARCHBOX_CHANGE'
+
+export function searchbox_change(text) {
+  return {
+    type: SEARCHBOX_CHANGE,
+    text: text
+  };
 }

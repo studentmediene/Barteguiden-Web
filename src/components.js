@@ -3,7 +3,7 @@ import initialEvents from './init_data'
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
-import { fetchEvents } from './actions'
+import { fetchEvents, searchbox_change } from './actions'
 
 export const Loading = props => {
   return (
@@ -40,18 +40,38 @@ export const EventList = props => {
   )
 }
 
+export const SearchBox = props => {
+  return (
+    <div>
+      <input type="text" placeholder="Søk etter events"
+       onChange={props.onChange}></input>
+    </div>
+  );
+}
+
 
 class App extends React.Component {
-
+  constructor() {
+    super();
+    // Jadascript.
+    this.handleSearchBoxClick = this.handleSearchBoxClick.bind(this);
+  }
   componentWillMount() {
     const { dispatch } = this.props;
     fetchEvents()(dispatch);
   }
 
+  handleSearchBoxClick(evt) {
+    const text = evt.target.value;
+    this.props.dispatch(searchbox_change(text))
+  }
+
   render() {
+    const { dispatch } = this.props;
     return (
       <div>
         <h1>martin er kul</h1>
+        <SearchBox onChange={this.handleSearchBoxClick} />
         <EventList events={this.props.events} />
       </div>
     )
@@ -59,7 +79,7 @@ class App extends React.Component {
 }
 
 function mapStateToProps(state) {
-  return state
+  return state;
 }
 
 
