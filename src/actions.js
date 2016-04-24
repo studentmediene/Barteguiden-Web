@@ -62,9 +62,18 @@ export function fetchEvents() {
 
 export const SEARCHBOX_CHANGE = 'SEARCHBOX_CHANGE'
 
-export function searchbox_change(text) {
+export function searchboxChange(text) {
   return {
     type: SEARCHBOX_CHANGE,
     text: text
+  };
+}
+
+export const DATE_SELECT = 'DATE_SELECT'
+
+export function dateSelect(date) {
+  return {
+    type: DATE_SELECT,
+    date,
   };
 }

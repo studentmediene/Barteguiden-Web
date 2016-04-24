@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
-import { fetchEvents, searchbox_change } from './actions'
+import { fetchEvents, searchboxChange, dateSelect } from './actions'
+import RangeCalendar from 'rc-calendar'
 
 export const Loading = props => {
   return (
@@ -53,6 +54,7 @@ class App extends React.Component {
     super();
     // Jadascript.
     this.handleSearchBoxClick = this.handleSearchBoxClick.bind(this);
+    this.handleCalendarChange = this.handleCalendarChange.bind(this);
   }
   componentWillMount() {
     const { dispatch } = this.props;
@@ -61,7 +63,16 @@ class App extends React.Component {
 
   handleSearchBoxClick(evt) {
     const text = evt.target.value;
-    this.props.dispatch(searchbox_change(text))
+    this.props.dispatch(searchboxChange(text))
+  }
+
+  handleCalendarChange(evt) {
+    const { fields } = evt;
+    const year  = fields[1],
+          month = fields[2],
+          day   = fields[3];
+    const date = new Date(year, month, day);
+    this.props.dispatch(dateSelect(date));
   }
 
   render() {
@@ -69,6 +80,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>martin er kul</h1>
+        <RangeCalendar onChange={this.handleCalendarChange}/>
         <SearchBox onChange={this.handleSearchBoxClick} />
         <EventList events={this.props.events} />
       </div>
