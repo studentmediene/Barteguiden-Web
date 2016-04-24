@@ -72,11 +72,11 @@ export const CategoryList = props => {
   return (
     <div>
       <ul>
-        <li>
         {categories.map((c, i) => (
-          <CategoryItem key={i} category={c} onClick={onClick}/>
+          <li key={i}>
+            <CategoryItem category={c} onClick={onClick}/>
+          </li>
         ))}
-        </li>
       </ul>
     </div>
   );

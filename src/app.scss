@@ -7,3 +7,27 @@ html {
   padding: 8px;
   margin-bottom: 1em;
 }
+
+.rc-calendar {
+  margin: 1em;
+  border: 1px solid #aaa;
+}
+
+.rc-calendar-date {
+  border: 1px solid #aaa;
+
+  min-width: 2em;
+  min-height: 2em;
+  text-align: center;
+}
+
+.rc-calendar-last-month-cell {
+  background: #eee;
+}
+.rc-calendar-next-month-btn-day {
+  background: #eee;
+}
+
+.rc-calendar-date[aria-selected="true"] {
+  background: #999;
+}
