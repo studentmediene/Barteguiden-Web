@@ -11,19 +11,20 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.6.5",
     "isomorphic-fetch": "^2.2.1",
-    "nwb-sass": "^0.5.0",
     "rc-calendar": "^5.5.1",
     "react": "0.14.x",
     "react-dom": "0.14.x",
     "react-redux": "^4.4.2",
     "react-router": "^2.0.1",
     "react-router-redux": "^4.0.2",
+    "react-toggle": "^2.1.0",
     "redux": "^3.4.0"
   },
   "devDependencies": {
-    "nwb": "0.9.x"
+    "babel-plugin-transform-object-rest-spread": "^6.6.5",
+    "nwb": "0.9.x",
+    "nwb-sass": "^0.5.0"
   },
   "author": "",
   "license": "MIT",
