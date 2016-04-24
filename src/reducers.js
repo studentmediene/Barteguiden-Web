@@ -21,8 +21,11 @@ const events = (state = initialEventState, action) => {
     const s = Object.assign({}, state, {});
     if (action.data.constructor === Array) {
       // @NOTE: do we need to clone the array?
-      s.items = action.data.slice();
+      const data = action.data.slice();
+      data.sort(function (a, b) {return a.date < b.date});
+      s.items = data;
     } else  {
+      // what .. ?
       s.item = action.data;
     }
     s.isFetching = false;
