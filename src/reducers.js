@@ -4,18 +4,16 @@ import {
   REQUEST_FAILED,
   SEARCHBOX_CHANGE,
   DATE_SELECT,
+  CATEGORY_SELECT,
 } from './actions'
 
 const initialEventState = {
   items: [],
   all_items: [],
+  categories: [],
 }
 
-/** 
- * Here, we get the action that is fired with `dispatch`.
- * For our use, this means getting the data out of the objects
- * returned by the receiveEvent* functions.
- */
+// @TODO: Split this up into multiple smaller reducers..
 const events = (state = initialEventState, action) => {
   if (action.type ==  RECEIVE_URL){
     // set the data to the state, and flag
@@ -58,6 +56,38 @@ const events = (state = initialEventState, action) => {
       }
     });
 
+
+
+  } else if (action.type == CATEGORY_SELECT) {
+    // we get one category: true/false.
+    // if true, we add it to the list of visible
+    // cats. If false, we remove it from the list.
+    // If the list is empty, we have no filtering
+    // function (defualt behaviour).
+    const { category, on } = action;
+    const currentCategories = state.categories || [];
+
+    let nextCategories;
+    if (!on) {
+      nextCategories = currentCategories.filter((c) => c !== category);
+    } else {
+      const copy = currentCategories.slice(0);
+      copy.push(category);
+      nextCategories = copy;
+    }
+
+    if (nextCategories.length === 0) {
+      return Object.assign({}, state, {
+        categories: [],
+        categoryFilter: undefined,
+      });
+    }
+    return Object.assign({}, state, {
+      categories: nextCategories,
+      categoryFilter: function (e) {
+        return nextCategories.filter((c) => c === e.category).length > 0;
+      }
+    });
   } else if (action.type == REQUEST_URL) {
     return Object.assign({}, state, {isFetching: true});
 

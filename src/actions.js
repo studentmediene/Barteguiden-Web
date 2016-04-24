@@ -77,3 +77,12 @@ export function dateSelect(date) {
     date,
   };
 }
+
+export const CATEGORY_SELECT = 'CATEGORY_SELECT'
+export function categorySelect(cat, on) {
+  return {
+    type: CATEGORY_SELECT,
+    category: cat,
+    on,
+  }
+}

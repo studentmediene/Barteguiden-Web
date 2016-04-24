@@ -1,8 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
-import { fetchEvents, searchboxChange, dateSelect } from './actions'
 import RangeCalendar from 'rc-calendar'
+import Toggle from 'react-toggle'
+
+import {
+  fetchEvents,
+  searchboxChange,
+  dateSelect,
+  categorySelect,
+} from './actions'
 
 export const Loading = props => {
   return (
@@ -48,6 +55,33 @@ export const SearchBox = props => {
   );
 }
 
+// @TODO: fill inn missing categories.
+const categories = ['OTHER', 'MUSIC', 'PERFORMANCE', 'NIGHTLIFE', 'DEBATE'];
+export const CategoryItem = props => {
+  const { category, onClick } = props;
+  return (
+    <div>
+      <Toggle id={category} onChange={onClick({category})} />
+      <span>{ category }</span>
+    </div>
+  )
+}
+
+export const CategoryList = props => {
+  const { onClick } = props;
+  return (
+    <div>
+      <ul>
+        <li>
+        {categories.map((c, i) => (
+          <CategoryItem key={i} category={c} onClick={onClick}/>
+        ))}
+        </li>
+      </ul>
+    </div>
+  );
+}
+
 
 class App extends React.Component {
   constructor() {
@@ -55,7 +89,9 @@ class App extends React.Component {
     // Jadascript.
     this.handleSearchBoxClick = this.handleSearchBoxClick.bind(this);
     this.handleCalendarChange = this.handleCalendarChange.bind(this);
+    this.handleToggleButtonChange = this.handleToggleButtonChange.bind(this);
   }
+
   componentWillMount() {
     const { dispatch } = this.props;
     fetchEvents()(dispatch);
@@ -75,6 +111,12 @@ class App extends React.Component {
     this.props.dispatch(dateSelect(date));
   }
 
+  handleToggleButtonChange(evt, props) {
+    const { target: {checked} } = evt;
+    const { category } = props;
+    this.props.dispatch(categorySelect(category, checked));
+  }
+
   render() {
     const { dispatch } = this.props;
     return (
@@ -82,6 +124,8 @@ class App extends React.Component {
         <h1>martin er kul</h1>
         <RangeCalendar onChange={this.handleCalendarChange}/>
         <SearchBox onChange={this.handleSearchBoxClick} />
+        <CategoryList onClick={(props) =>
+          (e) => this.handleToggleButtonChange(e, props)} />
         <EventList events={this.props.events} />
       </div>
     )
@@ -94,6 +138,7 @@ function mapStateToProps(state) {
     items: state.events.items
       .filter(state.events.calendarFilter || t)
       .filter(state.events.searchBoxFilter || t)
+      .filter(state.events.categoryFilter || t)
       ,
   });
 
