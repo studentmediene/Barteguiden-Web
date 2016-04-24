@@ -29,35 +29,38 @@ const events = (state = initialEventState, action) => {
     }
     s.isFetching = false;
     return s;
+
   } else if (action.type == SEARCHBOX_CHANGE) {
     const text = action.text.toLowerCase();
     if (text == '')
       return Object.assign({}, state, {
-        items: state.all_items,
+        searchBoxFilter: undefined,
       });
-    const items = state.all_items || state.items;
-
-    const filteredEvents = items.filter((e) =>
+    return Object.assign({}, state, {
+      searchBoxFilter: ((e) =>
+        // @TODO: change startsWith to includes?
         e.title.toLowerCase().startsWith(text)
-        );
-    return Object.assign({}, state, {
-      items: filteredEvents,
-      all_items: items,
+      ),
     });
+
   } else if (action.type == DATE_SELECT) {
-    console.log(state.items);
-    const { date } = action;
-    const filteredEvents = state.items.filter((e) => {
-      const eventDate = new Date(e.startAt);
-      return eventDate.getYear()  === date.getYear() &&
-             eventDate.getMonth() === date.getMonth() &&
-             eventDate.getDay()   === date.getDay();
-    });
+    const date = action.date;
+    if (!date)
+      return Object.assign({}, state, {
+        calendarFilter: undefined,
+      });
     return Object.assign({}, state, {
-      items: filteredEvents,
+      calendarFilter: function(e) {
+        const eventDate = new Date(e.startAt);
+        return eventDate.getYear() === date.getYear() &&
+               eventDate.getMonth() === date.getMonth() &&
+               eventDate.getDay() === date.getDay();
+      }
     });
+
   } else if (action.type == REQUEST_URL) {
     return Object.assign({}, state, {isFetching: true});
+
   } else if (action.type == REQUEST_FAILED) {
     return Object.assign({}, state, {isFetching: false});
 

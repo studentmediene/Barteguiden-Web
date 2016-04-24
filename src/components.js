@@ -88,8 +88,18 @@ class App extends React.Component {
   }
 }
 
+const t = (e) => true;
 function mapStateToProps(state) {
-  return state;
+  const events = Object.assign({}, state.events, {
+    items: state.events.items
+      .filter(state.events.calendarFilter || t)
+      .filter(state.events.searchBoxFilter || t)
+      ,
+  });
+
+  return Object.assign({}, state, {
+    events,
+  });
 }
 
 
