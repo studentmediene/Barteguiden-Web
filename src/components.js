@@ -82,8 +82,23 @@ export const CategoryList = props => {
   );
 }
 
+export const SideBar = props => {
+  const { calendarChange,
+          searchChange,
+          categoryChange
+  } = props;
+  return (
+    <div>
+      <RangeCalendar onChange={calendarChange} />
+      <SearchBox onChange={searchChange} />
+      <CategoryList onClick={categoryChange} />
+    </div>
+  )
+}
+
 
 class App extends React.Component {
+  // TODO: Uuuhh, this should probably be in a container?
   constructor() {
     super();
     // Jadascript.
@@ -122,23 +137,31 @@ class App extends React.Component {
     return (
       <div>
         <h1>martin er kul</h1>
-        <RangeCalendar onChange={this.handleCalendarChange}/>
-        <SearchBox onChange={this.handleSearchBoxClick} />
-        <CategoryList onClick={(props) =>
-          (e) => this.handleToggleButtonChange(e, props)} />
-        <EventList events={this.props.events} />
+        <div className="sidebar">
+          <SideBar calendarChange={this.handleCalendarChange}
+                   searchChange={this.handleSearchBoxClick}
+                   categoryChange={(props) =>
+                      (e) => this.handleToggleButtonChange(e, props)} />
+        </div>
+        <div className="event-content">
+          <EventList events={this.props.events} />
+        </div>
       </div>
     )
   }
 }
 
+// We will filter the events by all possible filter functions,
+// no matter wether they are undefined or not. In order to do this,
+// we || it together with a function that always returns true,
+// so that if the function is undefined, no events are removed.
 const t = (e) => true;
 function mapStateToProps(state) {
   const events = Object.assign({}, state.events, {
     items: state.events.items
-      .filter(state.events.calendarFilter || t)
+      .filter(state.events.calendarFilter  || t)
       .filter(state.events.searchBoxFilter || t)
-      .filter(state.events.categoryFilter || t)
+      .filter(state.events.categoryFilter  || t)
       ,
   });
 
@@ -146,6 +169,8 @@ function mapStateToProps(state) {
     events,
   });
 }
+
+// TODO: clean up dispatch stuff, and use mapDispatchToProps
 
 
 export default connect(mapStateToProps)(App);

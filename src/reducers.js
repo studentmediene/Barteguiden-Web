@@ -58,9 +58,6 @@ const events = (state = initialEventState, action) => {
                eventDate.getDay() === date.getDay();
       }
     });
-
-
-
   } else if (action.type == CATEGORY_SELECT) {
     // we get one category: true/false.
     // if true, we add it to the list of visible
