@@ -12,7 +12,7 @@ import {
   categorySelect,
 } from './actions'
 
-export const Loading = props => {
+export const Loading = _ => {
   return (
       <div>
         <p>Loading ...</p>
@@ -24,11 +24,11 @@ export const Event = props => {
   const e = props.evt
   return (
     <div className='eventbox'>
-      <h2><Link to={'/events/' + e._id}>
-        {e.title}
+      <h2><Link to={ '/events/' + e._id }>
+        { e.title }
       </Link></h2>
-      <img src={e.imageUrl} />
-      <p>{e.description}</p>
+      <img src={ e.imageUrl } />
+      <p> { e.description } </p>
     </div>
   )
 }
@@ -51,7 +51,8 @@ export const SearchBox = props => {
   return (
     <div>
       <input type="text" placeholder="Søk etter events"
-       onChange={props.onChange}></input>
+        onChange={props.onChange}>
+      </input>
     </div>
   );
 }
@@ -151,7 +152,8 @@ class App extends React.Component {
 // no matter wether they are undefined or not. In order to do this,
 // we || it together with a function that always returns true,
 // so that if the function is undefined, no events are removed.
-const t = (e) => true;
+const t = _ => true;
+
 function mapStateToProps(state) {
   const events = Object.assign({}, state.events, {
     items: state.events.items
