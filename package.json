@@ -12,19 +12,20 @@
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
-    "rc-calendar": "^5.5.6",
-    "react": "15.1",
-    "react-dom": "15.1",
-    "react-redux": "^4.4.5",
-    "react-router": "^2.4.1",
-    "react-router-redux": "^4.0.5",
-    "react-toggle": "^2.1.0",
+    "moment": "2.14",
+    "rc-calendar": "7.0",
+    "react": "15.3",
+    "react-dom": "15.3",
+    "react-redux": "4.4.5",
+    "react-router": "2.7",
+    "react-router-redux": "4.0",
+    "react-toggle": "2.1",
     "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "nwb": "0.9.x",
-    "nwb-sass": "^0.5.0"
+    "nwb": "0.12.0",
+    "nwb-sass": "^0.6.0"
   },
   "author": "",
   "license": "MIT",

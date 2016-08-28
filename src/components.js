@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import RangeCalendar from 'rc-calendar'
 import Toggle from 'react-toggle'
+import moment from 'moment'
 
 import {
   fetchEvents,
@@ -55,7 +56,7 @@ export const SearchBox = props => {
   );
 }
 
-// @TODO: fill inn missing categories.
+// TODO: fill inn missing categories.
 const categories = ['OTHER', 'MUSIC', 'PERFORMANCE', 'NIGHTLIFE', 'DEBATE'];
 export const CategoryItem = props => {
   const { category, onClick } = props;
@@ -98,7 +99,7 @@ export const SideBar = props => {
 
 
 class App extends React.Component {
-  // TODO: Uuuhh, this should probably be in a container?
+
   constructor() {
     super();
     // Jadascript.
@@ -118,12 +119,7 @@ class App extends React.Component {
   }
 
   handleCalendarChange(evt) {
-    const { fields } = evt;
-    const year  = fields[1],
-          month = fields[2],
-          day   = fields[3];
-    const date = new Date(year, month, day);
-    this.props.dispatch(dateSelect(date));
+    this.props.dispatch(dateSelect(evt));
   }
 
   handleToggleButtonChange(evt, props) {
