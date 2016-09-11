@@ -78,6 +78,13 @@ export function dateSelect(date) {
   };
 }
 
+export const RESET_CALENDAR = 'RESET_CALENDAR'
+export function resetCalendar() {
+  return {
+    type: RESET_CALENDAR,
+  }
+}
+
 export const CATEGORY_SELECT = 'CATEGORY_SELECT'
 export function categorySelect(cat, on) {
   return {

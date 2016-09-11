@@ -1,3 +1,6 @@
+'use strict'
+require('../node_modules/react-toggle/style.css')
+
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
@@ -10,14 +13,31 @@ import {
   searchboxChange,
   dateSelect,
   categorySelect,
+  resetCalendar,
 } from './actions'
+
+const LoadingStyle = {
+  'maxWidth': 800,
+  'width': 800,
+  'margin': '0 auto',
+}
 
 export const Loading = _ => {
   return (
-      <div>
+      <div style={LoadingStyle}>
         <p>Loading ...</p>
       </div>
   );
+}
+
+export const BarteHeader = () => {
+  return (
+    <header>
+    <h1>
+      Barteguiden Er Best :)
+    </h1>
+    </header>
+  )
 }
 
 export const Event = props => {
@@ -84,14 +104,30 @@ export const CategoryList = props => {
   );
 }
 
+export const ButtonLink = props => {
+  return (
+    <div>
+      <a onClick={props.onClick}> { props.label } </a>
+    </div>
+
+  )
+}
+
 export const SideBar = props => {
   const { calendarChange,
+          calendarReset,
+          isCalendarReset,
           searchChange,
           categoryChange
   } = props;
   return (
     <div>
+    {isCalendarReset ?
+      <RangeCalendar onChange={calendarChange} selectedValue={[undefined, undefined]}/>
+    :
       <RangeCalendar onChange={calendarChange} />
+    }
+      <ButtonLink onClick={calendarReset} label='reset' />
       <SearchBox onChange={searchChange} />
       <CategoryList onClick={categoryChange} />
     </div>
@@ -107,6 +143,7 @@ class App extends React.Component {
     this.handleSearchBoxClick = this.handleSearchBoxClick.bind(this);
     this.handleCalendarChange = this.handleCalendarChange.bind(this);
     this.handleToggleButtonChange = this.handleToggleButtonChange.bind(this);
+    this.resetCalendar = this.resetCalendar.bind(this);
   }
 
   componentWillMount() {
@@ -123,6 +160,11 @@ class App extends React.Component {
     this.props.dispatch(dateSelect(evt));
   }
 
+  resetCalendar() {
+    this.props.dispatch(resetCalendar());
+    this.props.dispatch(dateSelect(undefined));
+  }
+
   handleToggleButtonChange(evt, props) {
     const { target: {checked} } = evt;
     const { category } = props;
@@ -130,18 +172,25 @@ class App extends React.Component {
   }
 
   render() {
-    const { dispatch } = this.props;
+    const {
+      dispatch,
+      events,
+    } = this.props;
     return (
       <div>
-        <h1>martin er kul</h1>
-        <div className="sidebar">
-          <SideBar calendarChange={this.handleCalendarChange}
-                   searchChange={this.handleSearchBoxClick}
-                   categoryChange={(props) =>
-                      (e) => this.handleToggleButtonChange(e, props)} />
-        </div>
-        <div className="event-content">
-          <EventList events={this.props.events} />
+      <BarteHeader />
+        <div className='flex-row'>
+          <div className="event-content">
+            <EventList events={events} />
+          </div>
+          <div className="sidebar">
+            <SideBar calendarChange={this.handleCalendarChange}
+                     calendarReset={this.resetCalendar}
+                     isCalendarReset={events.resetCalendar}
+                     searchChange={this.handleSearchBoxClick}
+                     categoryChange={(props) =>
+                        (e) => this.handleToggleButtonChange(e, props)} />
+          </div>
         </div>
       </div>
     )

@@ -5,6 +5,7 @@ import {
   SEARCHBOX_CHANGE,
   DATE_SELECT,
   CATEGORY_SELECT,
+  RESET_CALENDAR,
 } from './actions'
 
 import moment from 'moment'
@@ -13,6 +14,7 @@ const initialEventState = {
   items: [],
   all_items: [],
   categories: [],
+  isCalendarReset: false,
 }
 
 // @TODO: Split this up into multiple smaller reducers..
@@ -49,9 +51,11 @@ const events = (state = initialEventState, action) => {
       const date = action.date;
       if (!date)
         return Object.assign({}, state, {
+          resetCalendar: false,
           calendarFilter: undefined,
         });
       return Object.assign({}, state, {
+        resetCalendar: false,
         calendarFilter: function(e) {
           const eventDate = moment(e.startAt);
           return eventDate.isSame(date, 'day');
@@ -91,6 +95,8 @@ const events = (state = initialEventState, action) => {
       return Object.assign({}, state, {isFetching: true});
     case REQUEST_FAILED:
       return Object.assign({}, state, {isFetching: false});
+    case RESET_CALENDAR:
+      return Object.assign({}, state, {resetCalendar: true});
 
   }
   return state;
