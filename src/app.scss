@@ -19,6 +19,12 @@ header, .eventlist, .sidebar {
 .sidebar {
   order: 1;
   flex: 1 0px;
+  max-width: 300px;
+  background: #f0f0f0;
+  border: 1px solid #aaa;
+
+  display: flex;
+  flex-direction: row;
 }
 
 .eventlist {
@@ -41,16 +47,18 @@ header, .eventlist, .sidebar {
     width: inherit;
     max-height: 400px;
   }
-}
+  .icon {
+    height: 32px;
+    width: 32px;
+    padding: 8px;
+  }
 
-
-.sidebar {
-  max-width: 300px;
-  background: #f0f0f0;
-  border: 1px solid #aaa;
-
-  display: flex;
-  flex-direction: row;
+  .event-header {
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: 50%;
+  }
 }
 
 .rc-calendar {

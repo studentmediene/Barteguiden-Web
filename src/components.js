@@ -44,9 +44,11 @@ export const Event = props => {
   const e = props.evt
   return (
     <div className='eventbox'>
-      <h2><Link to={ '/events/' + e._id }>
+      <img className='icon' src={categoryIcon(e.category)} />
+      <p className='event-header'><Link to={ '/events/' + e._id }>
         { e.title }
-      </Link></h2>
+        </Link>
+        </p>
       <img src={ e.imageUrl } />
       <p> { e.description } </p>
     </div>
@@ -87,6 +89,13 @@ export const CategoryItem = props => {
       <span>{ category }</span>
     </div>
   )
+}
+
+export const categoryIcon = category => {
+  if (categories.find(c => c == category) === undefined) {
+    console.log(`Tried to find category of unknown category: ${category}`)
+  }
+  return `http://www.barteguiden.no/images/${category}.png`
 }
 
 export const CategoryList = props => {
