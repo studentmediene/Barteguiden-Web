@@ -33,9 +33,9 @@ export const Loading = _ => {
 export const BarteHeader = () => {
   return (
     <header>
-    <h1>
-      Barteguiden Er Best :)
-    </h1>
+      <h1>
+        Barteguiden Er Best :)
+      </h1>
     </header>
   )
 }
@@ -69,7 +69,7 @@ export const EventList = props => {
 
 export const SearchBox = props => {
   return (
-    <div>
+    <div className='event-search'>
       <input type="text" placeholder="Søk etter events"
         onChange={props.onChange}>
       </input>
@@ -92,7 +92,7 @@ export const CategoryItem = props => {
 export const CategoryList = props => {
   const { onClick } = props;
   return (
-    <div>
+    <div className='category-list'>
       <ul>
         {categories.map((c, i) => (
           <li key={i}>
@@ -109,7 +109,6 @@ export const ButtonLink = props => {
     <div>
       <a onClick={props.onClick}> { props.label } </a>
     </div>
-
   )
 }
 
@@ -121,7 +120,7 @@ export const SideBar = props => {
           categoryChange
   } = props;
   return (
-    <div>
+    <div className='sidebar'>
     {isCalendarReset ?
       <RangeCalendar onChange={calendarChange} selectedValue={[undefined, undefined]}/>
     :
@@ -178,20 +177,14 @@ class App extends React.Component {
     } = this.props;
     return (
       <div>
-      <BarteHeader />
-        <div className='flex-row'>
-          <div className="event-content">
-            <EventList events={events} />
-          </div>
-          <div className="sidebar">
-            <SideBar calendarChange={this.handleCalendarChange}
-                     calendarReset={this.resetCalendar}
-                     isCalendarReset={events.resetCalendar}
-                     searchChange={this.handleSearchBoxClick}
-                     categoryChange={(props) =>
-                        (e) => this.handleToggleButtonChange(e, props)} />
-          </div>
-        </div>
+        <BarteHeader />
+        <EventList events={events} />
+        <SideBar calendarChange={this.handleCalendarChange}
+                 calendarReset={this.resetCalendar}
+                 isCalendarReset={events.resetCalendar}
+                 searchChange={this.handleSearchBoxClick}
+                 categoryChange={(props) =>
+                    (e) => this.handleToggleButtonChange(e, props)} />
       </div>
     )
   }

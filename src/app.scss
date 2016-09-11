@@ -2,45 +2,55 @@ html {
   background: #fafafa;
 }
 
-.flex-row {
-    display: flex;
-    flex: 1 1;
-    flex-direction: row;
-}
-
-.event-content {
-  flex: auto;
-  margin: 0 auto;
-}
-
 header {
   text-align: center;
   text-shadow: 8px 0px 0px #ffff00;
 }
 
-.event-content, .eventbox {
-  width: 800px;
-  max-width: 800px;
+#app > :first-child {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+header, .eventlist, .sidebar {
+  flex: 1 100%;
+}
+
+.sidebar {
+  order: 1;
+  flex: 1 0px;
+}
+
+.eventlist {
+  order: 2;
+  display: flex;
+
+  ul {
+    margin: auto;
+    padding: 0;
+  }
 }
 
 .eventbox {
   background: #ffffff;
   border: 1px solid #ccc;
-  padding: 8px;
   margin-bottom: 1em;
+  width: 100%;
+
+  img {
+    width: inherit;
+    max-height: 400px;
+  }
 }
 
-.eventbox img {
-  width: inherit;
-  max-height: 400px;
-}
 
 .sidebar {
-  display: flex;
-  flex: auto;
   max-width: 300px;
   background: #f0f0f0;
   border: 1px solid #aaa;
+
+  display: flex;
+  flex-direction: row;
 }
 
 .rc-calendar {
@@ -70,3 +80,21 @@ header {
 .rc-calendar-date[aria-selected="true"] {
   background: #999;
 }
+
+@media all and (min-width: 1200px) {
+  .sidebar {
+    order: 2;
+    flex-direction: column;
+  }
+  .eventlist {
+    order: 1;
+    flex: 2 0px;
+  }
+  header {
+    background: #333000;
+  }
+  .eventbox {
+    width: 600px;
+  }
+}
+
