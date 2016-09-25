@@ -40,7 +40,9 @@ export function fetchEvent(id) {
     return fetch(URL + '/' + id)
       .then(res => res.json())
       .then(json => dispatch(receive(json)))
-      .catch(err => dispatch(error(err)))
+      .catch(err => {
+        console.log('hehe');
+        dispatch(error(err))})
     }, 1000);
   }
 }
@@ -54,9 +56,10 @@ export function fetchEvents() {
     return fetch(URL)
       .then(res => res.json())
       .then(json => dispatch(receive(json)))
-      .catch(err => dispatch(error(err)))
+      .catch(err => {
+        console.log('hehe');
+        dispatch(error(err))})
     }, 1000);
-
   }
 }
 

@@ -4,9 +4,10 @@ require('../node_modules/react-toggle/style.css')
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
-import RangeCalendar from 'rc-calendar'
-import Toggle from 'react-toggle'
 import moment from 'moment'
+
+import { Event, EventList } from './components/Event'
+import { Sidebar } from './components/Sidebar'
 
 import {
   fetchEvents,
@@ -15,18 +16,6 @@ import {
   categorySelect,
   resetCalendar,
 } from './actions'
-
-const LoadingStyle = {
-  'width': '600px',
-}
-
-export const Loading = _ => {
-  return (
-      <div style={LoadingStyle}>
-        <p>Loading ...</p>
-      </div>
-  );
-}
 
 export const BarteHeader = () => {
   return (
@@ -37,127 +26,6 @@ export const BarteHeader = () => {
     </header>
   )
 }
-
-const EventContentStyle = {
-  margin: '10px',
-};
-
-const EventImageStyle = {
-  'display': 'flex',
-  'flex-direction': 'column',
-  'align-items': 'center',
-};
-
-export const Event = props => {
-  const e = props.evt
-  return (
-    <div className='eventbox'>
-      <img className='icon' src={categoryIcon(e.category)} />
-      <p className='event-header'><Link to={ '/events/' + e._id }>
-        { e.title }
-        </Link>
-        </p>
-      <div className='event-image' style={EventImageStyle}>
-        <img src={ e.imageUrl } />
-      </div>
-      <div style={EventContentStyle} className='eventContent'>
-        <p> { e.description } </p>
-      </div>
-    </div>
-  )
-}
-
-export const EventList = props => {
-  const { items, isFetching } = props.events;
-  if (isFetching) {
-    return (
-      <div className='content'>
-        <Loading />
-      </div>
-    )
-  }
-  return (
-    <div className="content">
-      <ul>
-        {items.map((e, i) => <Event key={i} evt={e}/>)}
-      </ul>
-    </div>
-  )
-}
-
-export const SearchBox = props => {
-  return (
-    <div className='event-search'>
-      <input type="text" placeholder="Søk etter events"
-        onChange={props.onChange}>
-      </input>
-    </div>
-  );
-}
-
-// TODO: fill inn missing categories.
-const categories = ['OTHER', 'MUSIC', 'PERFORMANCE', 'NIGHTLIFE', 'DEBATE'];
-export const CategoryItem = props => {
-  const { category, onClick } = props;
-  return (
-    <div>
-      <Toggle id={category} onChange={onClick({category})} />
-      <span>{ category }</span>
-    </div>
-  )
-}
-
-export const categoryIcon = category => {
-  if (categories.find(c => c == category) === undefined) {
-    console.log(`Tried to find category of unknown category: ${category}`)
-  }
-  return `http://www.barteguiden.no/images/${category}.png`
-}
-
-export const CategoryList = props => {
-  const { onClick } = props;
-  return (
-    <div className='category-list'>
-      <ul>
-        {categories.map((c, i) => (
-          <li key={i}>
-            <CategoryItem category={c} onClick={onClick}/>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export const ButtonLink = props => {
-  return (
-    <div>
-      <a onClick={props.onClick}> { props.label } </a>
-    </div>
-  )
-}
-
-export const SideBar = props => {
-  const { calendarChange,
-          calendarReset,
-          isCalendarReset,
-          searchChange,
-          categoryChange
-  } = props;
-  return (
-    <div className='sidebar'>
-    {isCalendarReset ?
-      <RangeCalendar onChange={calendarChange} selectedValue={[undefined, undefined]}/>
-    :
-      <RangeCalendar onChange={calendarChange} />
-    }
-      <ButtonLink onClick={calendarReset} label='reset' />
-      <SearchBox onChange={searchChange} />
-      <CategoryList onClick={categoryChange} />
-    </div>
-  )
-}
-
 
 class App extends React.Component {
 
@@ -203,8 +71,8 @@ class App extends React.Component {
     return (
       <div>
         <BarteHeader />
-        <EventList events={events} />
-        <SideBar calendarChange={this.handleCalendarChange}
+        <EventList isFetching={events.isFetching} events={events.items} />
+            <Sidebar calendarChange={this.handleCalendarChange}
                  calendarReset={this.resetCalendar}
                  isCalendarReset={events.resetCalendar}
                  searchChange={this.handleSearchBoxClick}
