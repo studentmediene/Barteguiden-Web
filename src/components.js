@@ -17,9 +17,7 @@ import {
 } from './actions'
 
 const LoadingStyle = {
-  'maxWidth': 800,
-  'width': 800,
-  'margin': '0 auto',
+  'width': '600px',
 }
 
 export const Loading = _ => {
@@ -40,6 +38,16 @@ export const BarteHeader = () => {
   )
 }
 
+const EventContentStyle = {
+  margin: '10px',
+};
+
+const EventImageStyle = {
+  'display': 'flex',
+  'flex-direction': 'column',
+  'align-items': 'center',
+};
+
 export const Event = props => {
   const e = props.evt
   return (
@@ -49,8 +57,12 @@ export const Event = props => {
         { e.title }
         </Link>
         </p>
-      <img src={ e.imageUrl } />
-      <p> { e.description } </p>
+      <div className='event-image' style={EventImageStyle}>
+        <img src={ e.imageUrl } />
+      </div>
+      <div style={EventContentStyle} className='eventContent'>
+        <p> { e.description } </p>
+      </div>
     </div>
   )
 }
@@ -58,10 +70,14 @@ export const Event = props => {
 export const EventList = props => {
   const { items, isFetching } = props.events;
   if (isFetching) {
-    return <Loading />
+    return (
+      <div className='content'>
+        <Loading />
+      </div>
+    )
   }
   return (
-    <div className="eventlist">
+    <div className="content">
       <ul>
         {items.map((e, i) => <Event key={i} evt={e}/>)}
       </ul>
