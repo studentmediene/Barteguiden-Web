@@ -1,5 +1,5 @@
 'use strict'
-require('./app.scss')
+require('./app.less')
 
 import React from 'react'
 import {render} from 'react-dom'
