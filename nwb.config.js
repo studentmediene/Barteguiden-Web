@@ -5,7 +5,7 @@ module.exports = {
   },
   cssPreprocessors: {
     less: {
-      test: /\.scss/,
+      test: /\.less/,
       loader: require.resolve('less-loader'),
       defaultConfig: 'lessLoader'
     }
