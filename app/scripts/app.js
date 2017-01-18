@@ -51,20 +51,11 @@ angular
     $routeProvider
       .when('/', {
         title: 'Barteguiden - din guide til kulturlivet i Trondheim',
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/ending-announcement.html',
       })
       .when('/om', {
         title: 'Om Barteguiden',
         templateUrl: 'views/about.html'
-      })
-      .when('/arrangement/:id/:slug?', {
-        templateUrl: 'views/event.html',
-        controller: 'EventCtrl'
-      })
-      .when('/kontakt', {
-        title: 'Kontakt Barteguiden',
-        templateUrl: 'views/contact.html'
       })
       .otherwise({
         redirectTo: '/'
